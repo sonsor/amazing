@@ -3,12 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Tag;
+use App\Icon;
 
-class Tag extends Model
+class VariationType extends Model
 {
     public function icon()
     {
-        return $this->belongsToMany(Icon::class)
+        return $this->belongsTo(Icon::class)
     }
 }
