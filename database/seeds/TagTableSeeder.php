@@ -17,7 +17,7 @@ class TagTableSeeder extends Seeder
         $this->command->info("Creating {$count} Tags.");
 
         // Create the Genre
-        $genres = factory(App\VariationType::class, $count)->create();
+        $genres = factory(App\Tag::class, $count)->create();
 
         $this->command->info('Tags Created!');
     }

@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\VariationType;
 
 class VariationTypeTableSeeder extends Seeder
 {

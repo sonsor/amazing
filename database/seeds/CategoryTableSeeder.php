@@ -17,7 +17,9 @@ class CategoryTableSeeder extends Seeder
         $this->command->info("Creating {$count} Categories.");
 
         // Create the Genre
-        $genres = factory(App\VariationType::class, $count)->create();
+        $genres = factory(App\Category::class, $count)->create()->each(function($category) {
+            $category->children()->save(factory(App\Category::class)->make());
+        });
 
         $this->command->info('Categories Created!');
     }

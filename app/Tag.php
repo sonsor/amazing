@@ -9,6 +9,6 @@ class Tag extends Model
 {
     public function icon()
     {
-        return $this->belongsToMany(Icon::class)
+        return $this->belongsToMany(Icon::class);
     }
 }

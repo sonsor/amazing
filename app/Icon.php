@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\VariationType;
 use App\Category;
 use App\Tag;
+
 class Icon extends Model
 {
     public function children()

@@ -7,8 +7,8 @@ use App\Icon;
 
 class VariationType extends Model
 {
-    public function icon()
+    public function icons()
     {
-        return $this->belongsTo(Icon::class)
+        return $this->belongsToMany(Icon::class);
     }
 }
