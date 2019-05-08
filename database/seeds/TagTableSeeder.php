@@ -11,6 +11,14 @@ class TagTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // How many genres you need, defaulting to 10
+        $count = (int) $this->command->ask('How many Tags do you need ?', 10);
+
+        $this->command->info("Creating {$count} Tags.");
+
+        // Create the Genre
+        $genres = factory(App\VariationType::class, $count)->create();
+
+        $this->command->info('Tags Created!');
     }
 }
