@@ -13,6 +13,7 @@ class CreateIconsTable extends Migration
      */
     public function up()
     {
+        $this->down();
         Schema::create('icons', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
@@ -20,13 +21,10 @@ class CreateIconsTable extends Migration
             $table->string('classes');
             $table->longText('shortDescription')->nullable();
             $table->longText('description')->nullable();
-            $table->longText('description')->nullable();
             $table->string('version');
             $table->boolean('paid')->default(false);
-            $table->integer('variation')->unsigned();
-            $table->integer('parent')->unsigned()->nullable();
-            $table->foreign('parent')->references('id')->on('icons');
-            $table->foreign('variation')->references('id')->on('variation_types');
+            $table->bigInteger('variation')->unsigned();
+            $table->bigInteger('parent')->unsigned()->nullable();
             $table->timestamps();
         });
     }

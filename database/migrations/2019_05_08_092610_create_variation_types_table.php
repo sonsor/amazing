@@ -13,6 +13,7 @@ class CreateVariationTypesTable extends Migration
      */
     public function up()
     {
+        $this->down();
         Schema::create('variation_types', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
