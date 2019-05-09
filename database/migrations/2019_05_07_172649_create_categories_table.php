@@ -18,7 +18,7 @@ class CreateCategoriesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('slug');
-            $table->integer('order')->autoIncrement();
+            $table->integer('order')->default(0);
             $table->bigInteger('parent')->unsigned()->nullable();
             $table->timestamps();
         });
