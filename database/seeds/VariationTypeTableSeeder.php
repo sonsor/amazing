@@ -11,13 +11,24 @@ class VariationTypeTableSeeder extends Seeder
      */
     public function run()
     {
-        // How many genres you need, defaulting to 10
-        $count = (int) $this->command->ask('How many Variation Type do you need ?', 10);
+        App\VariationType::truncate();
 
-        $this->command->info("Creating {$count} Variation Type.");
+        $this->command->info("Getting json file.");
 
-        // Create the Genre
-        $genres = factory(App\VariationType::class, $count)->create();
+        // getting josn file data
+        $data = File::get(database_path('data/variation-types.json'));
+
+        $this->command->info("decoding json data.");
+        // decoding the json
+        $data = json_decode($data, false);
+
+        $this->command->info("Create Records.");
+        foreach ($data as $element) {
+            $variationType = new App\VariationType();
+            $variationType->name = $element->name;
+            $variationType->slug = $element->slug;
+            $variationType->save();
+        }
 
         $this->command->info('Variation Types Created!');
     }

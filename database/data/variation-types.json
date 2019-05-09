@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Icon",
+    "slug": "icon"
+  },
+  {
+    "name": "Brand",
+    "slug": "brand"
+  },
+  {
+    "name": "Solid",
+    "slug": "solid"
+  },
+  {
+    "name": "Regular",
+    "slug": "regular"
+  },
+  {
+    "name": "Light",
+    "slug": "light"
+  }
+]
