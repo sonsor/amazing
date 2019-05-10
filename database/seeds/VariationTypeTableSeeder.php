@@ -12,6 +12,7 @@ class VariationTypeTableSeeder extends Seeder
     public function run()
     {
         App\VariationType::truncate();
+        $variationTypes = $this->get();
 
         $this->command->info("Getting json file.");
 
@@ -24,12 +25,20 @@ class VariationTypeTableSeeder extends Seeder
 
         $this->command->info("Create Records.");
         foreach ($data as $element) {
-            $variationType = new App\VariationType();
-            $variationType->name = $element->name;
-            $variationType->slug = $element->slug;
-            $variationType->save();
+            if (!in_array($element->slug, $variationTypes)) {
+                $variationType = new App\VariationType();
+                $variationType->name = $element->name;
+                $variationType->slug = $element->slug;
+                $variationType->save();
+            }
         }
 
         $this->command->info('Variation Types Created!');
+    }
+
+    private function get()
+    {
+        return App\VariationType::pluck('slug')->get()->toArray()
+
     }
 }

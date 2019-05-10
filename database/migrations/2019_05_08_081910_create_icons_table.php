@@ -22,6 +22,7 @@ class CreateIconsTable extends Migration
             $table->longText('shortDescription')->nullable();
             $table->longText('description')->nullable();
             $table->string('version');
+            $this->decimal('price', 8, 2)->default(0);
             $table->boolean('paid')->default(false);
             $table->bigInteger('variation')->unsigned();
             $table->bigInteger('parent')->unsigned()->nullable();
