@@ -1,0 +1,327 @@
+[
+  {
+    "name": "New Release",
+    "slug": "new-release"
+  },
+  {
+    "name": "Accessibility",
+    "slug": "accessibility"
+  },
+  {
+    "name": "Alert",
+    "slug": "alert"
+  },
+  {
+    "name": "Ammunition",
+    "slug": "ammunition"
+  },
+  {
+    "name": "Animals",
+    "slug": "animals"
+  },
+  {
+    "name": "Arrows",
+    "slug": "arrows"
+  },
+  {
+    "name": "Audio & Video",
+    "slug": "audio-video"
+  },
+  {
+    "name": "Automotive",
+    "slug": "automotive"
+  },
+  {
+    "name": "Autumn",
+    "slug": "autumn"
+  },
+  {
+    "name": "Badge & Awards",
+    "slug": "badge-award"
+  },
+  {
+    "name": "Beverage",
+    "slug": "beverage"
+  },
+  {
+    "name": "Brands",
+    "slug": "brands"
+  },
+  {
+    "name": "Buildings",
+    "slug": "buildings"
+  },
+  {
+    "name": "Business",
+    "slug": "business"
+  },
+  {
+    "name": "Camping",
+    "slug": "camping"
+  },
+  {
+    "name": "charity",
+    "slug": "charity"
+  },
+  {
+    "name": "chat",
+    "slug": "chat"
+  },
+  {
+    "name": "Charts",
+    "slug": "charts"
+  },
+  {
+    "name": "Childhood",
+    "slug": "childhood"
+  },
+
+  {
+    "name": "Clothing",
+    "slug": "clothing"
+  },
+  {
+    "name": "Code",
+    "slug": "code"
+  },
+  {
+    "name": "Communication",
+    "slug": "communication"
+  },
+  {
+    "name": "Computers",
+    "slug": "computers"
+  },
+  {
+    "name": "Construction",
+    "slug": "construction"
+  },
+  {
+    "name": "Currency",
+    "slug": "currency"
+  },
+  {
+    "name": "Date & Time",
+    "slug": "date-and-time"
+  },
+  {
+    "name": "Design",
+    "slug": "design"
+  },
+  {
+    "name": "Editors",
+    "slug": "editors"
+  },
+  {
+    "name": "Education",
+    "slug": "education"
+  },
+  {
+    "name": "Electric",
+    "slug": "electric"
+  },
+  {
+    "name": "Emoji",
+    "slug": "emoji"
+  },
+  {
+    "name": "Energy",
+    "slug": "energy"
+  },
+  {
+    "name": "Files",
+    "slug": "files"
+  },
+  {
+    "name": "Finance",
+    "slug": "finance"
+  },
+  {
+    "name": "Fitness",
+    "slug": "fitness"
+  },
+  {
+    "name": "Food",
+    "slug": "food"
+  },
+  {
+    "name": "Fruits & Vegetables",
+    "slug": "fruits-&-vegetables"
+  },
+  {
+    "name": "Games",
+    "slug": "games"
+  },
+  {
+    "name": "Genders",
+    "slug": "genders"
+  },
+  {
+    "name": "Halloween",
+    "slug": "halloween"
+  },
+  {
+    "name": "Hands",
+    "slug": "hands"
+  },
+  {
+    "name": "Health",
+    "slug": "health"
+  },
+  {
+    "name": "Holiday",
+    "slug": "holiday"
+  },
+  {
+    "name": "Hotel",
+    "slug": "hotel"
+  },
+  {
+    "name": "Household",
+    "slug": "household"
+  },
+  {
+    "name": "Images",
+    "slug": "images"
+  },
+  {
+    "name": "Interfaces",
+    "slug": "interfaces"
+  },
+  {
+    "name": "Logistics",
+    "slug": "logistics"
+  },
+  {
+    "name": "Maps",
+    "slug": "maps"
+  },
+  {
+    "name": "Maritime",
+    "slug": "maritime"
+  },
+  {
+    "name": "Marketing",
+    "slug": "marketing"
+  },
+  {
+    "name": "Mathematics",
+    "slug": "mathematics"
+  },
+  {
+    "name": "Medical",
+    "slug": "medical"
+  },
+  {
+    "name": "Landmark",
+    "slug": "landmark"
+  },
+  {
+    "name": "Moving",
+    "slug": "moving"
+  },
+  {
+    "name": "Music",
+    "slug": "music"
+  },
+  {
+    "name": "Objects",
+    "slug": "objects"
+  },
+  {
+    "name": "payments & shopping",
+    "slug": "payments-shopping"
+  },
+  {
+    "name": "Pharmacy",
+    "slug": "pharmacy"
+  },
+  {
+    "name": "Political",
+    "slug": "political"
+  },
+  {
+    "name": "Religion",
+    "slug": "religion"
+  },
+  {
+    "name": "Science",
+    "slug": "science"
+  },
+  {
+    "name": "Science Fiction",
+    "slug": "science-fiction"
+  },
+  {
+    "name": "Security",
+    "slug": "security"
+  },
+  {
+    "name": "Shapes",
+    "slug": "shapes"
+  },
+  {
+    "name": "Shopping",
+    "slug": "shopping"
+  },
+  {
+    "name": "Social",
+    "slug": "social"
+  },
+  {
+    "name": "Spinners",
+    "slug": "spinners"
+  },
+  {
+    "name": "Sports",
+    "slug": "sports"
+  },
+  {
+    "name": "Spring",
+    "slug": "spring"
+  },
+  {
+    "name": "Status",
+    "slug": "status"
+  },
+  {
+    "name": "Summer",
+    "slug": "summer"
+  },
+  {
+    "name": "Tabletop Gaming",
+    "slug": "tabletop-gaming"
+  },
+  {
+    "name": "Toggle",
+    "slug": "toggle"
+  },
+  {
+    "name": "Travel",
+    "slug": "travel"
+  },
+  {
+    "name": "Users & People",
+    "slug": "users-people"
+  },
+  {
+    "name": "Vehicles",
+    "slug": "vehicles"
+  },
+  {
+    "name": "Weather",
+    "slug": "weather"
+  },
+  {
+    "name": "Winter",
+    "slug": "winter"
+  },
+  {
+    "name": "Writing",
+    "slug": "writing"
+  },
+  {
+    "name": "Other",
+    "slug": "other"
+  }
+]

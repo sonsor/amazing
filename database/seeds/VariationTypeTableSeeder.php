@@ -30,6 +30,7 @@ class VariationTypeTableSeeder extends Seeder
                 $variationType->name = $element->name;
                 $variationType->slug = $element->slug;
                 $variationType->save();
+                $variationTypes[] = $variationType->slug;
             }
         }
 
@@ -38,7 +39,6 @@ class VariationTypeTableSeeder extends Seeder
 
     private function get()
     {
-        return App\VariationType::pluck('slug')->get()->toArray()
-
+        return App\VariationType::pluck('slug')->get()->toArray();
     }
 }

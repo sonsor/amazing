@@ -11,14 +11,37 @@ class TagTableSeeder extends Seeder
      */
     public function run()
     {
-        // How many genres you need, defaulting to 10
-        $count = (int) $this->command->ask('How many Tags do you need ?', 10);
+        App\VariationType::truncate();
 
-        $this->command->info("Creating {$count} Tags.");
+        // getting already saved tags slugs
+        $tags = $this->get();
 
-        // Create the Genre
-        $genres = factory(App\Tag::class, $count)->create();
+        $this->command->info("Getting json file.");
+
+        // getting josn file data
+        $data = File::get(database_path('data/tags.json'));
+
+        $this->command->info("decoding json data.");
+        // decoding the json
+        $data = json_decode($data, false);
+
+        $this->command->info("Create Records.");
+        foreach ($data as $element) {
+            if (!in_array($element->slug, $tags)) {
+                $tag = new App\Tag();
+                $tag->name = $element->name;
+                $tag->slug = $element->slug;
+                $tag->save();
+                $var$tag[] = $tag->slug;
+            }
+        }
 
         $this->command->info('Tags Created!');
+    }
+
+
+    private function get()
+    {
+        return App\Tag::pluck('slug')->get()->toArray();
     }
 }
