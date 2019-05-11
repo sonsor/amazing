@@ -32,13 +32,14 @@ class TagTableSeeder extends Seeder
 
         $this->command->info("Create Records.");
         foreach ($data as $element) {
-            if (!in_array($element->slug, $tags)) {
-                $tag = new App\Tag();
-                $tag->name = $element->name;
-                $tag->slug = $element->slug;
-                $tag->save();
-                $tags[] = $element->slug;
+            $tag = new App\Tag();
+            $tag->name = $element->name;
+            $tag->slug = $element->slug;
+            if (isset($tags[$element->slug])) {
+                $tag->id = $tags[$element->slug];
             }
+            $tag->save();
+            $tags[] = $element->slug;
         }
 
         $this->command->info('Tags Created!');
@@ -47,6 +48,11 @@ class TagTableSeeder extends Seeder
 
     private function get()
     {
-        return App\Tag::pluck('slug')->all();
+        $tags = [];
+        $results =  App\Tag::select('id', 'slug')->get()->toArray();
+        foreach ($results as $r) {
+            $tags[$r->slug] = $r->id;
+        }
+        return $tags;
     }
 }

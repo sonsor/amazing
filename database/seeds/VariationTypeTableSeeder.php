@@ -29,7 +29,7 @@ class VariationTypeTableSeeder extends Seeder
             $variationType->name = $element->name;
             $variationType->slug = $element->slug;
             $variationType->classes = $element->classes;
-            if (in_array($element->slug, $variationTypes)) {
+            if (isset($variationTypes[$element->slug])) {
                 $variationType->id = $variationTypes[$element->slug];
             }
             $variationType->save();

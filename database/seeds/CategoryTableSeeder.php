@@ -26,16 +26,17 @@ class CategoryTableSeeder extends Seeder
 
         $this->command->info("Create Records.");
         foreach ($data as $element) {
-            if (!isset($categories[$element->slug])) {
-                $category = new App\Category();
-                $category->name = $element->name;
-                $category->slug = $element->slug;
-                if (isset($element->parent)) {
-                    $category->parent = $categories[$element->parent] ?? null;
-                }
-                $category->save();
-                $categories[$element->slug] = $category->id;
+            $category = new App\Category();
+            $category->name = $element->name;
+            $category->slug = $element->slug;
+            if (isset($element->parent)) {
+                $category->parent = $categories[$element->parent] ?? null;
             }
+            if (isset($categories[$element->slug])) {
+                $category->id = $categories[$element->slug];
+            }
+            $category->save();
+            $categories[$element->slug] = $category->id;
         }
 
         $this->command->info('Categories Created!');
