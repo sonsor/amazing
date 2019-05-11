@@ -19,13 +19,13 @@ class CreateIconsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('classes');
-            $table->bigInteger('description')->nullable();
-            $table->string('version');
+            $table->bigInteger('description_id')->nullable();
+            $table->bigInteger('version_id')->unsigned();
             $table->decimal('price', 8, 2)->default(0);
             $table->string('filename')->nullable();
             $table->boolean('paid')->default(false);
-            $table->bigInteger('variation')->unsigned();
-            $table->bigInteger('parent')->unsigned()->nullable();
+            $table->bigInteger('variation_id')->unsigned();
+            $table->bigInteger('parent_id')->unsigned()->nullable();
             $table->timestamps();
         });
     }

@@ -9,12 +9,12 @@ class Category extends Model
 {
     public function children()
     {
-        return $this->hasMany(Category::class, 'parent');
+        return $this->hasMany(Category::class);
     }
 
     public function parent()
     {
-        return $this->belongsTo(Category::class, 'parent');
+        return $this->belongsTo(Category::class);
     }
 
     public function icon()

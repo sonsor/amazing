@@ -6,17 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 use App\VariationType;
 use App\Category;
 use App\Tag;
+use App\Version;
 
 class Icon extends Model
 {
     public function children()
     {
-        return $this->hasMany(Icon::class, 'parent');
+        return $this->hasMany(Icon::class);
     }
 
     public function parent()
     {
-        return $this->belongsTo(Icon::class, 'parent');
+        return $this->belongsTo(Icon::class);
     }
 
     public function categories()
@@ -31,6 +32,11 @@ class Icon extends Model
 
     public function variation()
     {
-        return $this->hasOne(VariationType::class);
+        return $this->belongsTo(VariationType::class);
+    }
+
+    public function version()
+    {
+        return $this->belongsTo(Version::class);
     }
 }

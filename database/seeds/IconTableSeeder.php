@@ -11,19 +11,82 @@ class IconTableSeeder extends Seeder
      */
     public function run()
     {
-        // How many genres you need, defaulting to 10
-        $count = (int) $this->command->ask('How many icons do you need ?', 10);
+        $version = $this->getVersion();
+        $variationTypes = $this->getVariationTypes();
+        $categories = $this->getCategories();
+        $data = $this->getData();
 
-        $this->command->info("Creating {$count} icons.");
+        foreach ($data as $row) {
+            $icon = $this->get($row->slug, $variationTypes['icon']->id);
+            $icon = $icon ?? new App\Icon();
 
-        // Create the Genre
-        $genres = factory(App\Icon::class, $count)->create()->each(function($icon) {
-            $icon->children()->save(factory(App\Icon::class, 3)->make());
-            $icon->categories()->save(factory(App\Category::class, 3)->make());
-            $icon->tags()->save(factory(App\Tag::class, 3)->make());
-            $icon->variation()->save(factory(App\VariationType::class, 1)->create());
-        });
+            $icon->name = $row->name;
+            $icon->slug = $row->slug;
+            $icon->classes = $row->classes;
+            $icon->version()->associate($version);
+            $icon->variation()->associate($variationTypes['icon']);
+            $icon->save();
 
-        $this->command->info('icons Created!');
+            foreach ($row->variations as $children) {
+                $variation = $this->get($icon->slug, $variationTypes[$children->type]->id);
+                $variation = $variation ?? new App\Icon();
+                $variation->name = $row->name;
+                $variation->slug = $row->slug;
+                $variation->classes = $row->classes;
+                $variation->version()->associate($version);
+                $variation->variation()->associate($variationTypes[$children->type]);
+                $variation->parent()->associate($icon);
+                $variation->price = $children->price;
+                $variation->paid = (bool) $children->paid;
+
+                $variation->save();
+            }
+        }
+    }
+
+    private function getData()
+    {
+        $this->command->info("Getting json file.");
+
+        // getting josn file data
+        $data = File::get(database_path('data/amazing-neo.json'));
+
+        $this->command->info("decoding json data.");
+        // decoding the json
+
+        return json_decode($data, false);
+    }
+
+    private function get($slug, $variation)
+    {
+        return App\Icon::where(array(
+            'slug' => $slug,
+            'variation_id' => $variation
+        ))->get()->first();
+    }
+
+    private function getVersion()
+    {
+        return App\Version::orderBy('created_at', 'desc')->first();
+    }
+
+    private function getVariationTypes()
+    {
+        $variationTypes = [];
+        $results = App\VariationType::all();
+        foreach ($results as $r) {
+            $variationTypes[$r->slug] = $r;
+        }
+        return $variationTypes;
+    }
+
+    private function getCategories()
+    {
+        $categories = [];
+        $results = App\Category::all();
+        foreach ($results as $r) {
+            $categories[$r->slug] = $r;
+        }
+        return $categories;
     }
 }

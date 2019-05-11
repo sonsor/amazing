@@ -29,26 +29,26 @@ class CategoryTableSeeder extends Seeder
             $category = new App\Category();
             $category->name = $element->name;
             $category->slug = $element->slug;
-            if (isset($element->parent)) {
-                $category->parent = $categories[$element->parent] ?? null;
+            if (isset($element->parent) && isset($categories[$element->parent])) {
+                $category->parent()->associate($categories[$element->parent]);
             }
             if (isset($categories[$element->slug])) {
                 $category->id = $categories[$element->slug];
             }
             $category->save();
-            $categories[$element->slug] = $category->id;
+            $categories[$element->slug] = $category;
         }
 
         $this->command->info('Categories Created!');
     }
 
 
-    private function get()
+    private function getCategories()
     {
         $categories = [];
         $results =  App\Category::select('id', 'slug')->get()->toArray();
         foreach ($results as $r) {
-            $categories[$r->slug] = $r->id;
+            $categories[$r->slug] = $r;
         }
         return $categories;
     }
