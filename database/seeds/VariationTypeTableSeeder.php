@@ -39,6 +39,6 @@ class VariationTypeTableSeeder extends Seeder
 
     private function get()
     {
-        return App\VariationType::pluck('slug')->get()->toArray();
+        return App\VariationType::pluck('slug')->all();
     }
 }

@@ -25,6 +25,11 @@ class TagTableSeeder extends Seeder
         // decoding the json
         $data = json_decode($data, false);
 
+        if ($data === null) {
+            $this->command->warn("File is empty or invalid data.");
+            return;
+        }
+
         $this->command->info("Create Records.");
         foreach ($data as $element) {
             if (!in_array($element->slug, $tags)) {
@@ -32,7 +37,7 @@ class TagTableSeeder extends Seeder
                 $tag->name = $element->name;
                 $tag->slug = $element->slug;
                 $tag->save();
-                $var$tag[] = $tag->slug;
+                $tags[] = $element->slug;
             }
         }
 
@@ -42,6 +47,6 @@ class TagTableSeeder extends Seeder
 
     private function get()
     {
-        return App\Tag::pluck('slug')->get()->toArray();
+        return App\Tag::pluck('slug')->all();
     }
 }
