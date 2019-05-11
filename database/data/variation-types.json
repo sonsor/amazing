@@ -1,22 +1,27 @@
 [
   {
     "name": "Icon",
-    "slug": "icon"
+    "slug": "icon",
+    "classes": "an"
   },
   {
     "name": "Brand",
-    "slug": "brand"
+    "slug": "brand",
+    "classes": "anb"
   },
   {
     "name": "Solid",
-    "slug": "solid"
+    "slug": "solid",
+    "classes": "ans"
   },
   {
     "name": "Regular",
-    "slug": "regular"
+    "slug": "regular",
+    "classes": "anr"
   },
   {
     "name": "Light",
-    "slug": "light"
+    "slug": "light",
+    "classes": "anl"
   }
 ]

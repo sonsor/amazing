@@ -25,13 +25,16 @@ class VariationTypeTableSeeder extends Seeder
 
         $this->command->info("Create Records.");
         foreach ($data as $element) {
-            if (!in_array($element->slug, $variationTypes)) {
-                $variationType = new App\VariationType();
-                $variationType->name = $element->name;
-                $variationType->slug = $element->slug;
-                $variationType->save();
-                $variationTypes[] = $variationType->slug;
+            $variationType = new App\VariationType();
+            $variationType->name = $element->name;
+            $variationType->slug = $element->slug;
+            $variationType->classes = $element->classes;
+            if (in_array($element->slug, $variationTypes)) {
+                $variationType->id = $variationTypes[$element->slug];
             }
+            $variationType->save();
+            $variationTypes[$element->slug] = $variationType->slug;
+
         }
 
         $this->command->info('Variation Types Created!');
@@ -39,6 +42,11 @@ class VariationTypeTableSeeder extends Seeder
 
     private function get()
     {
-        return App\VariationType::pluck('slug')->all();
+        $variationTypes = [];
+        $results =  App\VariationType::select('id', 'slug')->get()->toArray();
+        foreach ($results as $r) {
+            $variationTypes[$r->slug] = $r->id;
+        }
+        return $variationTypes;
     }
 }

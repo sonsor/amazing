@@ -1,13 +1,28 @@
 [
   {
-    "label": "wheelchair",
-    "class": "wheelchair",
-    "isPaid": "0",
-    "wieght": "bold",
-    "tags": [
-      "accessibility"
+    "name": "Wheel Chair",
+    "slug": "wheelchair",
+    "classes": "wheelchair",
+    "variations": [
+      {
+        "paid": true,
+        "type": "solid",
+        "price": "0.00"
+      },
+      {
+        "paid": true,
+        "type": "light",
+        "price": "0.00"
+      },
+      {
+        "paid": false,
+        "type": "regular",
+        "price": "0.00"
+      }
     ],
-    "price": "0.00"
+    "categories": [
+      "accessibility"
+    ]
   },
   {
     "label": "blind",
