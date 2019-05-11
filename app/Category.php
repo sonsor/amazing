@@ -17,7 +17,7 @@ class Category extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function icon()
+    public function icons()
     {
         return $this->belongsToMany(Icon::class);
     }

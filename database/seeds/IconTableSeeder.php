@@ -25,6 +25,9 @@ class IconTableSeeder extends Seeder
             $icon->classes = $row->classes;
             $icon->version()->associate($version);
             $icon->variation()->associate($variationTypes['icon']);
+
+            $this->handleCategories($row, $icon, $categories);
+
             $icon->save();
 
             foreach ($row->variations as $children) {
@@ -88,5 +91,14 @@ class IconTableSeeder extends Seeder
             $categories[$r->slug] = $r;
         }
         return $categories;
+    }
+
+    private function handleCategories(\StdClass $row, App\Icon $icon, array $categories)
+    {
+        $ids = [];
+        foreach ($row->categories as $category) {
+            $category = $categories[$category];
+            $icon->categories()->attach($category->id);
+        }
     }
 }
