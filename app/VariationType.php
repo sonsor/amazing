@@ -15,6 +15,6 @@ class VariationType extends Model
 
     public function icons()
     {
-        return $this->belongsToMany(Icon::class);
+        return $this->hasMany(Icon::class);
     }
 }

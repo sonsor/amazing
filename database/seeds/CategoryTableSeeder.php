@@ -11,8 +11,7 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        App\Category::truncate();
-        $categories = $this->get();
+        $categories = $this->getCategories();
 
         $this->command->info("Getting json file.");
 
@@ -30,7 +29,7 @@ class CategoryTableSeeder extends Seeder
             $category->name = $element->name;
             $category->slug = $element->slug;
             if (isset($element->parent) && isset($categories[$element->parent])) {
-                $category->parent()->associate($categories[$element->parent]);
+                $category->parent()->associate($categories[$element->parent])->save();
             }
             if (isset($categories[$element->slug])) {
                 $category->id = $categories[$element->slug];

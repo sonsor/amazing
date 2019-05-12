@@ -17,7 +17,6 @@ class CreateCategoryIconTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('category_id')->unsigned();
             $table->bigInteger('icon_id')->unsigned();
-            $table->timestamps();
         });
     }
 

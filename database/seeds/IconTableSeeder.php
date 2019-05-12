@@ -26,9 +26,12 @@ class IconTableSeeder extends Seeder
             $icon->version()->associate($version);
             $icon->variation()->associate($variationTypes['icon']);
 
+            $icon->save();
+
+
+            // handling categories
             $this->handleCategories($row, $icon, $categories);
 
-            $icon->save();
 
             foreach ($row->variations as $children) {
                 $variation = $this->get($icon->slug, $variationTypes[$children->type]->id);
@@ -43,6 +46,9 @@ class IconTableSeeder extends Seeder
                 $variation->paid = (bool) $children->paid;
 
                 $variation->save();
+
+                // handling categories
+                $this->handleCategories($row, $variation, $categories);
             }
         }
     }
@@ -97,8 +103,8 @@ class IconTableSeeder extends Seeder
     {
         $ids = [];
         foreach ($row->categories as $category) {
-            $category = $categories[$category];
-            $icon->categories()->attach($category->id);
+            $ids[] = $categories[$category]->id;
         }
+        $icon->categories()->sync($ids);
     }
 }
