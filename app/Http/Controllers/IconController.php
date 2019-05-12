@@ -53,6 +53,12 @@ class IconController extends Controller
             $icons->where('name', 'like', '%' . $search . '%');
         }
 
-        return $icons->get();
+        $count = $icons->count();
+        $icons->take(3);
+        
+        return [
+            'count' => $count,
+            'data' => $icons->get()
+        ];
     }
 }
