@@ -54,8 +54,9 @@ class IconController extends Controller
         }
 
         $count = $icons->count();
-        $icons->take(3);
-        
+        $icons->take(100);
+        $icons->skip(100 * $page);
+
         return [
             'count' => $count,
             'data' => $icons->get()
