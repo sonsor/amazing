@@ -18,4 +18,9 @@ class Version extends Model
     {
         return $this->hasMany(Icon::class, 'variation_id');
     }
+
+    public static function getLatestVersion()
+    {
+        return Version::orderBy('created_at', 'desc')->pluck('id')->first();
+    }
 }

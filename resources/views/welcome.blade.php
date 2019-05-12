@@ -2,6 +2,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
+        <meta name="_token" content="{{ csrf_token() }}">
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
@@ -95,5 +97,27 @@
                 </div>
             </div>
         </div>
+
+    <script>
+        function send(data) {
+            var http = new XMLHttpRequest();
+            var url = '/icons';
+            var params = JSON.stringify(data);
+            http.open('POST', url, true);
+            var token = document.querySelector('meta[name="_token"]').getAttribute('content');
+
+//Send the proper header information along with the request
+            http.setRequestHeader('Content-type', 'application/json');
+            http.setRequestHeader('X-CSRF-Token', token);
+
+            http.onreadystatechange = function() {//Call a function when the state changes.
+                if(http.readyState == 4 && http.status == 200) {
+                    console.log(http.responseText);
+                }
+            }
+            http.send(params);
+        }
+    </script>
+
     </body>
 </html>

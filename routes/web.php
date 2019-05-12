@@ -11,6 +11,13 @@
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::group(['prefix' => '/icons'], function() {
+    Route::get('/', 'IconController@index');
+    Route::post('/', 'IconController@search');
 });

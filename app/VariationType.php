@@ -27,4 +27,10 @@ class VariationType extends Model
     {
         return $this->hasMany(Icon::class);
     }
+
+    public static function getPublicVariations()
+    {
+        return VariationType::where('slug', '!=', 'icon')->pluck('id')->toArray();
+    }
 }
+
