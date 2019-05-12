@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
+/**
+ * Class TagTableSeeder
+ */
 class TagTableSeeder extends Seeder
 {
     /**
@@ -46,7 +49,10 @@ class TagTableSeeder extends Seeder
     }
 
 
-    private function get()
+    /**
+     * @return array
+     */
+    private function get(): array
     {
         $tags = [];
         $results =  App\Tag::select('id', 'slug')->get()->toArray();

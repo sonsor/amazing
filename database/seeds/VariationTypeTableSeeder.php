@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
+/**
+ * Class VariationTypeTableSeeder
+ */
 class VariationTypeTableSeeder extends Seeder
 {
     /**
@@ -40,7 +43,10 @@ class VariationTypeTableSeeder extends Seeder
         $this->command->info('Variation Types Created!');
     }
 
-    private function get()
+    /**
+     * @return array
+     */
+    private function get(): array
     {
         $variationTypes = [];
         $results =  App\VariationType::select('id', 'slug')->get()->toArray();

@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
+/**
+ * Class CategoryTableSeeder
+ */
 class CategoryTableSeeder extends Seeder
 {
     /**
@@ -42,7 +45,10 @@ class CategoryTableSeeder extends Seeder
     }
 
 
-    private function getCategories()
+    /**
+     * @return array
+     */
+    private function getCategories(): array
     {
         $categories = [];
         $results =  App\Category::select('id', 'slug')->get()->toArray();

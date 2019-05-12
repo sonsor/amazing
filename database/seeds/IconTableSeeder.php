@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
+/**
+ * Class IconTableSeeder
+ */
 class IconTableSeeder extends Seeder
 {
     /**
@@ -53,6 +56,9 @@ class IconTableSeeder extends Seeder
         }
     }
 
+    /**
+     * @return array|mixed|object
+     */
     private function getData()
     {
         $this->command->info("Getting json file.");
@@ -66,7 +72,12 @@ class IconTableSeeder extends Seeder
         return json_decode($data, false);
     }
 
-    private function get($slug, $variation)
+    /**
+     * @param string $slug
+     * @param int $variation
+     * @return \App\Icon|null
+     */
+    private function get(string $slug, int $variation): ?App\Icon
     {
         return App\Icon::where(array(
             'slug' => $slug,
@@ -74,12 +85,18 @@ class IconTableSeeder extends Seeder
         ))->get()->first();
     }
 
-    private function getVersion()
+    /**
+     * @return \App\Version
+     */
+    private function getVersion(): App\Version
     {
         return App\Version::orderBy('created_at', 'desc')->first();
     }
 
-    private function getVariationTypes()
+    /**
+     * @return array
+     */
+    private function getVariationTypes(): array
     {
         $variationTypes = [];
         $results = App\VariationType::all();
@@ -89,7 +106,10 @@ class IconTableSeeder extends Seeder
         return $variationTypes;
     }
 
-    private function getCategories()
+    /**
+     * @return array
+     */
+    private function getCategories(): array
     {
         $categories = [];
         $results = App\Category::all();
@@ -99,7 +119,12 @@ class IconTableSeeder extends Seeder
         return $categories;
     }
 
-    private function handleCategories(\StdClass $row, App\Icon $icon, array $categories)
+    /**
+     * @param StdClass $row
+     * @param \App\Icon $icon
+     * @param array $categories
+     */
+    private function handleCategories(\StdClass $row, App\Icon $icon, array $categories): void
     {
         $ids = [];
         foreach ($row->categories as $category) {

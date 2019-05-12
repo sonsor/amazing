@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
+/**
+ * Class VersionTableSeeder
+ */
 class VersionTableSeeder extends Seeder
 {
     /**
