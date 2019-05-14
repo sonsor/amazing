@@ -43,7 +43,7 @@ class Icon extends Model
      */
     public function tags()
     {
-        return $this->hasMany(Tag::calss);
+        return $this->belongsToMany(Tag::class);
     }
 
     /**

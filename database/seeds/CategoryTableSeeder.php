@@ -28,16 +28,15 @@ class CategoryTableSeeder extends Seeder
 
         $this->command->info("Create Records.");
         foreach ($data as $element) {
-            $category = new App\Category();
+            $category = $categories[$element->slug] ?? new App\Category();
             $category->name = $element->name;
             $category->slug = $element->slug;
             if (isset($element->parent) && isset($categories[$element->parent])) {
                 $category->parent()->associate($categories[$element->parent])->save();
             }
-            if (isset($categories[$element->slug])) {
-                $category->id = $categories[$element->slug];
-            }
+            
             $category->save();
+
             $categories[$element->slug] = $category;
         }
 
@@ -51,7 +50,7 @@ class CategoryTableSeeder extends Seeder
     private function getCategories(): array
     {
         $categories = [];
-        $results =  App\Category::select('id', 'slug')->get()->toArray();
+        $results =  App\Category::select('id', 'slug')->get();
         foreach ($results as $r) {
             $categories[$r->slug] = $r;
         }

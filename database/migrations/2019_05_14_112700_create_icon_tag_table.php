@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoryIconTable extends Migration
+class CreateIconTagTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCategoryIconTable extends Migration
      */
     public function up()
     {
-        Schema::create('category_icon', function (Blueprint $table) {
+        Schema::create('icon_tag', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('category_id')->unsigned();
-            $table->bigInteger('icon_id')->unsigned();
+            $table->bigInteger('tag_id');
+            $table->bigInteger('icon_id');
         });
     }
 
@@ -27,6 +27,6 @@ class CreateCategoryIconTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('category_icon');
+        Schema::dropIfExists('icon_tag');
     }
 }

@@ -17,6 +17,7 @@ class IconTableSeeder extends Seeder
         $version = $this->getVersion();
         $variationTypes = $this->getVariationTypes();
         $categories = $this->getCategories();
+        $tags = $this->getTags();
         $data = $this->getData();
 
         foreach ($data as $row) {
@@ -33,7 +34,12 @@ class IconTableSeeder extends Seeder
 
 
             // handling categories
-            $this->handleCategories($row, $icon, $categories);
+            $row->categories = $row->categories ?? [];
+            $this->handleCategories($row->categories, $icon, $categories);
+            
+            // handle tags
+            $row->tags = $row->tags ?? [];
+            $this->handleTags($row->tags, $icon, $tags);
 
 
             foreach ($row->variations as $children) {
@@ -51,7 +57,10 @@ class IconTableSeeder extends Seeder
                 $variation->save();
 
                 // handling categories
-                $this->handleCategories($row, $variation, $categories);
+                $this->handleCategories($row->categories, $variation, $categories);
+
+                // handling categories
+                $this->handleTags($row->tags, $variation, $tags);
             }
         }
     }
@@ -120,16 +129,43 @@ class IconTableSeeder extends Seeder
     }
 
     /**
-     * @param StdClass $row
+     * @return array
+     */
+    private function getTags(): array
+    {
+        $tags = [];
+        $results = App\Tag::all();
+        foreach ($results as $r) {
+            $tags[$r->slug] = $r;
+        }
+        return $tags;
+    }
+
+    /**
+     * @param array $slugs
      * @param \App\Icon $icon
      * @param array $categories
      */
-    private function handleCategories(\StdClass $row, App\Icon $icon, array $categories): void
+    private function handleCategories(array $slugs, App\Icon $icon, array $categories): void
     {
         $ids = [];
-        foreach ($row->categories as $category) {
-            $ids[] = $categories[$category]->id;
+        foreach ($slugs as $slug) {
+            $ids[] = $categories[$slug]->id;
         }
         $icon->categories()->sync($ids);
+    }
+
+    /**
+     * @param array $slugs
+     * @param \App\Icon $icon
+     * @param array $categories
+     */
+    private function handleTags(array $slugs, App\Icon $icon, array $tags): void
+    {
+        $ids = [];
+        foreach ($slugs as $slug) {
+            $ids[] = $tags[$slug]->id;
+        }
+        $icon->tags()->sync($ids);
     }
 }

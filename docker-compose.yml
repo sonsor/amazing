@@ -15,7 +15,7 @@ services:
       - PMA_ARBITRARY=1
     restart: always
     ports:
-      - 8080:80
+      - 8088:80
     depends_on:
       - mariadb
       - amazing
