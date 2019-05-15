@@ -51,8 +51,11 @@ class IconController extends Controller
 
         if ($search) {
             $icons->where('name', 'like', '%' . $search . '%');
+            $icons->orWhereHas('tags', function ($q) use ($search) {
+                $q->where('name', 'like', '%' . $search . '%');
+            });
         }
-
+        
         $count = $icons->count();
         $icons->take(100);
         $icons->skip(100 * $page);
