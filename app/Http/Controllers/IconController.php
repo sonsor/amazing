@@ -55,7 +55,7 @@ class IconController extends Controller
                 $q->where('name', 'like', '%' . $search . '%');
             });
         }
-        
+
         $count = $icons->count();
         $icons->take(100);
         $icons->skip(100 * $page);
