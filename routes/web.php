@@ -12,12 +12,15 @@
 */
 
 
+Route::group(['prefix' => '/'], function() {
+    Route::get('/', 'PagesController@index');
+    Route::get('/examples', 'PagesController@examples');
+    Route::get('/contact', 'PagesController@contact');
+    Route::get('/contact', 'PagesController@contact');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+    Route::group(['prefix' => '/icons'], function() {
+        Route::get('/', 'IconController@index');
+        Route::post('/', 'IconController@search');
+    });
 
-Route::group(['prefix' => '/icons'], function() {
-    Route::get('/', 'IconController@index');
-    Route::post('/', 'IconController@search');
 });
