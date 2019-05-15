@@ -19,6 +19,7 @@ class IconTableSeeder extends Seeder
         $categories = $this->getCategories();
         $tags = $this->getTags();
         $data = $this->getData();
+        $descriptions = $this->getDescriptions();
 
         foreach ($data as $row) {
             $icon = $this->get($row->slug, $variationTypes['icon']->id);
@@ -29,6 +30,10 @@ class IconTableSeeder extends Seeder
             $icon->classes = $row->classes;
             $icon->version()->associate($version);
             $icon->variation()->associate($variationTypes['icon']);
+
+            if (isset($descriptions[$row->slug])) {
+                $icon->description()->associate($descriptions[$row->slug]);
+            }
 
             $icon->save();
 
@@ -53,6 +58,11 @@ class IconTableSeeder extends Seeder
                 $variation->parent()->associate($icon);
                 $variation->price = $children->price;
                 $variation->paid = (bool) $children->paid;
+
+                $slug = $row->slug . '-' . $children->type;
+                if (isset($descriptions[$slug]) || isset($descriptions[$row->slug])) {
+                    $variation->description()->associate($descriptions[$slug] ?? $descriptions[$row->slug]);   
+                }
 
                 $variation->save();
 
@@ -167,5 +177,15 @@ class IconTableSeeder extends Seeder
             $ids[] = $tags[$slug]->id;
         }
         $icon->tags()->sync($ids);
+    }
+
+    private function getDescriptions()
+    {
+        $descriptions = [];
+        $results = App\Description::all();
+        foreach ($results as $r) {
+            $descriptions[$r->slug] = $r;
+        }
+        return $descriptions;
     }
 }

@@ -61,4 +61,9 @@ class Icon extends Model
     {
         return $this->belongsTo(Version::class);
     }
+
+    public function description()
+    {
+        return $this->belongsTo(Description::class);
+    }
 }
