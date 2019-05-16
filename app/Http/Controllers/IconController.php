@@ -11,7 +11,7 @@ class IconController extends Controller
 {
     public function index()
     {
-        return view('form');
+        return view('icons');
     }
 
     public function search(Request $request, Icon $icons)
