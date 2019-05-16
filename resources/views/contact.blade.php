@@ -21,7 +21,7 @@
             <div class="col-md-1"></div>
 
             <div class="col-md-10">
-                <form class="form contactForm">
+                <form class="form contactForm" id="contact-form">
                     <div class="col-md-6">
                         <div class="form-group">
                             <div class="contactUsername">Please Enter Your Name</div>

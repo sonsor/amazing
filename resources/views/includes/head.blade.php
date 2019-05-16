@@ -1,5 +1,7 @@
 <title>Amazing Neo - @yield('title')</title>
 @yield('meta')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
 <link href="/css/bootstrap.min.css" rel="stylesheet" />
 <link href="/css/amazing-neo.css" rel="stylesheet" />
 <link href="/css/owl.carousel.min.css" rel="stylesheet" />
