@@ -2,68 +2,81 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\IconInterface;
+use App\Repositories\VariationTypeInterface;
+use App\Repositories\VersionInterface;
 use Illuminate\Http\Request;
-use App\Icon;
-use App\VariationType;
-use App\Version;
 
+/**
+ * Class IconController
+ * @package App\Http\Controllers
+ */
 class IconController extends Controller
 {
+    /**
+     * @var IconInterface
+     */
+    protected $icons;
+
+    /**
+     * @var
+     */
+    protected $variationType;
+
+    /**
+     * @var
+     */
+    protected $version;
+
+    /**
+     * IconController constructor.
+     * @param IconInterface $icons
+     * @param VariationTypeInterface $variationType
+     * @param VersionInterface $version
+     */
+    public function __construct(
+        IconInterface $icons,
+        VariationTypeInterface $variationType,
+        VersionInterface $version
+    ) {
+        $this->icons = $icons;
+        $this->variationType = $variationType;
+        $this->version = $version;
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
         return view('icons');
     }
 
-    public function search(Request $request, Icon $icons)
+    /**
+     * @param Request $request
+     * @return array
+     */
+    public function search(Request $request)
     {
-        $icons = $icons->newQuery();
-
         $paid = $request->get('paid', null);
         $categories = $request->get('categories', []);
-        $variations = $request->get('variations', VariationType::getPublicVariations());
+        $variations = $request->get(
+            'variations',
+            $this->variationType->getPublicVariations()
+        );
         $latest = $request->get('latest', null);
         $search = $request->get('search', '');
         $page = $request->get('page', 0);
-        $version = Version::getLatestVersion();
 
-
-        $icons->select('slug', 'name', 'classes');
-        $icons->with('variation:id,slug,classes');
-        $icons->whereHas('variation', function ($q) use ($variations) {
-            $q->whereIn('id', $variations);
-        });
-
-        if ($latest !== null) {
-            $icons->whereHas('version', function ($q) use ($version) {
-                $q->where('id', $version);
-            });
-        }
-
-
-        if (count($categories) > 0) {
-            $icons->whereHas('categories', function ($q) use ($categories) {
-                $q->whereIn('category_id', $categories);
-            });
-        }
-
-        if ($paid !== null) {
-            $icons->where('paid', $paid);
-        }
-
-        if ($search) {
-            $icons->where('name', 'like', '%' . $search . '%');
-            $icons->orWhereHas('tags', function ($q) use ($search) {
-                $q->where('name', 'like', '%' . $search . '%');
-            });
-        }
-
-        $count = $icons->count();
-        $icons->take(100);
-        $icons->skip(100 * $page);
-
-        return [
-            'count' => $count,
-            'data' => $icons->get()
-        ];
+        return $this->icons->search(
+            $search,
+            $categories,
+            $variations,
+            $latest,
+            $this->version->getLatestVersionId(),
+            $paid,
+            $page,
+            100
+        );
     }
 }

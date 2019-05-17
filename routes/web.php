@@ -26,4 +26,8 @@ Route::group(['prefix' => '/'], function() {
         Route::post('/', 'IconController@search');
     });
 
+    Route::get('/categories', 'CategoryController@list');
+    Route::get('/tags', 'TagController@list');
+    Route::get('/variation-types', 'VariationTypeController@list');
+
 });
