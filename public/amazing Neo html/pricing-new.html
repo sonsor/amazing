@@ -1,0 +1,1720 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Amazing Neo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/amazing-neo.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!--<link href="css/pricing.css" rel="stylesheet" />-->
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <!-- topbar -->
+        <div class="top-bar">
+            <div class="col-md-6 hidden-sm hidden-xs">
+                <div class="alignleft">                 
+                    <!-- <a class="text-right"><i class="an an-facebook an-2x"></i></a>    -->                        
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+
+                <ul class="nav navbar-nav pull-right login">
+                    <li><a href="signup.html">Signup</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li class="dropdown r-0">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome User<b class="an-caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Profile</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>             
+        </div> <!-- /topbar -->
+        <!-- navbar -->
+        <nav class="navbar navbar-default activpro-scroll-up">
+            <div class="col-md-12">               
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo" href="index.html"><!-- <img src="images/logo.png" class="img-responsive" alt=""> --></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse" data-hover="dropdown" data-animations="zoomIn">
+                    <ul class="nav navbar-nav navbar-right ">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="icons.html">Icons</a></li>
+                        <li><a href="pricing.html">pricing</a></li>
+                        <li><a href="examples.html">Examples</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li class="s-icon"><a href="#" id="addClass" class="s-icon" data-toggle="modal" data-target="#modal-search"><i class="an an-search"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav> <!-- /navbar -->   
+        <!-- search popup -->
+        <div class="modal fade-scale" id="modal-search">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="search">
+                            <form action="#" method="post" autocomplete="off">
+                                <input type="text" placeholder="Search Icon or font name..." value="" name="term" id="term">
+                                <button class="btn btn-primary btn-xl" type="submit"><span class="glyphicon glyphicon-search"></span> Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /search popup -->
+    </header> <!-- /header -->
+
+    <!-- contant -->
+    <div class="main">
+        <!-- title -->
+        <div class="feature-section">
+            <div class="container">
+                <h1 class="h1-sm ">Amazing Pricing</h1>
+            </div>
+        </div> <!-- /title -->
+        <div class="container">  
+            <h2 class="h3">Chouse Your Plane</h2>
+        </div>
+
+
+        <style>
+            @import url("https://rsms.me/interface/interface.css");
+
+            * {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                text-rendering: optimizeLegibility;
+            }
+
+                *, *:before, *:after {
+                    box-sizing: border-box;
+                }
+
+            .pricing-contaner {
+                padding: 0;
+                margin: 0;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                background: white;
+                color: #162D3D;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .ease, .stepCount, .stepCount.active, .stepCount.done, .plan object, .plan object img, .detPurchase, .marg, .second, .viewed, .card, .card:after, .card:hover:after, .card:hover {
+                -webkit-transition: all 680ms cubic-bezier(0.19, 1, 0.22, 1);
+                transition: all 680ms cubic-bezier(0.19, 1, 0.22, 1);
+            }
+
+            .easeFast, a:hover, .stepHeader h3 span h3 a, .stepHeader h3 span h3 a:hover, .plan button, .plan button:hover, .detPrice button, .detPrice button:hover, .detSubmit button, .detSubmit button:hover, .radio input[type="radio"] + .radio-label, .radio input[type="radio"]:checked + .radio-label:before {
+                -webkit-transition: all 230ms cubic-bezier(0.19, 1, 0.22, 1);
+                transition: all 230ms cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            .plan.product:hover object {
+                opacity:1
+            } 
+            .title {
+                text-transform: uppercase;
+                font-size: 12px;
+                margin: 0 0 12px 0;
+                padding: 0;
+                color: #7A92A5;
+                letter-spacing: 2px;
+            }
+
+            a {
+                font-size: 14px;
+                color: #3899EC;
+            }
+
+                a:hover {
+                    color: #4EB7F5;
+                    cursor: pointer;
+                }
+
+            .Boss {
+                width: 60vw;
+                position: relative;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-line-pack: center;
+                align-content: center;
+            }
+
+
+
+
+
+            .userProf {
+                margin: 0 30px 0 0;
+                height: 30px;
+                width: 30px;
+                border-radius: 40em;
+                background: url("https://source.unsplash.com/random/100x100");
+                background-size: cover;
+                border: 1px solid #DFE5EB;
+            }
+
+           
+
+              
+            .bossWrapp {
+                width: 1096px;
+                height: auto;
+                margin: 0 0 120px 0;
+                position: relative;
+            }
+
+                .bossWrapp .line {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    border: 0px solid transparent;
+                    top: 0;
+                    height: 90%;
+                    width: 1px;
+                    background: #DFE5EB;
+                }
+
+            .step {
+                position: relative;
+                margin: 36px 0;
+            }
+
+            .stepHeader {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                margin: 0 0 36px 0;
+                position: relative;
+                background: white;
+            }
+
+                .stepHeader h3 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 24px;
+                    font-weight: 300;
+                    color: #162D3D;
+                }
+
+                    .stepHeader h3 p {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    .stepHeader h3 span {
+                        position: absolute;
+                        top: 0;
+                        -webkit-transform: translatey(25px);
+                        transform: translatey(25px);
+                        opacity: 0;
+                    }
+
+                        .stepHeader h3 span h3 {
+                            margin: 0;
+                        }
+
+                            .stepHeader h3 span h3 a {
+                                display: inline;
+                                font-size: 16px;
+                                text-decoration: none;
+                                color: #3899EC;
+                                font-weight: 400;
+                                margin: 0 0 0 12px;
+                            }
+
+                                .stepHeader h3 span h3 a:hover {
+                                    color: #4EB7F5;
+                                }
+
+            .stepCount {
+                position: relative;
+                z-index: 9;
+                margin: 0 24px 0 -20px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                font-size: 20px;
+                font-weight: 500;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                height: 42px;
+                width: 42px;
+                background: white;
+                border: 1px solid #DFE5EB;
+                border-radius: 30em;
+                box-shadow: 0 0 0 6px #FAFBFC;
+            }
+
+                .stepCount.active {
+                    color: white;
+                    background: #3899EC;
+                    box-shadow: 0 0 0 6px #FAFBFC;
+                }
+
+                .stepCount.done:after {
+                    position: absolute;
+                    content: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/270939/Checkmark-big.svg);
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    width: 40px;
+                    background: white;
+                    border-radius: 36em;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-line-pack: center;
+                    align-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    height: 40px;
+                    bottom: 0;
+                    margin: auto;
+                }
+
+            .stepDetails {
+                width: 100%;
+                height: 100%;
+                padding: 0 0 0 46px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: stretch;
+                -ms-flex-align: stretch;
+                align-items: stretch;
+                will-change: opacity;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+            }
+
+            .plans {
+                border-radius: 6px;
+                border: 1px solid #DFE5EB;
+                width: 586px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                background: white;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .plan {
+                border-bottom: 1px solid #DFE5EB;
+                min-height: 114px;
+                max-height: 114px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                padding: 36px;
+                -ms-flex-line-pack: center;
+                align-content: center;
+                position: relative;
+            }
+
+                .plan:last-child {
+                    border-bottom: 0px solid #DFE5EB;
+                }
+
+                .plan object {
+                    content: '';
+                    position: absolute;
+                    width: 586px;
+                    height: 115px;
+                    top: -1px;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    opacity: 0;
+                    -webkit-backface-visibility: none;
+                    backface-visibility: none;
+                    will-change: opacity;
+                    -webkit-transform: translatez();
+                    transform: translatez();
+                    left: -1px;
+                    border: 1px solid #b6c1cd;
+                    box-shadow: 0 4px 28px -4px rgba(22, 45, 61, 0.2);
+                }
+
+                .plan .badge {
+                    padding: 5px 15px 5px 15px !important;
+                    position: absolute;
+                    left: 0;
+                    top: 0px;
+                    white-space: nowrap;
+                    display: -ms-inline-flexbox;
+                    background: #ff9b00;
+                    font-size: 11px;
+                    font-weight: 500;
+                    -ms-transform: rotate(44deg);
+                    border-radius: 0px;
+                }
+
+                .plan:first-child object {
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                }
+
+                .plan:last-child object {
+                    border-bottom-left-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                }
+
+                .plan button {
+                    height: 36px;
+                    text-align: center;
+                    width: 96px;
+                    border: 1px solid #3899EC;
+                    color: #3899EC;
+                    border-radius: 30em;
+                    background: transparent;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    margin: 0px 0 0 0;
+                    padding: 2px 0 0 0;
+                    z-index: 991;
+                    outline: none;
+                }
+
+                    .plan button:hover {
+                        background: #3899EC;
+                        cursor: pointer;
+                        color: white;
+                    }
+
+                    .plan button:active {
+                        background: #308DDD;
+                    }
+
+                    .plan button.active {
+                        background: #3899EC;
+                        color: white;
+                    }
+
+                        .plan button.active:hover {
+                            background: #4EB7F5;
+                            border: 1px solid #4EB7F5;
+                        }
+
+                        .plan button.active:active {
+                            background: #308DDD;
+                            border: 1px solid #308DDD;
+                        }
+
+            .fixed {
+                position: fixed;
+                top: 178px;
+            }
+
+            .step1 .stepHeader {
+                height: auto;
+                margin: 0 0 36px 0;
+            }
+
+            .plan object img {
+                position: absolute;
+                right: -22px;
+                vertical-align: middle;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-item-align: center;
+                align-self: center;
+                width: 43px;
+                opacity: 1;
+                z-index: 9991;
+            }
+
+            .step1 {
+                margin: 0 0 36px 0;
+            }
+
+                .step1 .stepDetails {
+                    overflow: hidden;
+                    -webkit-transform-origin: center top;
+                    transform-origin: center top;
+                    will-change: height;
+                }
+
+            .step2 .stepDetails {
+                overflow: hidden;
+                height: 0;
+                -webkit-transform-origin: center top;
+                transform-origin: center top;
+                will-change: height;
+            }
+
+            .step3 .stepDetails {
+                height: 0;
+                overflow: hidden;
+                -webkit-transform-origin: center top;
+                transform-origin: center top;
+                will-change: opacity;
+            }
+
+            .planDesc h3 {
+                font-size: 20px;
+                margin: 0 0 6px 0;
+                font-weight: 500;
+                color: #162D3D;
+            }
+
+            .planDesc p {
+                margin: 0;
+                color: #20455E;
+                font-size: 14px;
+            }
+
+            .planPrice {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+                .planPrice span {
+                    color: #162D3D;
+                    font-size: 42px;
+                    margin: 0 36px 0 0;
+                    font-weight: 700;
+                }
+
+                    .planPrice span sup {
+                        font-size: 14px;
+                        top: -18px;
+                        font-weight: 400;
+                        margin: 0 3px 0 0;
+                    }
+
+                    .planPrice span sub {
+                        font-size: 14px;
+                        bottom: 0;
+                        font-weight: 400;
+                        margin: 0 0px 0 3px;
+                    }
+
+            .details {
+                position: absolute;
+                width: 426px;
+                height: auto;
+                top: 78px;
+                right: 0;
+                z-index: 999991;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                border-radius: 6px;
+                border: 1px solid #DFE5EB;
+                margin: 0 0 0 36px;
+                background: #FAFBFC;
+            }
+
+            .detHeader {
+                height: 114px;
+                width: 100%;
+                margin: 0 0 0px 0;
+                padding: 0 36px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                border-bottom: 1px solid #DFE5EB;
+                overflow: hidden;
+                position: relative;
+            }
+
+                .detHeader a {
+                    font-size: 14px;
+                    color: #3899EC;
+                }
+
+                    .detHeader a svg {
+                        margin: 0 0 0 6px;
+                        -webkit-transform-origin: center center;
+                        transform-origin: center center;
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                    }
+
+                        .detHeader a svg g {
+                            stroke: currentcolor;
+                        }
+
+                .detHeader div {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                }
+
+                .detHeader h3 {
+                    margin: 0 0 6px 0;
+                    font-size: 24px;
+                    font-weight: 300;
+                    width: 100%;
+                    /*display: inline-block;
+                    position: relative;*/
+                }
+
+                    .detHeader h3 span {
+                        position: absolute;
+                        right: -26px;
+                        top: 25px;
+                        white-space: nowrap;
+                        padding: 4px 24px;
+                        display: -ms-inline-flexbox;
+                        background: #ff9b00;
+                        font-size: 11px;
+                        font-weight: 500;
+                        color: white;
+                        -ms-transform: rotate(44deg);
+                        -webkit-transform: rotate(44deg);
+                        transform: rotate(44deg);
+                        width: 126px;
+                    }
+
+                .detHeader p {
+                    margin: 0;
+                    font-size: 14px;
+                }
+
+            .detDetails {
+                margin: 36px 0 0 0;
+                padding: 0 36px;
+            }
+
+                .detDetails .benefits {
+                    margin: 0 0 30px 0;
+                    padding: 0;
+                    list-style: none;
+                }
+
+                    .detDetails .benefits p {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 1.4;
+                    }
+
+                        .detDetails .benefits p img {
+                            display: inline-block;
+                            -ms-flex-item-align: center;
+                            -ms-grid-row-align: center;
+                            align-self: center;
+                        }
+
+                    .detDetails .benefits li {
+                        font-size: 14px;
+                        position: relative;
+                        color: #20455E;
+                        line-height: 2.25;
+                        padding: 0 0 0 21px;
+                    }
+
+                        .detDetails .benefits li p {
+                            margin: 0;
+                            line-height: 2.25;
+                        }
+
+                        .detDetails .benefits li:after {
+                            content: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/270939/check.svg);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+
+            .features {
+                margin: 0px 0 0 0;
+                padding: 0;
+                list-style: none;
+                position: relative;
+            }
+
+                .features li {
+                    font-size: 14px;
+                    position: relative;
+                    color: #20455E;
+                    line-height: 2.25;
+                    padding: 0 0 0 21px;
+                }
+
+                    .features li p {
+                        margin: 0;
+                    }
+
+                    .features li:after {
+                        content: url(images/check.svg);
+                        position: absolute;
+                        top: -3px;
+                        left: 4px;
+                    }
+
+                    .features li:hover {
+                        cursor: help;
+                    }
+
+                    .features li span {
+                        display: none;
+                        position: absolute;
+                        z-index: 99999991;
+                        left: 36px;
+                        right: 0;
+                        top: 36px;
+                        width: 366px;
+                        line-height: 18px;
+                        background: #FFFFFF;
+                        border: 1px solid #E3EBF1;
+                        box-shadow: 0 4px 18px 0 rgba(22, 45, 61, 0.1);
+                        border-radius: 2px;
+                        padding: 18px;
+                    }
+
+                    .features li:hover .tooltip {
+                        display: block;
+                    }
+
+            .save span {
+                padding: 4px 8px;
+                margin: 0 36px 0 0px;
+                border-radius: 2px;
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                letter-spacing: 1px;
+                background: #E4F6DC;
+                font-size: 13px;
+                font-weight: 500;
+                color: #45AB3D;
+            }
+
+            .detPrice {
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+                -webkit-transform-origin: center top;
+                transform-origin: center top;
+                padding: 0 36px;
+                margin: 30px 0 0 0;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                position: relative;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                border-top: 1px solid #DFE5EB;
+            }
+
+                .detPrice button {
+                    position: absolute;
+                    left: 0px;
+                    right: 0px;
+                    border: 0 solid transparent;
+                    background: #3899EC;
+                    border-radius: 30em;
+                    height: 42px;
+                    width: 352px;
+                    color: white;
+                    z-index: 9991;
+                    opacity: 0;
+                    margin: auto;
+                }
+
+                    .detPrice button:hover {
+                        background: #4EB7F5;
+                        cursor: pointer;
+                    }
+
+                .detPrice p {
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+
+                    .detPrice p small {
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
+
+            .priceSave {
+                padding: 4px 8px;
+                margin: 0 0px 0 9px;
+                border-radius: 2px;
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                letter-spacing: 1px;
+                background: #E4F6DC;
+                font-size: 13px;
+                font-weight: 500;
+                color: #45AB3D;
+            }
+
+            .detPurchase {
+                margin: 36px 0 0 0;
+                padding: 0 36px;
+                overflow: hidden;
+                -webkit-transform-origin: top center;
+                transform-origin: top center;
+            }
+
+            .marg {
+                margin: 0px 0 0 0;
+            }
+
+            .summary {
+                margin: 0px 0 0 0;
+                padding: 0;
+                list-style: none;
+            }
+
+                .summary li {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+                    font-size: 16px;
+                    position: relative;
+                    color: #20455E;
+                    line-height: 2.75;
+                    padding: 0 0 0 0;
+                }
+
+                    .summary li b {
+                        font-weight: 300;
+                    }
+
+                        .summary li b small {
+                            font-size: 14px;
+                            text-decoration: underline;
+                            font-weight: 400;
+                        }
+
+                    .summary li:last-child {
+                        margin: 6px 0 0 0;
+                        padding: 6px 0 0 0;
+                        border-top: 1px solid #DFE5EB;
+                        font-weight: 600;
+                    }
+
+                        .summary li:last-child b {
+                            font-weight: 600;
+                        }
+
+            .detSubmit {
+                -webkit-transform-origin: center top;
+                transform-origin: center top;
+                padding: 0 36px;
+                height: 114px;
+                margin: 30px 0 0 0;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                position: relative;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                border-top: 1px solid #DFE5EB;
+            }
+
+                .detSubmit button {
+                    left: 0px;
+                    outline: none;
+                    right: 0px;
+                    border: 0 solid transparent;
+                    background: #3899EC;
+                    border-radius: 30em;
+                    height: 42px;
+                    width: 352px;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    padding: 2px 0 0 0;
+                    color: white;
+                    z-index: 9991;
+                    margin: auto;
+                }
+
+                    .detSubmit button svg {
+                        margin: 0 9px 0 0;
+                        vertical-align: middle;
+                    }
+
+                    .detSubmit button:hover {
+                        background: #4EB7F5;
+                        cursor: pointer;
+                    }
+
+                    .detSubmit button:active {
+                        background: #308DDD;
+                        border: 1px solid #308DDD;
+                    }
+
+            .summaryWrapp {
+                opacity: 0;
+                display: none;
+            }
+
+            .second {
+                height: 352px;
+                opacity: 1;
+                overflow: hidden;
+                position: relative;
+                will-change: height;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                border-bottom: 1px solid #DFE5EB;
+            }
+
+                .second .features {
+                    margin: 30px 0 30px 0;
+                }
+
+            .viewed {
+                opacity: 0;
+                height: 0;
+            }
+
+            .cards {
+                border-radius: 6px;
+                width: 586px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                background: white;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .card {
+                border-bottom: 1px solid #DFE5EB;
+                border-top: 1px solid #DFE5EB;
+                border-left: 1px solid #DFE5EB;
+                border-right: 1px solid #DFE5EB;
+                min-height: 96px;
+                max-height: 96px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                padding: 36px;
+                -ms-flex-line-pack: center;
+                align-content: center;
+                position: relative;
+            }
+
+                .card:first-child {
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                }
+
+                .card:nth-child(5) {
+                    border-bottom: 1px solid #DFE5EB;
+                    border-top: 0px solid #DFE5EB;
+                    border-left: 1px solid #DFE5EB;
+                    border-right: 1px solid #DFE5EB;
+                    border-bottom-left-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                }
+
+                .card:after {
+                    content: '';
+                    position: absolute;
+                    width: 586px;
+                    height: 97px;
+                    top: -1px;
+                    left: -1px;
+                    border: 1px solid rgba(182, 193, 205, 0);
+                }
+
+                .card:first-child:after {
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                    height: 96px;
+                }
+
+                .card:nth-child(2):after {
+                    border-bottom-left-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                }
+
+                .card:hover:after {
+                    background: transparent;
+                    border: 1px solid #C1E4FE;
+                }
+
+                .card:hover {
+                    background-color: rgba(234, 247, 255, 0.5);
+                    cursor: pointer;
+                }
+
+                .card span {
+                    margin: 6px 0 0 0;
+                }
+
+                .card:before {
+                    position: absolute;
+                    content: '';
+                }
+
+            .radio {
+                z-index: 999991;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                height: 100%;
+                width: 100%;
+            }
+
+                .radio input[type="radio"] {
+                    position: absolute;
+                    opacity: 0;
+                }
+
+                    .radio input[type="radio"] + .radio-label {
+                        font-size: 16px;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-orient: horizontal;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: row;
+                        flex-direction: row;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        height: 96px;
+                        width: 100%;
+                    }
+
+                        .radio input[type="radio"] + .radio-label:hover {
+                            cursor: pointer;
+                        }
+
+                        .radio input[type="radio"] + .radio-label div {
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-orient: vertical;
+                            -webkit-box-direction: normal;
+                            -ms-flex-direction: column;
+                            flex-direction: column;
+                        }
+
+                        .radio input[type="radio"] + .radio-label h3 {
+                            margin: 0 0 6px 0;
+                            padding: 0;
+                            font-size: 16px;
+                            font-weight: 400;
+                        }
+
+                        .radio input[type="radio"] + .radio-label p {
+                            margin: 0;
+                            padding: 0;
+                            font-size: 14px;
+                            font-weight: 300;
+                        }
+
+                        .radio input[type="radio"] + .radio-label:before {
+                            content: '';
+                            background: white;
+                            border-radius: 100%;
+                            border: 1px solid #3899EC;
+                            display: -webkit-inline-box;
+                            display: -ms-inline-flexbox;
+                            display: inline-flex;
+                            width: 16px;
+                            height: 16px;
+                            position: relative;
+                            margin-right: 18px;
+                            vertical-align: top;
+                            cursor: pointer;
+                            text-align: center;
+                            -webkit-transition: all 250ms ease;
+                            transition: all 250ms ease;
+                        }
+
+                    .radio input[type="radio"]:focus + .radio-label:before {
+                        outline: none;
+                        border-color: #3197EE;
+                    }
+
+                    .radio input[type="radio"]:hover + .radio-label:before {
+                        background-color: #DAEFFE;
+                        box-shadow: inset 0 0 0 0px white;
+                    }
+
+                    .radio input[type="radio"]:active + .radio-label:before {
+                        background-color: #95c9f5;
+                        box-shadow: inset 0 0 0 2px white;
+                    }
+
+                    .radio input[type="radio"]:checked + .radio-label:before {
+                        background-color: #3899EC;
+                        box-shadow: inset 0 0 0 2px white;
+                    }
+
+                    .radio input[type="radio"]:disabled + .radio-label:before {
+                        box-shadow: inset 0 0 0 4px #f4f4f4;
+                        border-color: #b4b4b4;
+                        background: #b4b4b4;
+                    }
+
+                    .radio input[type="radio"] + .radio-label:empty:before {
+                        margin-right: 0;
+                    }
+
+            .disclaimer {
+                margin: 42px 0 0 0;
+                padding: 24px 0 0 0;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                font-size: 14px;
+                line-height: 1.4;
+                font-weight: 300;
+                border-top: 1px solid #DFE5EB;
+            }
+            
+            .green {
+                color: #5db655;
+                font-size: 12px !important;
+                background: #edf0f3;
+                width: 100%;
+                display: inline-table;
+                text-align: center;
+            }
+        </style>
+
+        <div class="pricing-contaner">
+            <div class="bossWrapp">
+                <span class="line"></span>
+                <!-- Summary -->
+                <div class="details summaryWrapp">
+                    <div class="detHeader">
+                        <div>
+                            <h3>Unlimited</h3>
+                            <p>Yearly Subscription</p>
+                        </div><a>
+                            Show Features
+                            <svg width="10px" height="7px" viewBox="0 0 10 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Sticky-Details-Flow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                    <g id="Quick-PP-/-Sticky-Details-/-Cycle-Selected" transform="translate(-1155.000000, -608.000000)" stroke-width="1.5">
+                                        <g id="Group-18" transform="translate(84.000000, 450.000000)">
+                                            <g id="Step-#2---Cycle-[collapsed]">
+                                                <g id="Group-21" transform="translate(690.000000, 102.000000)">
+                                                    <g id="Plan-Details-Header">
+                                                        <g id="Group-23" transform="translate(279.000000, 50.000000)">
+                                                            <polyline id="Shape" transform="translate(107.000000, 9.500000) rotate(-90.000000) translate(-107.000000, -9.500000) " points="109 13.5 105 9.5 109 5.5"></polyline>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- Plan List -->
+                    <div class="detDetails second viewed">
+                        <ul class="benefits">
+                            <!--<h5 class="title">plan benefits</h5>-->
+                            <li>400+ icons</li>
+                            <li>Unlimited Usage</li>
+                            <li>Form Builder App - $48 Value</li>
+                            <li>Site Booster App - $60 Value</li>
+                        </ul>
+                        <!--<ul class="features">
+                            <h5 class="title">plan features</h5>
+
+                        </ul>-->
+                    </div>
+                    <!-- Plan List - End -->
+
+
+
+
+                    <!-- Details Pruchase  -->
+                    <div class="detPurchase marg">
+                        <ul class="summary">
+                            <h5 class="title">PURCHASE SUMMARY</h5>
+                            <li>
+                                <b>Unlimited - Yearly Plan</b>
+                                <c>$ 168.00</c>
+                            </li>
+                            <li>
+                                <b><small>Enter Promo Code</small></b>
+                                <c></c>
+                            </li>
+                            <li>
+                                <b>VAT (17.00%)</b>
+                                <c>$ 28.56</c>
+                            </li>
+                            <li>
+                                <b>Total</b>
+                                <c>$ 196.56</c>
+                            </li>
+                        </ul>
+                    </div> <!-- Details Pruchase - End -->
+
+
+
+
+                    <!-- Details Plan Price -->
+                    <div class="detSubmit">
+                        <button>
+                            <svg width="11px" height="14px" viewBox="0 0 11 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Submit-Purchase-/-Default" transform="translate(-177.000000, -50.000000)" fill-rule="nonzero" fill="#FFFFFF">
+                                        <g id="Group-6">
+                                            <g id="Group-10" transform="translate(51.000000, 36.000000)">
+                                                <g id="Group-14" transform="translate(126.000000, 12.000000)">
+                                                    <g id="Lock" transform="translate(0.000000, 2.000000)">
+                                                        <path d="M9,6 L7,6 L7,4.28571429 C7,3.32142857 7.2,2.14285714 5.5,2.14285714 C4,2.14285714 4,3.21428571 4,4.28571429 L4,6 L2,6 L2,4.28571429 C2,2.14285714 3.5,0 5.5,0 C7.5,0 9,2.14285714 9,4.28571429 L9,6 Z" id="Shape"></path>
+                                                        <path d="M11,7 C11,5.9 10.1,5 9,5 L2,5 C0.9,5 0,5.9 0,7 L0,12 C0,13.1 0.9,14 2,14 L9,14 C10.1,14 11,13.1 11,12 L11,7 Z M7,8.4 L6,10.4 L6,11.9 C6,12.2 5.8,12.4 5.5,12.4 C5.2,12.4 5,12.1 5,11.9 L5,10.4 L4,8.4 L5.5,7.3 L7,8.4 Z" id="Shape"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>Submit
+                        </button>
+                    </div> <!-- Details Plan Price - End -->
+
+                </div> <!-- Summary - End -->
+
+
+
+
+
+                <!-- Details -->
+                <div class="details stuff">
+                    <div class="detHeader">
+                        <div>
+                            <h3 class="detTitle">Premium<span>Most Popular</span></h3>
+                            <p class="tag">$199.95 Best for Companies</p>
+                        </div>
+                    </div>
+
+
+                    <!-- package features & benefits -->
+                    <div class="detDetails">
+                        <!--<ul class="benefits"> <h5 class="title">plan benefits</h5> </ul>-->
+                        <ul class="features"> <h5 class="title">plan features</h5>  </ul> 
+                    </div> <!-- / package features & benefits end -->
+                    
+                        
+                    <!-- Details Plan Price -->
+                    <div class="detPrice">
+                        <div>
+                            <h5 class="title">plan price</h5>
+                            <p>$168.00 <small>($14.00 × 12 months)</small><span class="priceSave">Save 45%</span></p>
+                        </div>
+                    </div>  <!-- / Details Plan Price end -->
+
+                </div>
+                <!-- Details - End -->
+                
+                
+                <!-- Step #1 -->
+                <div class="step step1">
+                    <!-- Step Header -->
+                    <div class="stepHeader stepHeader1">
+                        <div class="stepCount active">1</div>
+                        <h3>
+                            <p>Select a Plan</p> <span><h5 class="title">premium plan</h5>
+                            <h3>Premium<a class="step1Change" href="javascript:void(0)">Change</a></h3> </span>
+                        </h3>
+                    </div>
+                    <!-- Step Header - End -->
+                    <div class="stepDetails">
+                        <div class="plans">
+                            <!-- free Plan -->
+                            <div class="plan product" id="free-plan">
+                                <object><img src="images/arrow-right.png" alt="" /></object>
+                                
+                                <div class="planDesc">
+                                    <h3>FREE</h3>
+                                    <p>Try before you buy!</p>
+                                </div>
+                                <div class="planPrice">
+                                    <span><sup>$</sup>0.00</span>
+                                    <button class="">Select</button>
+                                </div>
+                            </div> <!-- free Plan -->
+
+                            <!-- standard Plan -->
+                            <div class="plan product" id="standard">
+                                <object><img src="images/arrow-right.png" alt="" /></object>
+                                <div class="planDesc">
+                                    <h3>standard</h3>
+                                    <p>Single Project</p>
+                                </div>
+                                <div class="planPrice">
+                                    <span><sup>$</sup>39.99</span>
+                                    <button class="">Select</button>
+                                </div>
+                            </div> <!-- standard Plan -->
+
+                            <!-- advance Plan -->
+                            <div class="plan product" id="advance">
+                                <object><img src="images/arrow-right.png" alt="" /></object>
+                                <div class="planDesc">
+                                    <h3>advance</h3>
+                                    <p>Best for small businesses</p>
+                                </div>
+                                <div class="planPrice">
+                                    <span><sup>$</sup>$199.95</span>
+                                    <button class="">Select</button>
+                                </div>
+                            </div> <!-- advance Plan -->
+
+
+
+                            <!-- Most Popular Plan -->
+                            <div class="plan product" id="Unlimited">
+                                <span class="badge">Most Popular</span>
+                                <object><img src="images/arrow-right.png" alt="" /></object>
+                                <div class="planDesc">
+                                    <h3>premium</h3>
+                                    <p>For Large Companies</p>
+                                </div>
+                                <div class="planPrice">
+                                    <span><sup>$</sup>299.99<sub>/Yearly</sub></span>
+                                    <!--<div class="pricing-head-price-small">                                  
+                                        <div class="pricing-head-price-popup">
+                                            <span class="pricing-head-price-popup-button">?</span>
+                                            <span class="pricing-head-price-popup-text">Promotional pricing available until May 28th, 2016</span>
+                                        </div>
+                                    </div>
+                                    <style>
+                                        .pricing-head-price-popup {
+                                            position: absolute;
+                                            bottom: 2px;
+                                            right: -24px;
+                                        }
+                                        .pricing-head-price-popup-button {
+                                            display: block;
+                                            height: 18px;
+                                            width: 18px;
+                                            font-size: 11px !important;
+                                            border-radius: 100%;
+                                            background-color: #cacaca;
+                                            color: #fdfdfd;
+                                            line-height: 18px;
+                                            cursor: default;
+                                            transition: .2s;
+                                        }
+
+                                            .pricing-head-price-popup-button:hover {
+                                                background-color: #ffc62b;
+                                            }
+
+                                        .pricing-head-price-popup-text {
+                                            position: absolute;
+                                            width: 240px;
+                                            top: 18px;
+                                            left: -157px;
+                                            padding: 15px 30px;
+                                            border: 1px solid #A3FFD3;
+                                            box-sizing: border-box;
+                                            border-radius: 2px;
+                                            font-size: 11px !important;
+                                            background-color: #CDF9EC;
+                                            color: #000;
+                                            text-align: left;
+                                            opacity: 0;
+                                            transition: .2s;
+                                            visibility: hidden;
+                                        }
+
+                                        .type-primem .pricing-head-price-popup-text {
+                                            left: -163px;
+                                        }
+
+                                        .pricing-head-price-popup-button:hover + .pricing-head-price-popup-text {
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    </style>-->
+                                    <button class="step1CTA active">Select</button>
+                                </div>
+                            </div> <!-- Single Plan -->
+
+
+                           
+
+
+                        </div>
+
+                    </div>
+                </div> <!-- Step #1 - End -->
+
+
+
+                <!-- Step #2 -->
+                <div class="step step2">
+                    <!-- Step Header -->
+                    <div class="stepHeader stepHeader2">
+                        <div class="stepCount">2</div>
+                        <h3>
+                            <p>Select a Subscription Period</p> 
+                            <span><h5 class="title">Subscription Period</h5>
+                            <h3>Yearly<a class="step2Change" href="javascript:void(0)">Change</a></h3> 
+                            </span>
+                        </h3>
+                    </div>
+                   
+                    
+                     <!-- Step Header - End -->
+                    <div class="stepDetails">
+                        <div class="plans">
+                            <!-- Single Plan -->
+                            <!--<div class="plan cycle" id="4Years">
+                                <object><img src="images/arrow-right.png" alt="" /></object>
+                                <div class="planDesc">
+                                    <h3>3 Years</h3>
+                                    <p>$10.00 × 36 months</p>
+                                </div>
+                                <div class="planPrice save">
+                                    <span>Save 55%</span>
+                                    <button class="">Select</button>
+                                </div>
+                            </div>-->
+                            <!-- Single Plan -->
+                            
+                            <!-- 3 Years Plan -->
+                            <div class="plan cycle" id="3Years">
+                                <object><img src="images/arrow-right.png" alt="" /></object>
+                                <div class="planDesc">
+                                    <h3>3 Years</h3>
+                                    <p>$14.99 × 36 months</p>
+                                </div>
+                                <div class="planPrice save">
+                                    <span>Save 7% + incloude your logo</span>
+                                    <button class="">Select</button>
+                                </div>
+                            </div>
+                            <!-- /3 Years Plan end -->
+
+                            <!-- 2 Years Plan -->
+                            <div class="plan cycle" id="2Year">
+                                <object><img src="images/arrow-right.png" alt="" /></object>
+                                <div class="planDesc">
+                                    <h3>2 Years</h3>
+                                    <p>$14.99 /months</p>
+                                </div>
+                                <div class="planPrice save">
+                                    <span>Save 7%</span>
+                                    <button class="step2CTA active">Select</button>
+                                </div>
+                            </div> <!-- /2 Years Plan -->
+
+                            <!-- 1 Years Plan -->
+                            <div class="plan cycle" id="1Year">
+                                <object><img src="images/arrow-right.png" alt="" /></object>
+                                <div class="planDesc">
+                                    <h3>1 Year</h3>
+                                    <p>$16.66 /month</p>
+                                </div>
+                                <div class="planPrice">
+                                    <button class="">Select</button>
+                                </div>
+                            </div> <!-- / 1 Years Plan end -->
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Step #2 - End -->
+             
+                
+                
+                   <!-- Step #2 -->
+                <div class="step step3">
+                    <!-- Step Header -->
+                    <div class="stepHeader stepHeader3">
+                        <div class="stepCount">3</div>
+                        <h3>Complete Your Purchase</h3>
+                    </div>
+                    <!-- Step Header - End -->
+                    <div class="stepDetails">
+                        <div class="cards">
+                            <div class="card">
+                                <div class="radio">
+                                    <input id="radio-1" name="radio" type="radio" checked>
+                                    <label for="radio-1" class="radio-label"><div><h3>My Saved Card</h3><p>XXXX-8357</p></div></label>
+                                </div>
+                                <span>
+                                    <svg width="54px" height="36px" viewBox="0 0 54 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+                                        <desc>Created with Sketch.</desc>
+                                        <defs>
+                                            <rect id="path-1" x="0" y="0" width="54" height="36" rx="4"></rect>
+                                        </defs>
+                                        <g id="Sketches-&amp;-Archive" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Quick-PP-/-Sticky-Details-/-Cycle-Selected" transform="translate(-648.000000, -582.000000)">
+                                                <g id="Group-18" transform="translate(84.000000, 450.000000)">
+                                                    <g id="Step-#2---Cycle-[collapsed]">
+                                                        <g id="Saved-card-" transform="translate(66.000000, 102.000000)">
+                                                            <g id="Payment-Frame" transform="translate(36.000000, 27.000000)">
+                                                                <g id="Group-9">
+                                                                    <g id="payment-cc-icon-mastercard" transform="translate(462.000000, 3.000000)">
+                                                                        <g id="Layer_1">
+                                                                            <g id="Rectangle-6">
+                                                                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                                                                <rect stroke="#E3EBF1" stroke-width="1" x="0.5" y="0.5" width="53" height="35" rx="4"></rect>
+                                                                            </g>
+                                                                            <g id="Group" transform="translate(12.000000, 6.000000)" fill-rule="nonzero">
+                                                                                <path d="M5.71325978,23.7661172 L5.71325978,22.2008405 C5.71325978,21.6008178 5.34802856,21.2094986 4.7219179,21.2094986 C4.40886257,21.2094986 4.0697193,21.3138504 3.8349278,21.6529937 C3.65231219,21.3660263 3.39143275,21.2094986 3.00011358,21.2094986 C2.73923414,21.2094986 2.4783547,21.2877625 2.26965115,21.5747299 L2.26965115,21.2616745 L1.72180432,21.2616745 L1.72180432,23.7661172 L2.26965115,23.7661172 L2.26965115,22.3834561 C2.26965115,21.9399611 2.50444264,21.7312575 2.86967386,21.7312575 C3.23490508,21.7312575 3.41752069,21.966049 3.41752069,22.3834561 L3.41752069,23.7661172 L3.96536752,23.7661172 L3.96536752,22.3834561 C3.96536752,21.9399611 4.22624696,21.7312575 4.56539024,21.7312575 C4.93062146,21.7312575 5.11323707,21.966049 5.11323707,22.3834561 L5.11323707,23.7661172 L5.71325978,23.7661172 Z M13.8266104,21.2616745 L12.9396203,21.2616745 L12.9396203,20.5051242 L12.3917735,20.5051242 L12.3917735,21.2616745 L11.8961026,21.2616745 L11.8961026,21.7573455 L12.3917735,21.7573455 L12.3917735,22.905215 C12.3917735,23.4791498 12.626565,23.8182931 13.2526757,23.8182931 C13.4874672,23.8182931 13.7483466,23.7400292 13.9309622,23.6356775 L13.7744345,23.1660945 C13.6179069,23.2704462 13.4352913,23.2965342 13.3048515,23.2965342 C13.0439721,23.2965342 12.9396203,23.1400065 12.9396203,22.8791271 L12.9396203,21.7573455 L13.8266104,21.7573455 L13.8266104,21.2616745 Z M18.4702645,21.2094986 C18.1572092,21.2094986 17.9485056,21.3660263 17.8180659,21.5747299 L17.8180659,21.2616745 L17.2702191,21.2616745 L17.2702191,23.7661172 L17.8180659,23.7661172 L17.8180659,22.3573682 C17.8180659,21.9399611 18.0006815,21.7051696 18.3398248,21.7051696 C18.4441766,21.7051696 18.5746163,21.7312575 18.6789681,21.7573455 L18.8354957,21.2355866 C18.7311439,21.2094986 18.5746163,21.2094986 18.4702645,21.2094986 L18.4702645,21.2094986 Z M11.4526075,21.4703781 C11.1917281,21.2877625 10.8264968,21.2094986 10.4351777,21.2094986 C9.80906703,21.2094986 9.39165992,21.522554 9.39165992,22.0182249 C9.39165992,22.435632 9.70471525,22.6704235 10.2525621,22.7486874 L10.5134415,22.7747753 C10.8004089,22.8269512 10.9569366,22.905215 10.9569366,23.0356547 C10.9569366,23.2182704 10.748233,23.3487101 10.3830018,23.3487101 C10.0177706,23.3487101 9.73080319,23.2182704 9.54818758,23.0878306 L9.28730814,23.5052377 C9.57427553,23.7139413 9.96559469,23.8182931 10.3569139,23.8182931 C11.0873763,23.8182931 11.5047834,23.4791498 11.5047834,23.0095668 C11.5047834,22.5660717 11.1656401,22.3312802 10.6438812,22.2530164 L10.3830018,22.2269285 C10.1482103,22.2008405 9.96559469,22.1486646 9.96559469,21.992137 C9.96559469,21.8095214 10.1482103,21.7051696 10.4351777,21.7051696 C10.748233,21.7051696 11.0612883,21.8356093 11.217816,21.9138731 L11.4526075,21.4703781 Z M26.0096804,21.2094986 C25.6966251,21.2094986 25.4879215,21.3660263 25.3574818,21.5747299 L25.3574818,21.2616745 L24.8096349,21.2616745 L24.8096349,23.7661172 L25.3574818,23.7661172 L25.3574818,22.3573682 C25.3574818,21.9399611 25.5400974,21.7051696 25.8792407,21.7051696 C25.9835924,21.7051696 26.1140322,21.7312575 26.2183839,21.7573455 L26.3749116,21.2355866 C26.2705598,21.2094986 26.1140322,21.2094986 26.0096804,21.2094986 L26.0096804,21.2094986 Z M19.0181113,22.5138959 C19.0181113,23.2704462 19.5398702,23.8182931 20.3485965,23.8182931 C20.7138277,23.8182931 20.9747071,23.7400292 21.2355866,23.5313257 L20.9747071,23.0878306 C20.7660036,23.2443583 20.5573,23.3226221 20.3225085,23.3226221 C19.8790135,23.3226221 19.5659582,23.0095668 19.5659582,22.5138959 C19.5659582,22.0443129 19.8790135,21.7312575 20.3225085,21.7051696 C20.5573,21.7051696 20.7660036,21.7834334 20.9747071,21.9399611 L21.2355866,21.496466 C20.9747071,21.2877625 20.7138277,21.2094986 20.3485965,21.2094986 C19.5398702,21.2094986 19.0181113,21.7573455 19.0181113,22.5138959 L19.0181113,22.5138959 Z M24.0791725,22.5138959 L24.0791725,21.2616745 L23.5313257,21.2616745 L23.5313257,21.5747299 C23.3487101,21.3399384 23.0878306,21.2094986 22.7486874,21.2094986 C22.0443129,21.2094986 21.496466,21.7573455 21.496466,22.5138959 C21.496466,23.2704462 22.0443129,23.8182931 22.7486874,23.8182931 C23.1139186,23.8182931 23.374798,23.6878533 23.5313257,23.4530618 L23.5313257,23.7661172 L24.0791725,23.7661172 L24.0791725,22.5138959 Z M22.0704008,22.5138959 C22.0704008,22.0704008 22.3573682,21.7051696 22.8269512,21.7051696 C23.2704462,21.7051696 23.5835016,22.0443129 23.5835016,22.5138959 C23.5835016,22.9573909 23.2704462,23.3226221 22.8269512,23.3226221 C22.3573682,23.2965342 22.0704008,22.9573909 22.0704008,22.5138959 L22.0704008,22.5138959 Z M15.5223268,21.2094986 C14.7918644,21.2094986 14.2701055,21.7312575 14.2701055,22.5138959 C14.2701055,23.2965342 14.7918644,23.8182931 15.5484148,23.8182931 C15.913646,23.8182931 16.2788772,23.7139413 16.5658446,23.4791498 L16.3049651,23.0878306 C16.0962616,23.2443583 15.8353821,23.3487101 15.5745027,23.3487101 C15.2353594,23.3487101 14.8962161,23.1921824 14.8179523,22.7486874 L16.6701964,22.7486874 L16.6701964,22.5399838 C16.6962843,21.7312575 16.2267013,21.2094986 15.5223268,21.2094986 L15.5223268,21.2094986 Z M15.5223268,21.6790816 C15.8614701,21.6790816 16.0962616,21.8877852 16.1484375,22.2791044 L14.8440403,22.2791044 C14.8962161,21.9399611 15.1310076,21.6790816 15.5223268,21.6790816 L15.5223268,21.6790816 Z M29.1141457,22.5138959 L29.1141457,20.2703327 L28.5662989,20.2703327 L28.5662989,21.5747299 C28.3836833,21.3399384 28.1228039,21.2094986 27.7836606,21.2094986 C27.0792861,21.2094986 26.5314393,21.7573455 26.5314393,22.5138959 C26.5314393,23.2704462 27.0792861,23.8182931 27.7836606,23.8182931 C28.1488918,23.8182931 28.4097713,23.6878533 28.5662989,23.4530618 L28.5662989,23.7661172 L29.1141457,23.7661172 L29.1141457,22.5138959 Z M27.105374,22.5138959 C27.105374,22.0704008 27.3923414,21.7051696 27.8619244,21.7051696 C28.3054195,21.7051696 28.6184748,22.0443129 28.6184748,22.5138959 C28.6184748,22.9573909 28.3054195,23.3226221 27.8619244,23.3226221 C27.3923414,23.2965342 27.105374,22.9573909 27.105374,22.5138959 L27.105374,22.5138959 Z M8.7916372,22.5138959 L8.7916372,21.2616745 L8.24379037,21.2616745 L8.24379037,21.5747299 C8.06117476,21.3399384 7.80029532,21.2094986 7.46115205,21.2094986 C6.75677755,21.2094986 6.20893072,21.7573455 6.20893072,22.5138959 C6.20893072,23.2704462 6.75677755,23.8182931 7.46115205,23.8182931 C7.82638326,23.8182931 8.08726271,23.6878533 8.24379037,23.4530618 L8.24379037,23.7661172 L8.7916372,23.7661172 L8.7916372,22.5138959 Z M6.75677755,22.5138959 C6.75677755,22.0704008 7.04374494,21.7051696 7.51332793,21.7051696 C7.95682299,21.7051696 8.26987832,22.0443129 8.26987832,22.5138959 C8.26987832,22.9573909 7.95682299,23.3226221 7.51332793,23.3226221 C7.04374494,23.2965342 6.75677755,22.9573909 6.75677755,22.5138959 Z" id="XMLID_1775_" fill="#000000"></path>
+                                                                                <g id="XMLID_328_">
+                                                                                    <rect id="Rectangle-path" fill="#FF5F00" x="11.2699919" y="2.2435632" width="8.21770243" height="14.7657764"></rect>
+                                                                                    <path d="M11.7917508,9.62645142 C11.7917508,6.62633783 13.2004998,3.96536752 15.3657991,2.2435632 C13.7744345,0.99134188 11.7656628,0.234791498 9.57427553,0.234791498 C4.38277463,0.234791498 0.18261561,4.43495052 0.18261561,9.62645142 C0.18261561,14.8179523 4.38277463,19.0181113 9.57427553,19.0181113 C11.7656628,19.0181113 13.7744345,18.261561 15.3657991,17.0093396 C13.2004998,15.3136233 11.7917508,12.626565 11.7917508,9.62645142 Z" id="XMLID_330_" fill="#EB001B"></path>
+                                                                                    <path d="M30.5750706,9.62645142 C30.5750706,14.8179523 26.3749116,19.0181113 21.1834107,19.0181113 C18.9920234,19.0181113 16.9832517,18.261561 15.3918871,17.0093396 C17.5832744,15.2875353 18.9659354,12.626565 18.9659354,9.62645142 C18.9659354,6.62633783 17.5571865,3.96536752 15.3918871,2.2435632 C16.9832517,0.99134188 18.9920234,0.234791498 21.1834107,0.234791498 C26.3749116,0.234791498 30.5750706,4.46103846 30.5750706,9.62645142 Z" id="Shape" fill="#F79E1B"></path>
+                                                                                </g>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </div>
+                            
+
+                            <div class="card">
+                                <div class="radio">
+                                    <input id="radio-3" name="radio" type="radio">
+                                    <label for="radio-3" class="radio-label">authorize.net <br />
+                                    
+                                       
+                                    <!--American Express 
+                                    Diners Club
+                                    Discover
+                                    JCB
+                                    Mastercard
+                                    Visa--></label>
+                                </div>
+                                <span><img src="images/authorize-.png" />
+
+                                </span>
+                            </div>
+                            <div class="card">
+                                <div class="radio">
+                                    <input id="radio-4" name="radio" type="radio">
+                                    <label for="radio-4" class="radio-label">Payoneer</label>
+                                </div>
+                                <span>
+                                    <img src="images/payoneer.png" />
+                                </span>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="radio">
+                                    <input id="radio-5" name="radio" type="radio">
+                                    <label for="radio-5" class="radio-label">skrill</label>
+                                </div>
+                                <span>
+                                    <img src="images/skrill.png" />
+                                </span>
+                            </div>
+                            <div class="card">
+                                <div class="radio">
+                                    <input id="radio-2" name="radio" type="radio">
+                                    <label for="radio-2" class="radio-label">Paypall</label>
+                                </div>
+                                <span>
+                                    <img src="images/paypall.png" />
+                                </span>
+                            </div>
+
+                            <div class="disclaimer">To ensure uninterrupted service, your subscription will automatically renew for US$ 119.34 on a monthly basis. You may disable auto-renewal or cancel your subscription at any time through your account.<br><br>By clicking Submit Purchase, you agree to our Terms of Use and Privacy Policy</div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <!-- Step #2 - End -->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- scroll to up -->
+    <div class="scroll-to-up">
+        <div class="scrollup" style="display: block;">
+            <i class="an an-arrow-up"></i>
+        </div>
+    </div> <!-- / scroll to up -->
+
+     <!-- footer -->
+    <footer class="footer_area">
+        <div class="container">
+            <div class="row m0 foter_row">
+                <div class="col-sm-2 footer_logo p0"><img src="images/logo-w.png" alt=""></div>
+                <div class="col-md-8 col-sm-10 footer_menu">
+                    <ul class="nav navbar_menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="icons.html">Icons</a></li>
+                        <li><a href="examples.html">Examples</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="license.html">License</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-12 footer_menu">
+                    <ul class="nav navbar_menu socail_nav">
+                        <li><a href="#"><i class="an an-facebook"></i></a></li>
+                        <li><a href="#"><i class="an an-twitter"></i></a></li>
+                        <li><a href="#"><i class="an an-google-plus"></i></a></li>
+                        <li><a href="#"><i class="an an-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy_right_area row m0">
+                <ul class="privacy">
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+                </ul>
+                <p>All Right Reserved © 2019 <a class="blue" href="index.html">Amazing Neo &trade;</a></p>
+            </div>
+        </div>
+    </footer> <!-- /footer -->
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/custom.js"></script>
+    <!-- pricing js -->
+    <script src="js/anime.min.js"></script>
+    <script src="js/pricing-new.js"></script>
+    <!-- / pricing js end -->
+    
+</body>
+</html>

@@ -28,10 +28,12 @@
 </footer> <!-- /footer -->
 
 <script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/knockout.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/jquery.slimscroll.min.js"></script>
 <script src="js/custom.js" type="text/javascript"></script>
+<script src="js/icons.js" type="text/javascript"></script>
 
 </body>
 </html>

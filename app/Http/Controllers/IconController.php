@@ -27,6 +27,7 @@ class IconController extends Controller
         $version = Version::getLatestVersion();
 
 
+        $icons->select('slug', 'name', 'classes');
         $icons->with('variation:id,slug,classes');
         $icons->whereHas('variation', function ($q) use ($variations) {
             $q->whereIn('id', $variations);
