@@ -1,6 +1,7 @@
 <?php
 namespace App\Repositories;
 
+use \App\Icon as Model;
 
 /**
  * Class Icon
@@ -9,15 +10,15 @@ namespace App\Repositories;
 class Icon implements IconInterface
 {
     /**
-     * @var \App\Icon
+     * @var Model
      */
     protected $model;
 
     /**
-     * Icon constructor.
-     * @param \App\Icon $model
+     * Option constructor.
+     * @param Model $mode
      */
-    public function __construct(\App\Icon $model)
+    public function __construct(Model $model)
     {
         $this->model = $model;
     }

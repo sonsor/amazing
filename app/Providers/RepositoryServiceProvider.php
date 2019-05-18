@@ -44,9 +44,16 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Repositories\Version'
         );
 
+        // for contact us form details
         $this->app->bind(
             'App\Repositories\ContactInterface',
             'App\Repositories\Contact'
+        );
+
+        // for options
+        $this->app->bind(
+            'App\Repositories\OptionInterface',
+            'App\Repositories\Option'
         );
     }
 

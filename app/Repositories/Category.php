@@ -2,6 +2,7 @@
 namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Collection;
+use \App\Category as Model;
 
 /**
  * Class Category
@@ -10,15 +11,15 @@ use Illuminate\Database\Eloquent\Collection;
 class Category implements CategoryInterface
 {
     /**
-     * @var \App\Category
+     * @var Model
      */
     protected $model;
 
     /**
-     * Category constructor.
-     * @param \App\Category $model
+     * Option constructor.
+     * @param Model $mode
      */
-    public function __construct(\App\Category $model)
+    public function __construct(Model $model)
     {
         $this->model = $model;
     }

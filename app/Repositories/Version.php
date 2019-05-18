@@ -1,6 +1,8 @@
 <?php
 namespace App\Repositories;
 
+use \App\Version as Model;
+
 /**
  * Class Version
  * @package App\Repositories
@@ -8,15 +10,15 @@ namespace App\Repositories;
 class Version implements VersionInterface
 {
     /**
-     * @var \App\Version
+     * @var Model
      */
     protected $model;
 
     /**
-     * Version constructor.
-     * @param \App\Version $model
+     * Option constructor.
+     * @param Model $mode
      */
-    public function __construct(\App\Version $model)
+    public function __construct(Model $model)
     {
         $this->model = $model;
     }

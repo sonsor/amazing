@@ -2,7 +2,7 @@
 namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Collection;
-
+use \App\Tag as Model;
 /**
  * Class Tag
  * @package App\Repositories
@@ -10,15 +10,15 @@ use Illuminate\Database\Eloquent\Collection;
 class Tag implements TagInterface
 {
     /**
-     * @var \App\Tag
+     * @var Model
      */
     protected $model;
 
     /**
-     * Tag constructor.
-     * @param \App\Tag $model
+     * Option constructor.
+     * @param Model $mode
      */
-    public function __construct(\App\Tag $model)
+    public function __construct(Model $model)
     {
         $this->model = $model;
     }

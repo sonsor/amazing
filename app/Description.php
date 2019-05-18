@@ -10,6 +10,9 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Description extends Model
 {
+    /**
+     * @var bool
+     */
     public $timestamps = false;
 
     /**

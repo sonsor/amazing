@@ -2,6 +2,7 @@
 namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Collection;
+use \App\VariationType as Model;
 
 /**
  * Class VariationType
@@ -10,15 +11,15 @@ use Illuminate\Database\Eloquent\Collection;
 class VariationType implements VariationTypeInterface
 {
     /**
-     * @var \App\VariationType
+     * @var Model
      */
     protected $model;
 
     /**
-     * VariationType constructor.
-     * @param \App\VariationType $model
+     * Option constructor.
+     * @param Model $mode
      */
-    public function __construct(\App\VariationType $model)
+    public function __construct(Model $model)
     {
         $this->model = $model;
     }

@@ -1,16 +1,36 @@
 <?php
 namespace App\Repositories;
 
+use \App\Contact as Model;
 
+/**
+ * Class Contact
+ * @package App\Repositories
+ */
 class Contact implements ContactInterface
 {
+    /**
+     * @var Model
+     */
     protected $model;
 
-    public function __construct(\App\Contact $model)
+    /**
+     * Option constructor.
+     * @param Model $mode
+     */
+    public function __construct(Model $model)
     {
         $this->model = $model;
     }
 
+    /**
+     * @param string $firstName
+     * @param string $surname
+     * @param string $email
+     * @param string|null $phoneNo
+     * @param string $message
+     * @return int
+     */
     public function save(
         string $firstName,
         string $surname,
