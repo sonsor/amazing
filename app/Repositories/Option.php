@@ -39,9 +39,9 @@ class Option implements OptionInterface
      */
     public function set(string $key, string $value): void
     {
-        $option = $this->model->where('key', $key)->get()->first(): new $this->model;
+        $option = $this->model->where('key', $key)->get()->first() ?? new $this->model();
         $option->key = $key;
         $option->value = $value;
-        $option-.save();
+        $option->save();
     }
 }
