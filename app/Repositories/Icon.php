@@ -69,9 +69,11 @@ class Icon implements IconInterface
         }
 
         if (!empty($search)) {
-            $icons->where('name', 'like', '%' . $search . '%');
-            $icons->orWhereHas('tags', function ($q) use ($search) {
-                $q->where('name', 'like', '%' . $search . '%');
+            $icons->where(function($query) use ($search) {
+                $query->where('name', 'like', '%' . $search . '%');
+                $query->orWhereHas('tags', function ($q) use ($search) {
+                    $q->where('name', 'like', '%' . $search . '%');
+                });
             });
         }
 
@@ -79,7 +81,7 @@ class Icon implements IconInterface
         $icons->take($limit);
         $icons->skip($limit * $page);
 
-        \Log::debug($icons->toSql());
+        //\Log::debug($icons->toSql());
 
         return [
             'count' => $count,

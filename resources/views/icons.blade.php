@@ -43,12 +43,11 @@
             <div class="icons-widget">
                 <!-- search -->
                 <div class="search-box">
-                    <input type="text" name="search-icon" placeholder="SEARCH ICON" id="search">
+                    <input data-bind="textInput: filters.search, attr: {type: 'text', placeholder: 'SEARCH ICON', id: 'search'}" />
                 </div> <!-- / search -->
 
                 <!-- icons -->
                 <div id="icons-list" data-bind="foreach: icons">
-                    <!-- ko if: console.log("$data : ", $data) --><!-- /ko -->
                     <div class="icon-box">
                         <a data-bind="attr: {href: $data.url}">
                             <i class="an an-circle-check-fancy" data-bind="attr: {class: $data.classes}"></i>

@@ -24,6 +24,10 @@
         this.pullVariations();
         this.pullIcons();
 
+        this.filters.search.extend({
+            rateLimit: 500
+        });
+
         this.filters.categories.subscribe(function(value) {
             self.reset();
             self.pullIcons();
