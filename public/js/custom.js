@@ -43,6 +43,52 @@
         }, 350)
     })
 
+    // validate contact form and submit that
+    $("body").on('submit', '#contact-form', function(e) {
+        e.preventDefault();
+        var isValid = true;
+        var filter = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        $(this).find('.form-group > div').addClass('hidden');
+
+        if (!$('#contactFirstName').val()) {
+            console.log(1);
+            isValid = false;
+            $('.contactFirstName').removeClass('hidden');
+        }
+        if (!$('#contactLastName').val()) {
+            console.log(2);
+            isValid = false;
+            $('.contactLastName').removeClass('hidden');
+        }
+        if (!filter.test($('#contactEmail').val())) {
+            console.log(3);
+            isValid = false;
+            $('.contactEmail').removeClass('hidden');
+        }
+        if (!$('#contactDescription').val()) {
+            console.log(4);
+            isValid = false;
+            $('.contactDescription').removeClass('hidden');
+        }
+
+        console.log(isValid)
+        if (isValid) {
+            $.ajax({
+                url: $(this).attr('action'),
+                method: $(this).attr('method'),
+                data: $(this).serialize()
+            }).done(function() {
+                $(e.target).find('#contact-message').removeClass('hidden');
+                $(e.target).trigger('reset');
+                setTimeout(function() {
+                      $(e.target).find('#contact-message').addClass('hidden');
+                }, 3000)
+            })
+        }
+
+    })
+
 
     // color picker
     jQuery('#sky, #grey, #black, #green, #red').click(function () {

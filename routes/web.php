@@ -15,11 +15,13 @@
 Route::group(['prefix' => '/'], function() {
     Route::get('/', 'PagesController@index');
     Route::get('/examples', 'PagesController@examples');
-    Route::get('/contact', 'PagesController@contact');
     Route::get('/faq', 'PagesController@faq');
     Route::get('/license', 'PagesController@license');
     Route::get('/privacy-policy', 'PagesController@privacyPolicy');
     Route::get('/terms-and-conditions', 'PagesController@tac');
+
+    Route::get('/contact', 'ContactController@index');
+    Route::put('/contact', 'ContactController@save')->name('contact.save');
 
     Route::group(['prefix' => '/icons'], function() {
         Route::get('/', 'IconController@index');

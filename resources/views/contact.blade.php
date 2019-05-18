@@ -21,53 +21,63 @@
             <div class="col-md-1"></div>
 
             <div class="col-md-10">
-                <form class="form contactForm" id="contact-form">
+                <?php echo Form::open(array(
+                    'route' => 'contact.save',
+                    'method' => 'put',
+                    'class' => 'form contactForm',
+                    'id' => 'contact-form'
+                )); ?>
+                <?php echo Form::token(); ?>
+
+                    <div class="alert alert-success hidden" id="contact-message">
+                        Submit Successfully.
+                    </div>
+
                     <div class="col-md-6">
                         <div class="form-group">
-                            <div class="contactUsername">Please Enter Your Name</div>
-                            <label for="contactUsername">Your Name</label>
-                            <input type="text" id="contactUsername" name="contactUsername" required="required">
+                            <div class="contactFirstName hidden">Please Enter Your First Name</div>
+                            <label for="contactFirstName">First Name *</label>
+                            <input type="text" id="contactFirstName" name="firstName" />
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <div class="contactEmail"> Please Enter Your Email Address</div>
-                            <label for="contactEmail">Email Address</label>
-                            <input type="text" id="contactEmail" name="contactEmail" required="required">
+                            <div class="contactLastName hidden">Please Enter Your Last Name</div>
+                            <label for="contactLastName">First Name *</label>
+                            <input type="text" id="contactLastName" name="surname" />
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <div class="ContactBusinessName"> Please Enter Business Name</div>
-                            <label for="ContactBusinessName">Mobile / Lanline</label>
-                            <input type="text" id="ContactBusinessName" name="ContactBusinessName" required="required">
+                            <div class="contactEmail hidden"> Please Enter Your Email Address</div>
+                            <label for="contactEmail">Email Address *</label>
+                            <input type="text" id="contactEmail" name="email" />
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <div class="contactPhoneNumber"> Please Enter Mobile / Lanline Number</div>
                             <label for="contactPhoneNumber">Mobile / Lanline</label>
-                            <input type="Number" id="contactPhoneNumber" name="contactPhoneNumber" required="required">
+                            <input type="text" id="contactPhoneNumber" name="phoneNo" />
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <div class="contactDescription"> Please Enter your query</div>
-                            <label for="contactDescription">Description</label>
-                            <textarea type="text" id="contactDescription" cols="20" rows="5" name="contactDescription" required="required"></textarea>
+                            <div class="contactDescription hidden"> Please Enter your query</div>
+                            <label for="contactDescription">Messaeg *</label>
+                            <textarea id="contactDescription" cols="20" rows="5" name="message"></textarea>
                         </div>
                     </div>
 
                     <div class="col-md-offset-4">
                         <div class="form-group col-md-6">
-                            <button class="btn btn-default btn-center">Submit</button>
+                            <button type="submits" class="btn btn-default btn-center">Submit</button>
                         </div>
                     </div>
-                </form>
+                <?php echo Form::close(); ?>
             </div>
         </div>
     </div>

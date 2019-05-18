@@ -43,6 +43,11 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Repositories\VersionInterface',
             'App\Repositories\Version'
         );
+
+        $this->app->bind(
+            'App\Repositories\ContactInterface',
+            'App\Repositories\Contact'
+        );
     }
 
 }
