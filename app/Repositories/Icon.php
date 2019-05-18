@@ -9,7 +9,21 @@ namespace App\Repositories;
 class Icon implements IconInterface
 {
     /**
-     * @param string $search
+     * @var \App\Icon
+     */
+    protected $model;
+
+    /**
+     * Icon constructor.
+     * @param \App\Icon $model
+     */
+    public function __construct(\App\Icon $model)
+    {
+        $this->model = $model;
+    }
+
+    /**
+     * @param string|null $search
      * @param array $categories
      * @param array $variations
      * @param bool|null $latest
@@ -20,7 +34,7 @@ class Icon implements IconInterface
      * @return array
      */
     public function search(
-        string $search,
+        ?string $search,
         array $categories,
         array $variations,
         ?bool $latest,
@@ -30,7 +44,8 @@ class Icon implements IconInterface
         int $limit
     ): array {
 
-        $icons->select('slug', 'name', 'classes');
+        $icons = $this->model->newQuery();
+        $icons->select('slug', 'name', 'classes', 'variation_id');
         $icons->with('variation:id,slug,classes');
         $icons->whereHas('variation', function ($q) use ($variations) {
             $q->whereIn('id', $variations);
@@ -53,7 +68,7 @@ class Icon implements IconInterface
             $icons->where('paid', $paid);
         }
 
-        if ($search) {
+        if (!empty($search)) {
             $icons->where('name', 'like', '%' . $search . '%');
             $icons->orWhereHas('tags', function ($q) use ($search) {
                 $q->where('name', 'like', '%' . $search . '%');
@@ -63,6 +78,8 @@ class Icon implements IconInterface
         $count = $icons->count();
         $icons->take($limit);
         $icons->skip($limit * $page);
+
+        \Log::debug($icons->toSql());
 
         return [
             'count' => $count,

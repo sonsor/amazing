@@ -9,7 +9,7 @@ namespace App\Repositories;
 interface IconInterface
 {
     /**
-     * @param string $search
+     * @param string|null $search
      * @param array $categories
      * @param array $variations
      * @param bool|null $latest
@@ -20,7 +20,7 @@ interface IconInterface
      * @return array
      */
     public function search(
-        string $search,
+        ?string $search,
         array $categories,
         array $variations,
         ?bool $latest,
@@ -28,5 +28,5 @@ interface IconInterface
         ?bool $paid,
         int $page,
         int $limit
-    ): array
+    ): array;
 }

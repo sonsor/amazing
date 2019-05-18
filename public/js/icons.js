@@ -6,6 +6,7 @@
         this.variations = ko.observableArray([]);
         this.icons = ko.observableArray([]);
         this.count = ko.observable(0);
+        this.loading = ko.observable(true);
         this.filters = {
             search: ko.observable(''),
             categories: ko.observableArray([]),
@@ -17,44 +18,97 @@
     }
 
     Amazing.prototype.init = function() {
+        var self = this;
+        this.setup();
         this.pullCategories();
         this.pullVariations();
         this.pullIcons();
+
+        this.filters.categories.subscribe(function(value) {
+            self.reset();
+            self.pullIcons();
+        });
+
+        this.filters.variations.subscribe(function(value) {
+            self.reset();
+            self.pullIcons();
+        });
+
+        this.filters.search.subscribe(function(value) {
+            self.reset();
+            self.pullIcons();
+        });
+    };
+
+    Amazing.prototype.reset = function() {
+      this.filters.page(0);
+      this.icons([]);
+    };
+
+    Amazing.prototype.setup = function() {
+        var csrf = $('meta[name="csrf-token"]').attr('content');
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': csrf
+            }
+        });
     };
 
     Amazing.prototype.pullCategories = function() {
-        this.categories.push({
-            name: 'Computers',
-            slug: 'computers',
-            value: '1'
-        }, {
-            name: 'Auto',
-            slug: 'auto',
-            value: '2'
+        var self = this;
+        $.getJSON('/categories', function(data) {
+            self.categories(data);
         });
     };
 
     Amazing.prototype.pullVariations = function() {
-        this.variations.push({
-            name: 'Solid',
-            slug: 'solid',
-            value: '1'
-        }, {
-            name: 'Brands',
-            slug: 'brands',
-            value: '2'
+        var self = this;
+        $.getJSON('/variation-types', function(data) {
+            self.variations(data);
         });
     };
 
     Amazing.prototype.pullIcons = function() {
+        var self = this;
         var filters = ko.toJSON(this.filters);
-        this.send('/icons', filters, function(response) {
-            
-        });
+        $.ajax({
+            method: 'POST',
+            url: '/icons',
+            contentType: 'application/json',
+            data: filters,
+            beforeSend: function() {
+              self.loading(true);
+            },
+            complete: function(xhr, status) {
+              self.loading(false);
+            },
+            success: self.success.bind(self),
+            error: function(xhr, statua, error) {
+                if (self.filters.page() > 0) {
+                    self.filters.page(self.filters.page() - 1);
+                }
+                console.log(error);
+            }
+        })
     };
 
     Amazing.prototype.more = function() {
-        this.page(this.page() + 1);
+        this.filters.page(this.filters.page() + 1);
+        this.pullIcons();
+    };
+
+    Amazing.prototype.success = function(data) {
+        this.count(data.count);
+        data = data.data || [];
+        var icons = this.icons();
+        for (var i in data) {
+            icons.push({
+                name: data[i].name,
+                url: data[i].variation.type === 'brand' ? data[i].slug: data[i].slug + '/' + data[i].variation.slug,
+                classes: data[i].variation.classes + ' an-' + data[i].classes,
+            });
+        }
+        this.icons(icons);
     };
 
     ko.applyBindings(new Amazing());

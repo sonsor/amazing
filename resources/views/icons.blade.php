@@ -48,10 +48,11 @@
 
                 <!-- icons -->
                 <div id="icons-list" data-bind="foreach: icons">
+                    <!-- ko if: console.log("$data : ", $data) --><!-- /ko -->
                     <div class="icon-box">
-                        <a data-bind="attr: {href: url}">
-                            <i class="an an-circle-check-fancy" data-bind="attr: {classs: class}"></i>
-                            <span data-bind="text: name"></span>
+                        <a data-bind="attr: {href: $data.url}">
+                            <i class="an an-circle-check-fancy" data-bind="attr: {class: $data.classes}"></i>
+                            <span data-bind="text: $data.name"></span>
                         </a>
                     </div>
                 </div> <!-- / icons -->

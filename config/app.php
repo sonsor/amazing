@@ -230,4 +230,12 @@ return [
 
     ],
 
+    'madmin' => array(
+        'cache' => array(
+            'manager' => array(
+                'name' => 'None'
+            ),
+        ),
+    ),
+
 ];

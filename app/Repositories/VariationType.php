@@ -36,6 +36,6 @@ class VariationType implements VariationTypeInterface
      */
     public function getPublicVariationTypes(): Collection
     {
-        return $this->model->select('id', 'name', 'slug')->whereIn('slug', ['solid', 'brand'])->get();
+        return $this->model->select('id as value', 'name', 'slug')->whereIn('slug', ['solid', 'brand'])->get();
     }
 }

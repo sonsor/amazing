@@ -8,15 +8,15 @@ namespace App\Repositories;
 class Version implements VersionInterface
 {
     /**
-     * @var App\Version
+     * @var \App\Version
      */
     protected $model;
 
     /**
      * Version constructor.
-     * @param App\Version $model
+     * @param \App\Version $model
      */
-    public function __construct(App\Version $model)
+    public function __construct(\App\Version $model)
     {
         $this->model = $model;
     }

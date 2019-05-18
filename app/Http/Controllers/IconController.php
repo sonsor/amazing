@@ -60,13 +60,14 @@ class IconController extends Controller
     {
         $paid = $request->get('paid', null);
         $categories = $request->get('categories', []);
-        $variations = $request->get(
-            'variations',
-            $this->variationType->getPublicVariations()
-        );
+        $variations = $request->get('variations', []);
         $latest = $request->get('latest', null);
         $search = $request->get('search', '');
         $page = $request->get('page', 0);
+
+        if (count($variations) === 0) {
+            $variations = $this->variationType->getPublicVariationTypesId();
+        }
 
         return $this->icons->search(
             $search,

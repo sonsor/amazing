@@ -28,6 +28,6 @@ class Category implements CategoryInterface
      */
     public function all(): Collection
     {
-        return $this->model->all('id', 'name', 'slug');
+        return $this->model->all('id as value', 'name', 'slug');
     }
 }
