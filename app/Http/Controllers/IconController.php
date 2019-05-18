@@ -53,6 +53,14 @@ class IconController extends Controller
     }
 
     /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function show()
+    {
+        return view('icon-detail');
+    }
+
+    /**
      * @param Request $request
      * @return array
      */

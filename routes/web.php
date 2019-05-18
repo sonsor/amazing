@@ -23,6 +23,7 @@ Route::group(['prefix' => '/'], function() {
 
     Route::group(['prefix' => '/icons'], function() {
         Route::get('/', 'IconController@index');
+        Route::get('/{slug}/{variation}', 'IconController@show');
         Route::post('/', 'IconController@search');
     });
 

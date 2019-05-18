@@ -108,7 +108,7 @@
         for (var i in data) {
             icons.push({
                 name: data[i].name,
-                url: data[i].variation.type === 'brand' ? data[i].slug: data[i].slug + '/' + data[i].variation.slug,
+                url: '/icons/' + data[i].slug + '/' + data[i].variation.slug,
                 classes: data[i].variation.classes + ' an-' + data[i].classes,
             });
         }
