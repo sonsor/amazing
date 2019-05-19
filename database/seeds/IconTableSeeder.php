@@ -28,6 +28,8 @@ class IconTableSeeder extends Seeder
             $icon->name = $row->name;
             $icon->slug = $row->slug;
             $icon->classes = $row->classes;
+            $icon->ios = $row->ios;
+            $icon->android = $row->android;
             $icon->version()->associate($versions[$row->version]);
             $icon->variation()->associate($variationTypes['icon']);
 
@@ -53,6 +55,8 @@ class IconTableSeeder extends Seeder
                 $variation->name = $row->name;
                 $variation->slug = $row->slug;
                 $variation->classes = $row->classes;
+                $variation->ios = $children->ios;
+                $variation->android = $children->android;
                 $variation->version()->associate($versions[$children->version]);
                 $variation->variation()->associate($variationTypes[$children->type]);
                 $variation->parent()->associate($icon);

@@ -19,6 +19,8 @@ class CreateIconsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('classes');
+            $table->string('ios');
+            $table->string('android');
             $table->bigInteger('description_id')->nullable();
             $table->bigInteger('version_id')->unsigned();
             $table->decimal('price', 8, 2)->default(0);
