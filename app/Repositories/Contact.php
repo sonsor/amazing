@@ -2,6 +2,7 @@
 namespace App\Repositories;
 
 use \App\Contact as Model;
+use App\Events\ContactCreated;
 
 /**
  * Class Contact
@@ -46,6 +47,9 @@ class Contact implements ContactInterface
         $contact->phoneNo = $phoneNo;
         $contact->message = $message;
         $contact->save();
+
+        event(new ContactCreated($contact));
+
         return $contact->id;
     }
 

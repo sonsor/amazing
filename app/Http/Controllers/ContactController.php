@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\ContactCreated;
 use App\Repositories\ContactInterface;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
@@ -43,10 +44,6 @@ class ContactController extends Controller
             $this->contact,
             'save'
         ), $data);
-
-        if ($id) {
-            Mail::send(new ContactMessagePost($this->contact->get($id)));
-        }
 
         return $id ? ['message' => 'success']: ['message' => 'error'];
     }
