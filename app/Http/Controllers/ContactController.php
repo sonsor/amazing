@@ -46,7 +46,6 @@ class ContactController extends Controller
 
         if ($id) {
             Mail::send(new ContactMessagePost($this->contact->get($id)));
-
         }
 
         return $id ? ['message' => 'success']: ['message' => 'error'];

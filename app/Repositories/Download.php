@@ -36,4 +36,22 @@ class Download implements DownloadInterface
         $download->save();
         return $download->id;
     }
+
+    /**
+     *
+     */
+    public function increase()
+    {
+        $downloads = \Option::get('total.downloads') || 0;
+        \Option::set('total.downloads', ++$downloads);
+    }
+
+    /**
+     * @param int $id
+     * @return Model
+     */
+    public function get(int $id): Model
+    {
+        return $this->model->find($id)->first();
+    }
 }

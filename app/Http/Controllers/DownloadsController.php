@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\DownloadFont;
 use App\Repositories\DownloadInterface;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
 /**
@@ -44,9 +46,18 @@ class DownloadsController extends Controller
             'email'
         ]);
 
-        return call_user_func_array(array(
+        $this->download->increase();
+
+        $id = call_user_func_array(array(
             $this->download,
             'save'
-        ), $data) ? ['message' => 'success']: ['messge' => 'error'];
+        ), $data);
+
+
+        if ($id) {
+            Mail::send(new DownloadFont($this->download->get($id)));
+        }
+
+        return $id ? ['message' => 'success']: ['message' => 'error'];
     }
 }
