@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Downloads;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -18,7 +19,7 @@ class DownloadFont extends Mailable implements ShouldQueue
      *
      * @return void
      */
-    public function __construct(Download $download)
+    public function __construct(Downloads $download)
     {
         $this->download = $download;
     }

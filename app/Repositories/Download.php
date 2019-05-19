@@ -38,12 +38,12 @@ class Download implements DownloadInterface
     }
 
     /**
-     *
+     * this function is use to increase count of downloads
      */
-    public function increase()
+    public function increase(): void
     {
         $downloads = \Option::get('total.downloads');
-        $downloads = empt($downloads) ? 0: $downloads;
+        $downloads = empty($downloads) ? 0: $downloads;
         \Option::set('total.downloads', ++$downloads);
     }
 
