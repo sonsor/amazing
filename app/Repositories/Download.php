@@ -2,6 +2,7 @@
 namespace App\Repositories;
 
 use \App\Downloads as Model;
+use App\Events\DownloadFormSubmitted;
 
 /**
  * Class Download
@@ -34,6 +35,9 @@ class Download implements DownloadInterface
         $download->name = $name;
         $download->email = $email;
         $download->save();
+
+        event(new DownloadFormSubmitted($download));
+
         return $download->id;
     }
 

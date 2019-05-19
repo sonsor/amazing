@@ -20,6 +20,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         'App\Events\ContactCreated' => [
             'App\Listeners\SendContactMail'
+        ],
+        'App\Events\DownloadFormSubmitted' => [
+            'App\Listeners\SendDownloadLink'
         ]
     ];
 
