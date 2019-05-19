@@ -23,6 +23,9 @@ Route::group(['prefix' => '/'], function() {
     Route::get('/contact', 'ContactController@index');
     Route::put('/contact', 'ContactController@save')->name('contact.save');
 
+    Route::get('/downloads', 'DownloadsController@index');
+    Route::put('/downloads', 'DownloadsController@save')->name('download.save');
+
     Route::group(['prefix' => '/icons'], function() {
         Route::get('/', 'IconController@index');
         Route::get('/{slug}/{variation}', 'IconController@show');

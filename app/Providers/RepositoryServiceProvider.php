@@ -55,6 +55,12 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Repositories\OptionInterface',
             'App\Repositories\Option'
         );
+
+        // for options
+        $this->app->bind(
+            'App\Repositories\DownloadInterface',
+            'App\Repositories\Download'
+        );
     }
 
 }

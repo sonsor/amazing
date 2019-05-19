@@ -74,7 +74,7 @@
 
                     <div class="col-md-offset-4">
                         <div class="form-group col-md-6">
-                            <button type="submits" class="btn btn-default btn-center">Submit</button>
+                            <button type="submit" class="btn btn-default btn-center">Submit</button>
                         </div>
                     </div>
                 <?php echo Form::close(); ?>

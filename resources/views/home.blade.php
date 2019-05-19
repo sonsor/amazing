@@ -11,7 +11,7 @@
                 <h1 class="an-4x fw700 white">AMAZING NEO!</h1>
                 <h3 an class="an-2x  white">ONE OF THE BEST ICONIC FONTS </h3>
                 <h4 class="blue"> First Choice of thousands of professionals!</h4>
-                <a class="btn btn-default btn-radius" href="download.html" ><strong>Download free here</strong> </a>
+                <a class="btn btn-default btn-radius" href="{{ url('/downloads')  }}" ><strong>Download free here</strong> </a>
                 <p>Version 1.0 ( Beta )</p>
             </div>
         </div>

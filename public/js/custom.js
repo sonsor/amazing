@@ -51,28 +51,23 @@
 
         $(this).find('.form-group > div').addClass('hidden');
 
-        if (!$('#contactFirstName').val()) {
-            console.log(1);
+        if (!$(this).find('#contactFirstName').val()) {
             isValid = false;
-            $('.contactFirstName').removeClass('hidden');
+            $(this).find('.contactFirstName').removeClass('hidden');
         }
-        if (!$('#contactLastName').val()) {
-            console.log(2);
+        if (!$(this).find('#contactLastName').val()) {
             isValid = false;
-            $('.contactLastName').removeClass('hidden');
+            $(this).find('.contactLastName').removeClass('hidden');
         }
-        if (!filter.test($('#contactEmail').val())) {
-            console.log(3);
+        if (!filter.test($(this).find('#contactEmail').val())) {
             isValid = false;
-            $('.contactEmail').removeClass('hidden');
+            $(this).find('.contactEmail').removeClass('hidden');
         }
-        if (!$('#contactDescription').val()) {
-            console.log(4);
+        if (!$(this).find('#contactDescription').val()) {
             isValid = false;
-            $('.contactDescription').removeClass('hidden');
+            $(this).find('.contactDescription').removeClass('hidden');
         }
 
-        console.log(isValid)
         if (isValid) {
             $.ajax({
                 url: $(this).attr('action'),
@@ -86,8 +81,45 @@
                 }, 3000)
             })
         }
+    });
 
-    })
+    // validate download form and submit that
+    $("body").on('submit', '#download-form', function(e) {
+        e.preventDefault();
+        var isValid = true;
+        var filter = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        $(this).find('.form-group > div').addClass('hidden');
+
+        if (!$(this).find('#userName').val()) {
+            isValid = false;
+            $(this).find('.userName').removeClass('hidden');
+        }
+
+        if (!filter.test($(this).find('#email').val())) {
+            isValid = false;
+            $(this).find('.email').removeClass('hidden');
+        }
+
+        if (!$(this).find('#tac').is(':checked')) {
+            isValid = false;
+            $(this).find('.tac').removeClass('hidden');
+        }
+
+        if (isValid) {
+            $.ajax({
+                url: $(this).attr('action'),
+                method: $(this).attr('method'),
+                data: $(this).serialize()
+            }).done(function() {
+                $(e.target).find('#download-message').removeClass('hidden');
+                $(e.target).trigger('reset');
+                setTimeout(function() {
+                    $(e.target).find('#download-message').addClass('hidden');
+                }, 3000)
+            })
+        }
+    });
 
 
     // color picker
