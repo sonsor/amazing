@@ -44,9 +44,14 @@ class Contact implements ContactInterface
         $contact->surname = $surname;
         $contact->email = $email;
         $contact->phoneNo = $phoneNo;
-        $contact->surname = $message;
+        $contact->message = $message;
         $contact->save();
         return $contact->id;
+    }
+
+    public function get($id)
+    {
+        return $this->model->find($id)->first();
     }
 
 

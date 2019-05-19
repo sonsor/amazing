@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\ContactInterface;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use App\Mail\ContactMessagePost;
 
 /**
  * Class ContactController
@@ -11,6 +13,7 @@ use Illuminate\Http\Request;
  */
 class ContactController extends Controller
 {
+
     protected $contact;
 
     public function __construct(ContactInterface $contact)
@@ -36,9 +39,16 @@ class ContactController extends Controller
             'message'
         ]);
 
-        return call_user_func_array(array(
+        $id = call_user_func_array(array(
             $this->contact,
             'save'
-        ), $data) ? ['message' => 'success']: ['message' => 'error'];
+        ), $data);
+
+        if ($id) {
+            Mail::send(new ContactMessagePost($this->contact->get($id)));
+
+        }
+
+        return $id ? ['message' => 'success']: ['message' => 'error'];
     }
 }
