@@ -49,7 +49,11 @@ class Contact implements ContactInterface
         return $contact->id;
     }
 
-    public function get($id)
+    /**
+     * @param int $id
+     * @return Model
+     */
+    public function get(int $id): Model 
     {
         return $this->model->find($id)->first();
     }

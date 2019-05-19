@@ -23,4 +23,10 @@ interface ContactInterface
         ?string $phoneNo,
         string $message
     ): int;
+
+    /**
+     * @param int $id
+     * @return \App\Contact
+     */
+    public function get(int $id): \App\Contact;
 }
