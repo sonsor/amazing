@@ -30,10 +30,7 @@ class ContactMessagePost extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        \Log::debug($this->contact);
-        $email = \Option::get('admin_email');
-        $email = $this->contact->email;
-        $this->to($email, 'Admin User');
+        $this->to(\Option::get('admin.email'), 'Admin User');
         $this->from($this->contact->email, $this->contact->firstName);
         $this->subject('Contact Us Message');
         return $this->view('emails.contact');

@@ -29,7 +29,7 @@ class Option implements OptionInterface
      */
     public function get(string $key): string
     {
-        $value = $this->model->select('value')->where('key', $key)->get();
+        $value = $this->model->select('value')->where('key', $key)->pluck('value');
         return (string) $value->first();
     }
 
