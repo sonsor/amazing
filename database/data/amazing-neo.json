@@ -3,21 +3,25 @@
     "name": "Wheel Chair",
     "slug": "wheelchair",
     "classes": "wheelchair",
+    "version": "1.0.1",
     "variations": [
       {
         "paid": true,
         "type": "solid",
-        "price": "0.00"
+        "price": "0.00",
+        "version": "1.0.1"
       },
       {
         "paid": true,
         "type": "light",
-        "price": "0.00"
+        "price": "0.00",
+        "version": "1.0.0"
       },
       {
         "paid": false,
         "type": "regular",
-        "price": "0.00"
+        "price": "0.00",
+        "version": "1.0.0"
       }
     ],
     "categories": [
@@ -32,21 +36,25 @@
     "name": "Blind",
     "slug": "blind",
     "classes": "blind",
+    "version": "1.0.0",
     "variations": [
       {
         "paid": true,
         "type": "solid",
-        "price": "0.00"
+        "price": "0.00",
+        "version": "1.0.0"
       },
       {
         "paid": true,
         "type": "light",
-        "price": "0.00"
+        "price": "0.00",
+        "version": "1.0.0"
       },
       {
         "paid": false,
         "type": "regular",
-        "price": "0.00"
+        "price": "0.00",
+        "version": "1.0.0"
       }
     ],
     "categories": [
@@ -61,21 +69,25 @@
     "name": "Yuan",
     "slug": "yuan",
     "classes": "yuan",
+    "version": "1.0.0",
     "variations": [
       {
         "paid": true,
         "type": "solid",
-        "price": "0.00"
+        "price": "0.00",
+        "version": "1.0.0"
       },
       {
         "paid": true,
         "type": "light",
-        "price": "0.00"
+        "price": "0.00",
+        "version": "1.0.0"
       },
       {
         "paid": false,
         "type": "regular",
-        "price": "0.00"
+        "price": "0.00",
+        "version": "1.0.0"
       }
     ],
     "categories": [

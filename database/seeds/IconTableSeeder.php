@@ -14,7 +14,7 @@ class IconTableSeeder extends Seeder
      */
     public function run()
     {
-        $version = $this->getVersion();
+        $versions = $this->getVersions();
         $variationTypes = $this->getVariationTypes();
         $categories = $this->getCategories();
         $tags = $this->getTags();
@@ -28,7 +28,7 @@ class IconTableSeeder extends Seeder
             $icon->name = $row->name;
             $icon->slug = $row->slug;
             $icon->classes = $row->classes;
-            $icon->version()->associate($version);
+            $icon->version()->associate($versions[$row->version]);
             $icon->variation()->associate($variationTypes['icon']);
 
             if (isset($descriptions[$row->slug])) {
@@ -53,7 +53,7 @@ class IconTableSeeder extends Seeder
                 $variation->name = $row->name;
                 $variation->slug = $row->slug;
                 $variation->classes = $row->classes;
-                $variation->version()->associate($version);
+                $variation->version()->associate($versions[$children->version]);
                 $variation->variation()->associate($variationTypes[$children->type]);
                 $variation->parent()->associate($icon);
                 $variation->price = $children->price;
@@ -102,14 +102,6 @@ class IconTableSeeder extends Seeder
             'slug' => $slug,
             'variation_id' => $variation
         ))->get()->first();
-    }
-
-    /**
-     * @return \App\Version
-     */
-    private function getVersion(): App\Version
-    {
-        return App\Version::orderBy('created_at', 'desc')->first();
     }
 
     /**
@@ -187,5 +179,18 @@ class IconTableSeeder extends Seeder
             $descriptions[$r->slug] = $r;
         }
         return $descriptions;
+    }
+
+    /**
+     * @return array
+     */
+    private function getVersions(): array
+    {
+        $versions = [];
+        $results =  App\Version::all();
+        foreach ($results as $r) {
+            $versions[$r->version] = $r;
+        }
+        return $versions;
     }
 }

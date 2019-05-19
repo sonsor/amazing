@@ -14,28 +14,45 @@ class VersionTableSeeder extends Seeder
      */
     public function run()
     {
-        // How many genres you need, defaulting to 10
-        $continue = (int) $this->command->ask('Would you like to create new version', 'no');
+        // getting already saved tags slugs
+        $versions = $this->get();
 
-        if ($continue === 'no') {
+        $this->command->info("Getting json file.");
+
+        // getting josn file data
+        $data = File::get(database_path('data/versions.json'));
+
+        $this->command->info("decoding json data.");
+        // decoding the json
+        $data = json_decode($data, false);
+
+        if ($data === null) {
+            $this->command->error("File is empty or invalid data.");
             return;
         }
 
-        do {
-            $versionNo = (string) $this->command->ask('Please enter the version number', '');
-        } while ($versionNo === '');
+        $this->command->info("Create Records.");
+        foreach ($data as $element) {
+            $version = $versions[$element->version] ?? new App\Version();
+            $version->version = $element->version;
+            $version->changeLog = $element->changeLog;
+            $version->save();
+            $versions[$element->version] = $element;
+        }
 
-        $changeLog = (string) $this->command->ask('Please enter change log', '');
+        $this->command->info('Tags Created!');
+    }
 
-
-        $this->command->info("Creating version " . $versionNo);
-
-
-        $version = new App\Version();
-        $version->version = $versionNo;
-        $version->changeLog = $changeLog;
-        $version->save();
-
-        $this->command->info('Version Created!');
+    /**
+     * @return array
+     */
+    private function get(): array
+    {
+        $versions = [];
+        $results =  App\Version::all();
+        foreach ($results as $r) {
+            $versions[$r->version] = $r;
+        }
+        return $versions;
     }
 }
