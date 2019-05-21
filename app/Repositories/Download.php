@@ -34,6 +34,8 @@ class Download implements DownloadInterface
         $download = new $this->model;
         $download->name = $name;
         $download->email = $email;
+        $download->token = bcrypt($name . $email);
+        $download->expire = (new \DateTime('tomorrow'))->getTimestamp();
         $download->save();
 
         event(new DownloadFormSubmitted($download));

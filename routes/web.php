@@ -13,21 +13,22 @@
 
 
 Route::group(['prefix' => '/'], function() {
-    Route::get('/', 'PagesController@index');
-    Route::get('/examples', 'PagesController@examples');
-    Route::get('/faq', 'PagesController@faq');
-    Route::get('/license', 'PagesController@license');
-    Route::get('/privacy-policy', 'PagesController@privacyPolicy');
-    Route::get('/terms-and-conditions', 'PagesController@tac');
 
-    Route::get('/contact', 'ContactController@index');
-    Route::put('/contact', 'ContactController@save')->name('contact.save');
+    Route::group(['prefix' => 'contact'], function() {
+        Route::get('/', 'ContactController@index');
+        Route::put('/', 'ContactController@save')->name('contact.save');
+        Route::get('/thank-you', 'ContactController@thankyou')->name('contact.thankyou');
+    });
 
-    Route::get('/downloads', 'DownloadsController@index');
-    Route::put('/downloads', 'DownloadsController@save')->name('download.save');
+    Route::group(['prefix' => 'downloads'], function() {
+        Route::get('/', 'DownloadsController@index');
+        Route::put('/', 'DownloadsController@save')->name('download.save');
+        Route::get('/success', 'DownloadsController@success')->name('download.success');
+        Route::get('/thank-you', 'DownloadsController@thankyou')->name('download.thankyou');
+    });
 
     Route::group(['prefix' => '/icons'], function() {
-        Route::get('/', 'IconController@index');
+        Route::get('/', 'IconController@index')->name('icon.seach');
         Route::get('/{slug}/{variation}', 'IconController@show');
         Route::post('/', 'IconController@search');
     });
@@ -35,5 +36,12 @@ Route::group(['prefix' => '/'], function() {
     Route::get('/categories', 'CategoryController@list');
     Route::get('/tags', 'TagController@list');
     Route::get('/variation-types', 'VariationTypeController@list');
+
+    Route::get('/', 'PagesController@index');
+    Route::get('/examples', 'PagesController@examples');
+    Route::get('/faq', 'PagesController@faq');
+    Route::get('/license', 'PagesController@license');
+    Route::get('/privacy-policy', 'PagesController@privacyPolicy');
+    Route::get('/terms-and-conditions', 'PagesController@tac');
 
 });

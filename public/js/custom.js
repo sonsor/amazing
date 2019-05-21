@@ -42,7 +42,7 @@
             $('.' + $(this).attr('id')).css('opacity', '1')
         }, 350)
     })
-
+/*
     // validate contact form and submit that
     $("body").on('submit', '#contact-form', function(e) {
         e.preventDefault();
@@ -85,7 +85,7 @@
 
     // validate download form and submit that
     $("body").on('submit', '#download-form', function(e) {
-        e.preventDefault();
+        //e.preventDefault();
         var isValid = true;
         var filter = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
@@ -106,7 +106,10 @@
             $(this).find('.tac').removeClass('hidden');
         }
 
+        
+
         if (isValid) {
+            return true;
             $.ajax({
                 url: $(this).attr('action'),
                 method: $(this).attr('method'),
@@ -119,7 +122,8 @@
                 }, 3000)
             })
         }
-    });
+        return false;
+    });*/
 
 
     // color picker
@@ -244,49 +248,3 @@
     }
 
 }(jQuery))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,14 +1,14 @@
 (function(ko, $) {
     'use strict';
 
-    function Amazing() {
+    function Amazing(search) {
         this.categories = ko.observableArray([]);
         this.variations = ko.observableArray([]);
         this.icons = ko.observableArray([]);
         this.count = ko.observable(0);
         this.loading = ko.observable(true);
         this.filters = {
-            search: ko.observable(''),
+            search: ko.observable(search || ''),
             categories: ko.observableArray([]),
             variations: ko.observableArray([]),
             page: ko.observable(0)
@@ -115,7 +115,8 @@
         this.icons(icons);
     };
 
-    ko.applyBindings(new Amazing());
+    var params = new URLSearchParams(window.location.search);
+    ko.applyBindings(new Amazing(params.get('search')));
 
 
 })(ko, jQuery)

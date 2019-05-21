@@ -17,6 +17,8 @@ class CreateDownloadsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('email');
+            $table->longText('token');
+            $table->timestamp('expire_on');
             $table->timestamps();
         });
     }

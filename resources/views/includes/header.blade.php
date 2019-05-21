@@ -24,10 +24,13 @@
             </div>
             <div class="modal-body">
                 <div id="search">
-                    <form action="#" method="post" autocomplete="off">
-                        <input type="text" placeholder="Search Icon or font name..." value="" name="term" id="term">
+                    <?php echo Form::open(array(
+                        'route' => 'icon.seach',
+                        'method' => 'get',
+                    )); ?>
+                        <input type="text" placeholder="Search Icon or font name..." value="" name="search" id="term">
                         <button class="btn btn-primary btn-xl" type="submit"><span class="glyphicon glyphicon-search"></span> Search</button>
-                    </form>
+                    <?php echo Form::close(); ?>
                 </div>
             </div>
         </div>

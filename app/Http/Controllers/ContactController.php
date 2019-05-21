@@ -7,6 +7,7 @@ use App\Repositories\ContactInterface;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use App\Mail\ContactMessagePost;
+use App\Http\Requests\ContactForm;
 
 /**
  * Class ContactController
@@ -27,10 +28,10 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('contact');
+        return view('contact.form');
     }
 
-    public function save(Request $request)
+    public function save(ContactForm $request)
     {
         $data = $request->all([
             'firstName',
@@ -45,6 +46,11 @@ class ContactController extends Controller
             'save'
         ), $data);
 
-        return $id ? ['message' => 'success']: ['message' => 'error'];
+        redirect('contact.thankyou');
+    }
+
+    public function thankyou()
+    {
+        return view('contact.thankyou');
     }
 }

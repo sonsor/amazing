@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Repositories\DownloadInterface;
 use Illuminate\Http\Request;
+use App\Http\Requests\DownloadForm;
 
 /**
  * Class DownloadsController
@@ -29,14 +30,14 @@ class DownloadsController extends Controller
      */
     public function index()
     {
-        return view('download');
+        return view('download.form');
     }
 
     /**
      * @param Request $request
      * @return array
      */
-    public function save(Request $request)
+    public function save(DownloadForm $request)
     {
         $data = $request->all([
             'name',
@@ -49,7 +50,18 @@ class DownloadsController extends Controller
             $this->download,
             'save'
         ), $data);
-
-        return $id ? ['message' => 'success']: ['message' => 'error'];
+        
+        redirect('download.success');
     }
+
+    public function thankyou()
+    {
+        return view('download.thankyou');
+    }
+
+    public function success()
+    {
+        return view('download.success');
+    }
+
 }
