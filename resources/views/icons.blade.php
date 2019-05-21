@@ -61,7 +61,7 @@
                 <!-- load mre BTN -->
                 <div class="center load-more">
                     <div class="lodemore-button">
-                        <button class="btn btn-default btn-radius" data-bind="click: more">Load More</button>
+                        <button class="btn btn-default btn-radius" data-bind="visible: hasMore(), click: more">Load More</button>
                     </div>
                 </div>  <!-- / load more BTN -->
             </div>

@@ -28,6 +28,14 @@
             rateLimit: 500
         });
 
+        this.hasMore = ko.computed(function() {
+            var count = this.count();
+            var page = this.filters.page();
+
+            return Math.floor(count / 100) > page ? true: false
+
+        }.bind(this));
+
         this.filters.categories.subscribe(function(value) {
             self.reset();
             self.pullIcons();

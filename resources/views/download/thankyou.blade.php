@@ -16,7 +16,6 @@
 @endsection
 
 @section('footer')
-    <script>console.log(2)</script>
     @if (Session::get('download.file.token'))
     <script>
         window.open('{{ route('download.file', Session::get('download.file.token'))  }}', '_blank')
