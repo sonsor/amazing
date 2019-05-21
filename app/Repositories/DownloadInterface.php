@@ -11,9 +11,9 @@ interface DownloadInterface
     /**
      * @param string $name
      * @param string $email
-     * @return int
+     * @return \App\Downloads
      */
-    public function save(string $name, string $email): int;
+    public function save(string $name, string $email): \App\Downloads;
 
     /**
      * this function is use to increase count of downloads

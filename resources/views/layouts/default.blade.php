@@ -34,5 +34,7 @@
 <script src="{!! asset('js/custom.js') !!}" type="text/javascript"></script>
 <script src="{!! asset('js/icons.js') !!}" type="text/javascript"></script>
 
+@yield('footer')
+
 </body>
 </html>

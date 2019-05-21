@@ -232,14 +232,6 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Option' => \App\Facades\OptionFacade::class
 
-    ],
-
-    'madmin' => array(
-        'cache' => array(
-            'manager' => array(
-                'name' => 'None'
-            ),
-        ),
-    ),
+    ]
 
 ];

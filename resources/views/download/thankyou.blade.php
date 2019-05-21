@@ -13,4 +13,13 @@
             <h3>Thank You for using Amazing Neo</h3>
         </div>
     </div>
+@endsection
+
+@section('footer')
+    <script>console.log(2)</script>
+    @if (Session::get('download.file.token'))
+    <script>
+        window.open('{{ route('download.file', Session::get('download.file.token'))  }}', '_blank')
+    </script>
+    @endif
 @stop

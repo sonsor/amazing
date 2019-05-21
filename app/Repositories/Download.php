@@ -2,7 +2,6 @@
 namespace App\Repositories;
 
 use \App\Downloads as Model;
-use App\Events\DownloadFormSubmitted;
 
 /**
  * Class Download
@@ -27,9 +26,10 @@ class Download implements DownloadInterface
     /**
      * @param string $name
      * @param string $email
-     * @return int
+     * @return Model
+     * @throws \Exception
      */
-    public function save(string $name, string $email): int
+    public function save(string $name, string $email): Model
     {
         $download = new $this->model;
         $download->name = $name;
@@ -37,10 +37,7 @@ class Download implements DownloadInterface
         $download->token = bcrypt($name . $email);
         $download->expire = (new \DateTime('tomorrow'));
         $download->save();
-
-        event(new DownloadFormSubmitted($download));
-
-        return $download->id;
+        return $download;
     }
 
     /**

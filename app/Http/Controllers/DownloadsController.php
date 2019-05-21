@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Repositories\DownloadInterface;
 use Illuminate\Http\Request;
 use App\Http\Requests\DownloadForm;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use App\Events\DownloadFormSubmitted;
 
 
 /**
@@ -48,24 +51,41 @@ class DownloadsController extends Controller
 
         $this->download->increase();
 
-        $id = call_user_func_array(array(
+        $download = call_user_func_array(array(
             $this->download,
             'save'
         ), $data);
-        
-        return redirect()->route($id ? 'download.success': 'download.error');
+
+
+        \Log::debug("download : " . $download->id);;
+        if ($download->id > 0) {
+            event(new DownloadFormSubmitted($download));
+            return redirect()->route('download.success');
+        }
+        \Log::debug("download : " . $download->id);;
+        return redirect()->route('download.error');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function thankyou()
     {
         return view('download.thankyou');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function success()
     {
         return view('download.success');
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Symfony\Component\HttpFoundation\BinaryFileResponse
+     */
     public function download(Request $request)
     {
         $token = $request->route('token');
@@ -76,9 +96,21 @@ class DownloadsController extends Controller
         $storagePath = \Storage::disk('local')->getDriver()->getAdapter()->getPathPrefix();
         $fileName = 'test.json';
 
-        return response()->download($storagePath . $fileName, $fileName, [
-            'location' => route('download.thankyou')
-        ]);
+        return response()->download($storagePath . $fileName, $fileName);
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function validateToken(Request $request)
+    {
+        $token = $request->route('token');
+        if (!$this->download->verify($token)) {
+            return redirect()->route('download.error');
+        }
+
+        Session::flash('download.file.token', $token);
+        return redirect()->route('download.thankyou');
+    }
 }
