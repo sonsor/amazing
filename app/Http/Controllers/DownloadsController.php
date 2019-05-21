@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Repositories\DownloadInterface;
 use Illuminate\Http\Request;
 use App\Http\Requests\DownloadForm;
+use Illuminate\Support\Facades\Storage;
+
 
 /**
  * Class DownloadsController
@@ -62,6 +64,21 @@ class DownloadsController extends Controller
     public function success()
     {
         return view('download.success');
+    }
+
+    public function download(Request $request)
+    {
+        $token = $request->route('token');
+        if (!$this->download->verify($token)) {
+            return redirect()->route('download.error');
+        }
+
+        $storagePath = \Storage::disk('local')->getDriver()->getAdapter()->getPathPrefix();
+        $fileName = 'test.json';
+
+        return response()->download($storagePath . $fileName, $fileName, [
+            'location' => route('download.thankyou')
+        ]);
     }
 
 }

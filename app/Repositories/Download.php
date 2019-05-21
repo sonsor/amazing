@@ -61,4 +61,9 @@ class Download implements DownloadInterface
     {
         return $this->model->find($id)->first();
     }
+
+    public function verify($token): bool
+    {
+        return $this->model->where('token', $token)->whereDate('expire', '>', now())->count() > 0 ? true: false;
+    }
 }

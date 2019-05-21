@@ -22,6 +22,7 @@ Route::group(['prefix' => '/'], function() {
 
     Route::group(['prefix' => 'downloads'], function() {
         Route::get('/', 'DownloadsController@index');
+        Route::get('/{token}', 'DownloadsController@download');
         Route::put('/', 'DownloadsController@save')->name('download.save');
         Route::get('/success', 'DownloadsController@success')->name('download.success');
         Route::get('/thank-you', 'DownloadsController@thankyou')->name('download.thankyou');

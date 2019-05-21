@@ -44,7 +44,7 @@
     <div class="title">
         <h3 class="h3 black">AMAZING NEO</h3>
         <h2 class="an-3x fw700 black">THE BEST GRAPHIC RESOURCES FOR YOU </h2>
-        <p> Find over <a class="blue" href="/icons/"> 1100+ ICONS</a> according to your inspirational desire, available for free <a class="blue" href="/download/">download</a></p>
+        <p> Find over <a class="blue" href="/icons/"> 1100+ ICONS</a> according to your inspirational desire, available for free <a class="blue" href="{{ url('/downloads')  }}">download</a></p>
     </div>
 
     <div class="col-md-4 col-sm-6">
