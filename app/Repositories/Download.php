@@ -35,7 +35,7 @@ class Download implements DownloadInterface
         $download->name = $name;
         $download->email = $email;
         $download->token = bcrypt($name . $email);
-        $download->expire = (new \DateTime('tomorrow'))->getTimestamp();
+        $download->expire = (new \DateTime('tomorrow'));
         $download->save();
 
         event(new DownloadFormSubmitted($download));

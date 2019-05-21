@@ -51,7 +51,7 @@ class DownloadsController extends Controller
             'save'
         ), $data);
         
-        redirect('download.success');
+        return redirect()->route($id ? 'download.success': 'download.error');
     }
 
     public function thankyou()

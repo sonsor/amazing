@@ -46,7 +46,8 @@ class ContactController extends Controller
             'save'
         ), $data);
 
-        redirect('contact.thankyou');
+
+        return redirect()->route('contact.thankyou');
     }
 
     public function thankyou()

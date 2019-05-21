@@ -18,7 +18,7 @@ class CreateDownloadsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->longText('token');
-            $table->timestamp('expire_on');
+            $table->timestamp('expire');
             $table->timestamps();
         });
     }
