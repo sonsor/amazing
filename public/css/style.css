@@ -1,7 +1,7 @@
 ﻿/*! * Amazing Neo CSS - http://amazingneo.com/ * Version - 1.0 beta * Licensed under the MIT license - http://opensource.org/licenses/MIT * * Copyright (c) Amazing Team */
 
 
- html, body {
+html, body {
     height: 100%;
     font-family: 'HindSiliguri', sans-serif, Open Sans,sans-serif;
      -webkit-font-smoothing: antialiased;
@@ -3695,6 +3695,32 @@ a.back-to-all-btn{
 
 .icon-grid-left {
     position: relative;
+}
+
+.pro-tag{
+    height: 130px
+}
+
+.ico-var {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.justify-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.pt-4x {
+    padding-top: 4em;
 }
 
 .icon-grid-left .pro-tag h1 {

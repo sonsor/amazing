@@ -13,16 +13,16 @@
                 </div>
                 <div id="copyButton">
                     <svg version="1.1" id="Layer_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.137px" height="20.831px" viewBox="0 491.169 17.137 20.831" enable-background="new 0 491.169 17.137 20.831" xml:space="preserve" fill="#6f778a">
-	                        <g>
-                                <rect x="2.618" y="495.111" width="3.784" height="1.306" />
-                                <rect x="2.618" y="497.559" width="3.784" height="1.306" />
-                                <rect x="2.618" y="500.005" width="9.302" height="1.307" />
-                                <rect x="2.618" y="502.452" width="9.302" height="1.306" />
-                                <rect x="2.618" y="504.899" width="9.302" height="1.306" />
-                                <path d="M11.578,492.941l-1.832-1.822H0v18.189h1.794V512h15.375l0.008-19.059H11.578z M1.305,508.011l0.024-15.591l7.121-0.004
-	                            		v4.742h4.739v10.857L1.305,508.011z M15.864,510.695H3.095v-1.379l11.403,0.009l-0.021-13.476l-1.644-1.603h3.039L15.864,510.695z" />
-                            </g>
-	                    </svg>
+                        <g>
+                            <rect x="2.618" y="495.111" width="3.784" height="1.306" />
+                            <rect x="2.618" y="497.559" width="3.784" height="1.306" />
+                            <rect x="2.618" y="500.005" width="9.302" height="1.307" />
+                            <rect x="2.618" y="502.452" width="9.302" height="1.306" />
+                            <rect x="2.618" y="504.899" width="9.302" height="1.306" />
+                            <path d="M11.578,492.941l-1.832-1.822H0v18.189h1.794V512h15.375l0.008-19.059H11.578z M1.305,508.011l0.024-15.591l7.121-0.004
+                                    v4.742h4.739v10.857L1.305,508.011z M15.864,510.695H3.095v-1.379l11.403,0.009l-0.021-13.476l-1.644-1.603h3.039L15.864,510.695z" />
+                        </g>
+                    </svg>
                 </div>
                 <span id="msg"></span>
             </div>
@@ -36,17 +36,13 @@
 
         </div>
     </div>
+
     <div class="container-fluid no-padding">
         <div class="icon-warper">
             <div class="container">
                 <div class="col-md-5">
                     <div class="icon-grid-right">
-                        <a class="back-to-all-btn" href="icons.html"> <i class="an an-long-arrow-left"></i> all icons</a>
-                        <h4>BEACH CHAIR</h4>
-                        <div class="arrows">
-                            <a href="#"> <img src="images/arrow-left-active.png"> </a>
-                            <a href="#"> <img src="images/arrow-right-active.png"> </a>
-                        </div>
+                        <h1 class="h1-sm">BEACH CHAIR</h1>
 
                         <div class="clearfix"></div>
 
@@ -64,7 +60,7 @@
                                 </div>
                             </div>
                             <div class="icon-text-class  activpro-padding-bottom-1x  activpro-padding-top-1x">
-                                <code>&lt;i <span class="typ">class</span>=<span class="nam">"an an-wheelchair"</span>&gt;&lt;/i&gt; </code>
+                                <code>&lt;i <span class="typ">class</span>=<span class="nam">"an an-<?php echo $icon->class; ?>"</span>&gt;&lt;/i&gt; </code>
                             </div>
                         </div>
 
@@ -74,35 +70,16 @@
                     <div class="icon-grid-left">
                         <div class="pro-content">
                             <div class="pro-tag">
-                                <a class="btn-pro" href="#">
-                                    <i class="an an an-crown"> </i>
-                                    <span> go to pro</span>
-                                </a>
-                                <h1>PRO</h1>
+                                <a class="btn-pro" href="icons.html"> <i class="an an an-arrow-left"> </i> <span> all icons</span> </a>	                               
                             </div>
-
-                            <h4>an, anr, anl -beach-chair</h4>
-                            <h1>Beach Chair</h1>
-
-                            <div class="pro-example">
-                                <div class="icon-pro-box">
-                                    <i class="an an-beach-chair-alt"></i>LIGHT
-                                </div>
-                                <div class="icon-pro-box">
-                                    <i class="an an-beach-chair-alt"></i>REGULAR
-                                </div>
-                            </div>
-
-                            <div class="download-waper">
-                                <a class="btn-rounded btn-download" href="#">PNG</a>
-                                <a class="btn-rounded btn-download" href="#">SVG</a>
-                                <a class="btn-rounded btn-download" href="#">AI</a>
-                                <a class="btn-rounded btn-download" href="#">PSD</a>
-                                <a class="btn-rounded btn-download" href="#">EPS</a>
-                            </div>
-
-                            <a class="gray back" href="#"><i class="an an-long-arrow-circle-left-fill"></i> back</a>
-
+                            <div class="col-md-12 ico-var flex-end justify-between pt-4x">
+                                <i class="an an-beach-chair-alt an-1x"></i>
+                                <i class="an an-beach-chair-alt an-2x"></i>
+                                <i class="an an-beach-chair-alt an-3x"></i>
+                                <i class="an an-beach-chair-alt an-4x"></i>
+                                <i class="an an-beach-chair-alt an-5x"></i>
+                                <i class="an an-beach-chair-alt an-6x"></i>
+                            </div> 
                         </div>
                     </div>
                 </div>
