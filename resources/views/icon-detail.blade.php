@@ -9,7 +9,7 @@
                 <i style="color: #6f778a; padding-right: 10px;" class="an an-user"></i> |
 
                 <div id="copyTarget" class="ico-class">
-                    <code data-balloon="Click to Copy HTML" data-balloon-pos="down"><span>&lt;i </span><span class="typ">class</span>=<span class="nam">"an an-beach-chair-alt"</span><span>&gt;&lt;/i&gt;</span></code>
+                    <code data-balloon="Click to Copy HTML" data-balloon-pos="down"><span>&lt;i </span><span class="typ">class</span>=<span class="nam">"{{ $icon->variation->classes . ' an-' . $icon->classes  }}"</span><span>&gt;&lt;/i&gt;</span></code>
                 </div>
                 <div id="copyButton">
                     <svg version="1.1" id="Layer_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.137px" height="20.831px" viewBox="0 491.169 17.137 20.831" enable-background="new 0 491.169 17.137 20.831" xml:space="preserve" fill="#6f778a">
@@ -29,8 +29,8 @@
 
             <div class="tag-version">
                 <ul class="category-version">
-                    <li>weather</li>
-                    <li>Updated: Version 1.0</li>
+                    <li>{{ $icon->name }}</li>
+                    <li>Updated: Version {{ $icon->Version->version  }}</li>
                 </ul>
             </div>
 
@@ -42,7 +42,7 @@
             <div class="container">
                 <div class="col-md-5">
                     <div class="icon-grid-right">
-                        <h1 class="h1-sm">BEACH CHAIR</h1>
+                        <h1 class="h1-sm">{{ $icon->name  }}</h1>
 
                         <div class="clearfix"></div>
 
@@ -56,11 +56,11 @@
                             </div>
                             <div class="collection">
                                 <div class="example-icon icon-box center">
-                                    <i class="an an-beach-chair-alt"></i>
+                                    <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
                                 </div>
                             </div>
                             <div class="icon-text-class  activpro-padding-bottom-1x  activpro-padding-top-1x">
-                                <code>&lt;i <span class="typ">class</span>=<span class="nam">"an an-<?php echo $icon->class; ?>"</span>&gt;&lt;/i&gt; </code>
+                                <code>&lt;i <span class="typ">class</span>=<span class="nam">"{{ $icon->variation->classes . ' an-' . $icon->classes  }}"</span>&gt;&lt;/i&gt; </code>
                             </div>
                         </div>
 
@@ -73,12 +73,12 @@
                                 <a class="btn-pro" href="icons.html"> <i class="an an an-arrow-left"> </i> <span> all icons</span> </a>	                               
                             </div>
                             <div class="col-md-12 ico-var flex-end justify-between pt-4x">
-                                <i class="an an-beach-chair-alt an-1x"></i>
-                                <i class="an an-beach-chair-alt an-2x"></i>
-                                <i class="an an-beach-chair-alt an-3x"></i>
-                                <i class="an an-beach-chair-alt an-4x"></i>
-                                <i class="an an-beach-chair-alt an-5x"></i>
-                                <i class="an an-beach-chair-alt an-6x"></i>
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-1x"></i>
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-2x"></i>
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-3x"></i>
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-4x"></i>
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-5x"></i>
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-6x"></i>
                             </div> 
                         </div>
                     </div>
@@ -88,10 +88,10 @@
         <div class="icon-showcase">
             <div class="container bg-white">
                 <div class="icon">
-                    <i class="an an-beach-chair-alt"></i>
+                    <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
                 </div>
                 <div class="contant">
-                    <p>“Pictures, abstract symbols, materials, and colors are among the ingredients with which a designer or engineer works. To design is to discover relationships and to make arrangements and rearrangements among these ingredients.”</p>
+                    <p>{{ $icon->description->shortDescription }}</p>
                 </div>
             </div>
         </div>
@@ -102,20 +102,20 @@
                     <div class="icon-showcase-todo">
                         <ul class="todo-list">
                             <li>
-                                <i class="an an-beach-chair-alt"></i>
-                                <p>and colors are among the ingredients with which a designer</p>
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                                <p>{{ $icon->description->mediumDescription1 }}</p>
                             </li>
                             <li>
-                                <i class="an an-beach-chair-alt"></i>
-                                <p>and colors are among the ingredients with which a designer</p>
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                                <p>{{ $icon->description->mediumDescription2 }}</p>
                             </li>
                             <li>
-                                <i class="an an-beach-chair-alt"></i>
-                                <p>and colors are among the ingredients with which a designer</p>
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                                <p>{{ $icon->description->mediumDescription3 }}</p>
                             </li>
                             <li>
-                                <i class="an an-beach-chair-alt"></i>
-                                <p>and colors are among the ingredients with which a designer</p>
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                                <p>{{ $icon->description->mediumDescription4 }}</p>
                             </li>
                         </ul>
                     </div>
@@ -123,13 +123,13 @@
 
                 <div class=col-md-5>
                     <div class="icon-waget one">
-                        <i class="an an-beach-chair-alt"></i>
-                        <p>and colors are among the.</p>
+                        <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                        <p>{{ $icon->description->smallDescription1 }}</p>
                     </div>
 
                     <div class="icon-waget two">
-                        <i class="an an-beach-chair-alt"></i>
-                        <p>and colors are among the.</p>
+                        <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                        <p>{{ $icon->description->smallDescription2 }}</p>
                     </div>
                 </div>
             </div>
@@ -138,14 +138,14 @@
             <div class="container">
                 <div class=col-md-6>
                     <div class="icon-waget-half">
-                        <i class="an an-beach-chair-alt bg-orange"></i>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                        <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} bg-orange"></i>
+                        <p>{{ $icon->description->description1 }}</p>
                     </div>
                 </div>
                 <div class=col-md-6>
                     <div class="icon-waget-half">
-                        <i class="an an-beach-chair-alt bg-black"></i>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                        <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} bg-black"></i>
+                        <p>{{ $icon->description->description2 }}</p>
                     </div>
                 </div>
             </div>

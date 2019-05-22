@@ -1,6 +1,8 @@
 <div class="container">
     <div class="row m0 foter_row">
-        <div class="col-sm-2 footer_logo p0"><img src="images/logo-w.png" alt=""></div>
+        <div class="col-sm-2 footer_logo p0">
+            <img src="{{ url('images/logo-w.png') }}" alt="">
+        </div>
         <div class="col-md-8 col-sm-10 footer_menu">
             <ul class="nav navbar_menu">
                 <li><a href="{{ url('/') }}">Home</a></li>

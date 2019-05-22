@@ -91,4 +91,20 @@ class Icon implements IconInterface
 
     }
 
+    public function one(string $slug, string $variation): Model
+    {
+        $icon = $this->model->newQuery();
+        $icon->with('variation');
+        $icon->with('description');
+        $icon->with('version');
+        $icon->where('slug', $slug);
+        $icon->whereHas('variation', function ($q) use ($variation) {
+            $q->where('slug', $variation);
+        });
+
+        return $icon->get()->first();
+
+
+    }
+
 }

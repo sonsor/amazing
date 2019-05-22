@@ -138,7 +138,7 @@ ul.dropdown-menu li a {
 }
  .logo {
         padding-top: 32px;
-    background-image: url(../images/logo.png);
+    background-image: url(/images/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
     top: 30px;

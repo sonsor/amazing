@@ -6,6 +6,7 @@ use App\Repositories\IconInterface;
 use App\Repositories\VariationTypeInterface;
 use App\Repositories\VersionInterface;
 use Illuminate\Http\Request;
+use function Psy\debug;
 
 /**
  * Class IconController
@@ -53,14 +54,6 @@ class IconController extends Controller
     }
 
     /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function show()
-    {
-        return view('icon-detail');
-    }
-
-    /**
      * @param Request $request
      * @return array
      */
@@ -87,5 +80,14 @@ class IconController extends Controller
             $page,
             100
         );
+    }
+
+    public function detail(Request $request)
+    {
+        $slug = $request->route('slug');
+        $variation = $request->route('variation');
+
+        $icon = $this->icons->one($slug, $variation);
+        return view('icon-detail', ['icon' => $icon]);
     }
 }

@@ -62,6 +62,9 @@ class Icon extends Model
         return $this->belongsTo(Version::class);
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function description()
     {
         return $this->belongsTo(Description::class);
