@@ -103,8 +103,27 @@ class Icon implements IconInterface
         });
 
         return $icon->get()->first();
+    }
 
+    public function related(Model $icon)
+    {
+        $related = $this->model->newQuery();
+        $tags = $icon->tags()->get()->pluck('id')->toArray();
+        $variation = $icon->variation->id;
 
+        $related->with('variation');
+
+        $related->whereHas('variation', function ($q) use ($variation) {
+            $q->where('id', $variation);
+        });
+
+        $related->whereHas('tags', function ($q) use ($tags) {
+            $q->whereIn('tag_id', $tags);
+        });
+
+        $related->take(20);
+
+        return $related->get();
     }
 
 }

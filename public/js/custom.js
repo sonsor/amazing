@@ -45,8 +45,9 @@
 
 
     // color picker
-    jQuery('#sky, #grey, #black, #green, #red').click(function () {
-        jQuery('.collection').find('.icon-box').removeClass('green black gray red').addClass($(this).attr('id'));
+    $("body").on('click', '.icon-color-picker div', function () {
+        $('.collection').find('.icon-box').removeClass('green sky black gray red');
+        $('.collection').find('.icon-box').addClass($(this).attr('id'));
     });
     // /color picker
 

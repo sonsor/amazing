@@ -70,7 +70,10 @@
                     <div class="icon-grid-left">
                         <div class="pro-content">
                             <div class="pro-tag">
-                                <a class="btn-pro" href="icons.html"> <i class="an an an-arrow-left"> </i> <span> all icons</span> </a>	                               
+                                <a class="btn-pro" href="{{ route('icon.seach')  }}">
+                                    <i class="an an an-arrow-left"> </i>
+                                    <span> all icons</span>
+                                </a>
                             </div>
                             <div class="col-md-12 ico-var flex-end justify-between pt-4x">
                                 <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-1x"></i>
@@ -153,76 +156,14 @@
         <div class="relative-icon-saction">
             <div class="container">
                 <h3>Relative Icon </h3>
+                @foreach ($related as $r)
                 <div class="relative-icon">
-                    <svg>
-                        <g>
-                            <path fill-rule="evenodd" clip-rule="evenodd" fill="#de0029" d="M0,0v16l7-3.8l7,3.8V0H0z M9.3,9L7,8L4.7,9L5,6.6L3.2,4.8l2.5-0.5L7,2.1l1.2,2.2l2.5,0.5L9,6.6L9.3,9z"></path>
-                        </g>
-                    </svg>
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
+                    <a href="{{ route('icon.detail', [$r->slug, $r->variation->slug])  }}">
+                        <i class="{{ $r->variation->classes . ' an-' . $r->classes  }}"></i>
+                        <span>{{ $r->name  }}</span>
+                    </a>
                 </div>
-
-                <div class="relative-icon">
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
-                </div>
-
-                <div class="relative-icon">
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
-                </div>
-
-                <div class="relative-icon">
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
-                </div>
-
-                <div class="relative-icon">
-                    <svg>
-                        <g>
-                            <path fill-rule="evenodd" clip-rule="evenodd" fill="#de0029" d="M0,0v16l7-3.8l7,3.8V0H0z M9.3,9L7,8L4.7,9L5,6.6L3.2,4.8l2.5-0.5L7,2.1l1.2,2.2l2.5,0.5L9,6.6L9.3,9z"></path>
-                        </g>
-                    </svg>
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
-                </div>
-
-                <div class="relative-icon">
-                    <svg>
-                        <g>
-                            <path fill-rule="evenodd" clip-rule="evenodd" fill="#de0029" d="M0,0v16l7-3.8l7,3.8V0H0z M9.3,9L7,8L4.7,9L5,6.6L3.2,4.8l2.5-0.5L7,2.1l1.2,2.2l2.5,0.5L9,6.6L9.3,9z"></path>
-                        </g>
-                    </svg>
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
-                </div>
-
-                <div class="relative-icon">
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
-                </div>
-
-                <div class="relative-icon">
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
-                </div>
-
-                <div class="relative-icon">
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
-                </div>
-
-                <div class="relative-icon">
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
-                </div>
-
-                <div class="relative-icon">
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
-                </div>
-
-                <div class="relative-icon">
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
-                </div>
-
-                <div class="relative-icon">
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
-                </div>
-
-                <div class="relative-icon">
-                    <a href="#"> <i class="an an-beach-chair-alt"></i><span>beach chair alt</span></a>
-                </div>
+                @endforeach
 
             </div>
         </div>

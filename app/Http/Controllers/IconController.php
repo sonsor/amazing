@@ -88,6 +88,10 @@ class IconController extends Controller
         $variation = $request->route('variation');
 
         $icon = $this->icons->one($slug, $variation);
-        return view('icon-detail', ['icon' => $icon]);
+        $related = $this->icons->related($icon);
+        return view('icon-detail', [
+            'icon' => $icon,
+            'related' => $related
+        ]);
     }
 }
