@@ -6,6 +6,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMessagePost;
+use App\Mail\ContactAdminEmail;
 
 class SendContactMail
 {
@@ -28,5 +29,6 @@ class SendContactMail
     public function handle(ContactCreated $event)
     {
         Mail::send(new ContactMessagePost($event->contact));
+        Mail::send(new ContactAdminEmail($event->contact));
     }
 }

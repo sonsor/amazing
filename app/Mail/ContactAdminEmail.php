@@ -2,17 +2,14 @@
 
 namespace App\Mail;
 
-use App\Contact;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ContactMessagePost extends Mailable implements ShouldQueue
+class ContactAdminEmail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
-
-    public $contact;
 
     /**
      * ContactMessagePost constructor.
@@ -30,9 +27,9 @@ class ContactMessagePost extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        //$this->to(\Option::get('admin.email'), 'Admin User');
-        $this->to($this->contact->email, $this->contact->firstName);
+        $this->to(\Option::get('admin.email'), 'Admin User');
+        //$this->to($this->contact->email, $this->contact->firstName);
         $this->subject('Contact Us Message');
-        return $this->view('emails.contact.user');
+        return $this->view('emails.contact.admin');
     }
 }
