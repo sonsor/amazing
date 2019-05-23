@@ -12,6 +12,8 @@
 */
 
 
+Auth::routes();
+
 Route::group(['prefix' => '/'], function() {
 
     Route::group(['prefix' => 'contact'], function() {
@@ -50,3 +52,5 @@ Route::group(['prefix' => '/'], function() {
     Route::get('/terms-and-conditions', 'PagesController@tac');
 
 });
+
+Route::get('/home', 'HomeController@index')->name('home');
