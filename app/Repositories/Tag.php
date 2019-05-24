@@ -3,6 +3,8 @@ namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Collection;
 use \App\Tag as Model;
+use Illuminate\Pagination\LengthAwarePaginator;
+
 /**
  * Class Tag
  * @package App\Repositories
@@ -29,5 +31,18 @@ class Tag implements TagInterface
     public function all(): Collection
     {
         return $this->model->all('id', 'name', 'slug');
+    }
+
+    /**
+     * @param string|null $search
+     * @return LengthAwarePaginator
+     */
+    public function list(?string $search): LengthAwarePaginator
+    {
+        $tags = $this->model->newQuery();
+        if ($search) {
+            $tags->where('name', 'like', '%' . $search . '%');
+        }
+        return $tags->paginate(20);
     }
 }

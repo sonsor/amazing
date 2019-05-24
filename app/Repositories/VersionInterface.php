@@ -20,4 +20,10 @@ interface VersionInterface
      * @return int
      */
     public function getLatestVersionId(): int;
+
+    /**
+     * @param string|null $search
+     * @return LengthAwarePaginator
+     */
+    public function list(?string $search): LengthAwarePaginator;
 }

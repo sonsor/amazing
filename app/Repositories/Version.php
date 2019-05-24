@@ -31,4 +31,18 @@ class Version implements VersionInterface
         return $this->model->orderBy('created_at', 'desc')->pluck('id')->first();
     }
 
+    /**
+     * @param string|null $search
+     * @return LengthAwarePaginator
+     */
+    public function list(?string $search): LengthAwarePaginator
+    {
+        $versions = $this->model->newQuery();
+        if ($search) {
+            $versions->where('version', 'like', '%' . $search . '%');
+        }
+        return $versions->paginate(20);
+    }
+
+
 }

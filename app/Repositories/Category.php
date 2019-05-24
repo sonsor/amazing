@@ -3,6 +3,7 @@ namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Collection;
 use \App\Category as Model;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 /**
  * Class Category
@@ -30,5 +31,19 @@ class Category implements CategoryInterface
     public function all(): Collection
     {
         return $this->model->all('id as value', 'name', 'slug');
+    }
+
+    /**
+     * @param string $search
+     * @return Collection
+     */
+    public function list(?string $search): LengthAwarePaginator
+    {
+        $categories = $this->model->newQuery();
+        $categories->with('parent');
+        if ($search) {
+            $categories->where('name', 'like', '%' . $search . '%');
+        }
+        return $categories->paginate(20);
     }
 }

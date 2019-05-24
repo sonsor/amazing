@@ -3,6 +3,7 @@ namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Collection;
 use \App\VariationType as Model;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 /**
  * Class VariationType
@@ -38,5 +39,18 @@ class VariationType implements VariationTypeInterface
     public function getPublicVariationTypes(): Collection
     {
         return $this->model->select('id as value', 'name', 'slug')->whereIn('slug', ['solid', 'brand'])->get();
+    }
+
+    /**
+     * @param string|null $search
+     * @return LengthAwarePaginator
+     */
+    public function list(?string $search): LengthAwarePaginator
+    {
+        $variationTypes = $this->model->newQuery();
+        if ($search) {
+            $variationTypes->where('name', 'like', '%' . $search . '%');
+        }
+        return $variationTypes->paginate(20);
     }
 }

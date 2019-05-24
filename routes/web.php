@@ -13,6 +13,23 @@
 
 Route::group(['prefix' => 'admin'], function(){
     Auth::routes();
+
+    Route::group(['prefix' => 'category'], function() {
+        Route::get('/', 'Admin\\CategoryController@list');
+    });
+
+    Route::group(['prefix' => 'tag'], function() {
+        Route::get('/', 'Admin\\TagController@list');
+    });
+
+    Route::group(['prefix' => 'variation-type'], function() {
+        Route::get('/', 'Admin\\VariationTypeontroller@list');
+    });
+
+    Route::group(['prefix' => 'version'], function() {
+        Route::get('/', 'Admin\\VersionController@list');
+    });
+
 });
 
 Route::group(['prefix' => '/'], function() {
