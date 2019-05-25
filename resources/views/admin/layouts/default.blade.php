@@ -20,6 +20,8 @@
 
         <div class="container-fluid">
 
+            <div class="alert js-alert hidden" role="alert"></div>
+
             <!-- Breadcrumbs-->
             @yield('content')
 

@@ -30,7 +30,7 @@
                                 <a class="btn btn-link" href="{{ route('admin.icons.edit', $row->id) }}">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <a class="btn btn-link js-remove" href="{{ route('admin.version.remove', $row->id) }}">
+                                <a class="btn btn-link js-remove" href="{{ route('admin.icons.remove', $row->id) }}">
                                     <i class="fas fa-trash"></i>
                                 </a>
                             </td>

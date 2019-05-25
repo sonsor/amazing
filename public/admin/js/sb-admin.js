@@ -1,6 +1,7 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  var $alert = $('body').find('.js-alert');
   var csrf = $('meta[name="csrf-token"]').attr('content');
   $.ajaxSetup({
     headers: {
@@ -52,10 +53,14 @@
       success: function(data) {
         if (data.status === 'success') {
           window.location.reload();
+        } else {
+          $alert.addClass('alert-warning').removeClass('hidden');
+          $alert.text('There is error in removing record. please try later');
         }
       },
       error: function() {
-
+        $alert.addClass('alert-warning').removeClass('hidden');
+        $alert.text('There is error in removing record. please try later');
       }
     });
   });

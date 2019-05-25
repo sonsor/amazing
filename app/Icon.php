@@ -19,7 +19,7 @@ class Icon extends Model
      */
     public function children()
     {
-        return $this->hasMany(Icon::class);
+        return $this->hasMany(Icon::class, 'parent_id');
     }
 
     /**

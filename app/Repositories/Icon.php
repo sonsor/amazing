@@ -184,4 +184,27 @@ class Icon implements IconInterface
 
         return $icons->paginate(20);
     }
+
+
+    /**
+     * @param int $id
+     * @return bool
+     * @throws \Exception
+     */
+    public function remove(int $id): bool
+    {
+        /** @var Model $icon */
+        $icon = $this->model->findOrFail($id);
+        $variations = $icon->children()->get();
+        if ($variations->count() > 0) {
+            foreach ($variations as $variation) {
+                $this->remove($variation->id);
+            }
+        }
+
+        $icon->categories()->detach();
+        $icon->tags()->detach();
+        $icon->delete();
+        return true;
+    }
 }

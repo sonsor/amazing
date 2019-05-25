@@ -100,4 +100,18 @@ class IconController extends Controller
             'columns' => $columns
         ]);
     }
+
+    /**
+     * @param Request $request
+     * @return array
+     */
+    public function remove(Request $request)
+    {
+        $id = $request->route('id');
+        $idDeleted = $this->icons->remove($id);
+        if ($idDeleted) {
+            return ['status' => 'success'];
+        }
+        return ['status' => 'error'];
+    }
 }

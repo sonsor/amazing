@@ -44,4 +44,10 @@ interface IconInterface
      * @return LengthAwarePaginator
      */
     public function variations(int $id, ?string $search): LengthAwarePaginator;
+
+    /**
+     * @param int $id
+     * @return bool
+     */
+    public function remove(int $id): bool;
 }
