@@ -202,6 +202,7 @@ class Icon implements IconInterface
             }
         }
 
+        $icon->description() ? $icon->description()->delete(): '';
         $icon->categories()->detach();
         $icon->tags()->detach();
         $icon->delete();
