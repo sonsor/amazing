@@ -27,19 +27,17 @@
                                 <th>{{ ColumnValue::get($col['field'], $row) }}</th>
                             @endforeach
                             <td>
-                                {{ Form::open(array('method' => 'delete')) }}
-                                {{ Form::token() }}
-                                <input type="hidden" name="id" value="{{ $row->id }}" />
                                 <a class="btn btn-link" href="{{ route('admin.icons.edit', $row->id) }}">
                                     <i class="fas fa-edit"></i>
                                 </a>
                                 <a class="btn btn-link" href="{{ route('admin.icons.variations.list', $row->id) }}">
                                     <i class="fas fa-list-ul"></i>
                                 </a>
-                                <button class="btn btn-link">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                                {{ Form::close() }}
+                                @if ($row->variation->count() === 0)
+                                    <a class="btn btn-link js-remove" href="{{ route('admin.version.remove', $row->id) }}">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                @endif
                             </td>
                         </tr>
                     @endforeach

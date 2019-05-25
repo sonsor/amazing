@@ -143,7 +143,10 @@ class Icon implements IconInterface
     public function list(?string $search): LengthAwarePaginator
     {
         $icons = $this->model->newQuery();
-        $icons->with('version');
+        $icons->with([
+            'version',
+            'variation'
+        ]);
 
         $icons->whereHas('variation', function ($q) {
             $q->where('slug', 'icon');
@@ -156,6 +159,11 @@ class Icon implements IconInterface
         return $icons->paginate(20);
     }
 
+    /**
+     * @param int $id
+     * @param string|null $search
+     * @return LengthAwarePaginator
+     */
     public function variations(int $id, ?string $search): LengthAwarePaginator
     {
         $icons = $this->model->newQuery();
@@ -176,6 +184,4 @@ class Icon implements IconInterface
 
         return $icons->paginate(20);
     }
-
-
 }

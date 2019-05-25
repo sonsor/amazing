@@ -48,9 +48,21 @@ class VariationType implements VariationTypeInterface
     public function list(?string $search): LengthAwarePaginator
     {
         $variationTypes = $this->model->newQuery();
+        $variationTypes->with('icons');
         if ($search) {
             $variationTypes->where('name', 'like', '%' . $search . '%');
         }
         return $variationTypes->paginate(20);
+    }
+
+    /**
+     * @param int $id
+     * @return bool
+     */
+    public function remove(int $id): bool
+    {
+        $variationType = $this->model->findOrFail($id);
+        $variationType->delete();
+        return true;
     }
 }

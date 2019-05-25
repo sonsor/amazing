@@ -63,4 +63,18 @@ class VariationTypeController extends Controller
         ]);
 
     }
+
+    /**
+     * @param Request $request
+     * @return array
+     */
+    public function remove(Request $request)
+    {
+        $id = $request->route('id');
+        $idDeleted = $this->variationType->remove($id);
+        if ($idDeleted) {
+            return ['status' => 'success'];
+        }
+        return ['status' => 'error'];
+    }
 }

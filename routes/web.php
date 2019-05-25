@@ -20,30 +20,37 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/', 'Admin\\CategoryController@list')->name('admin.category.list');
         Route::get('/new', 'Admin\\CategoryController@list')->name('admin.category.create');
         Route::get('/{id}', 'Admin\\CategoryController@list')->name('admin.category.edit');
+        Route::delete('/{id}', 'Admin\\CategoryController@remove')->name('admin.category.remove');
     });
 
     Route::group(['prefix' => 'tag'], function () {
         Route::get('/', 'Admin\\TagController@list')->name('admin.tag.list');
         Route::get('/new', 'Admin\\TagController@list')->name('admin.tag.create');
         Route::get('/{id}', 'Admin\\TagController@list')->name('admin.tag.edit');
+        Route::delete('/{id}', 'Admin\\TagController@remove')->name('admin.tag.remove');
     });
 
     Route::group(['prefix' => 'variation-type'], function() {
         Route::get('/', 'Admin\\VariationTypeController@list')->name('admin.variation.type.list');
         Route::get('/new', 'Admin\\VariationTypeController@list')->name('admin.variation.type.create');
         Route::get('/{id}', 'Admin\\VariationTypeController@list')->name('admin.variation.type.edit');
+        Route::delete('/{id}', 'Admin\\VariationTypeController@remove')->name('admin.variation.type.remove');
     });
 
     Route::group(['prefix' => 'version'], function() {
         Route::get('/', 'Admin\\VersionController@list')->name('admin.version.list');
         Route::get('/new', 'Admin\\VersionController@list')->name('admin.version.create');
         Route::get('/{id}', 'Admin\\VersionController@list')->name('admin.version.edit');
+        Route::delete('/{id}', 'Admin\\VersionController@remove')->name('admin.version.remove');
     });
 
-    Route::group(['prefix' => 'icon'], function() {
+    Route::group(['prefix' => 'icon'], function () {
         Route::get('/', 'Admin\\IconController@list')->name('admin.icons.list');
         Route::get('/new', 'Admin\\IconController@list')->name('admin.icons.create');
-        Route::get('/{id}', 'Admin\\IconController@list')->name('admin.icons.edit');
+
+        Route::get('/{id}', 'Admin\\IconController@edit')->name('admin.icons.edit');
+        Route::delete('/{id}', 'Admin\\IconController@remove')->name('admin.icons.remove');
+
         Route::get('/{id}/variation', 'Admin\\IconController@variations')->name('admin.icons.variations.list');
     });
 

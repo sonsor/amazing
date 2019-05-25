@@ -39,11 +39,21 @@ class Version implements VersionInterface
     public function list(?string $search): LengthAwarePaginator
     {
         $versions = $this->model->newQuery();
+        $versions->with('icons');
         if ($search) {
             $versions->where('version', 'like', '%' . $search . '%');
         }
         return $versions->paginate(20);
     }
 
-
+    /**
+     * @param int $id
+     * @return bool
+     */
+    public function remove(int $id): bool
+    {
+        $version = $this->model->findOrFail($id);
+        $version->delete();
+        return true;
+    }
 }

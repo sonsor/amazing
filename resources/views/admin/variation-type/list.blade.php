@@ -27,16 +27,14 @@
                                 <th>{{ ColumnValue::get($col['field'], $row) }}</th>
                             @endforeach
                             <td>
-                                {{ Form::open(array('method' => 'delete')) }}
-                                {{ Form::token() }}
-                                <input type="hidden" name="id" value="{{ $row->id }}" />
                                 <a class="btn btn-link" href="{{ route('admin.variation.type.edit', $row->id) }}">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <button class="btn btn-link">
+                                @if ($row->icons->count() === 0)
+                                <a class="btn btn-link js-remove" href="{{ route('admin.variation.type.remove', $row->id) }}">
                                     <i class="fas fa-trash"></i>
-                                </button>
-                                {{ Form::close() }}
+                                </a>
+                                @endif
                             </td>
                         </tr>
                     @endforeach

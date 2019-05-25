@@ -16,6 +16,6 @@ class Version extends Model
      */
     public function icons()
     {
-        return $this->hasMany(Icon::class, 'variation_id');
+        return $this->hasMany(Icon::class);
     }
 }

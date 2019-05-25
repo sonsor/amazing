@@ -45,4 +45,17 @@ class Tag implements TagInterface
         }
         return $tags->paginate(20);
     }
+
+
+    /**
+     * @param int $id
+     * @return bool
+     */
+    public function remove(int $id): bool
+    {
+        $tag = $this->model->findOrFail($id);
+        $tag->icons()->detach();
+        $tag->delete();
+        return true;
+    }
 }

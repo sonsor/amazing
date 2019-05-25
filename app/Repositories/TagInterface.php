@@ -20,4 +20,10 @@ interface TagInterface
      * @return LengthAwarePaginator
      */
     public function list(?string $search): LengthAwarePaginator;
+
+    /**
+     * @param int $id
+     * @return bool
+     */
+    public function remove(int $id): bool;
 }

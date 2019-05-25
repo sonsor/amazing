@@ -25,7 +25,7 @@ class NavProvider extends ServiceProvider
                 'name' => 'icon',
                 'label' => 'Icons',
                 'route' => 'admin.icons.list',
-                'icon' => 'tachometer-alt',
+                'icon' => 'italic',
                 'children' => [
                     [
                         'label' => 'All Icons',

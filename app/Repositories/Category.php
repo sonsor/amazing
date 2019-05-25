@@ -41,9 +41,23 @@ class Category implements CategoryInterface
     {
         $categories = $this->model->newQuery();
         $categories->with('parent');
+        $categories->with('children');
+
         if ($search) {
             $categories->where('name', 'like', '%' . $search . '%');
         }
         return $categories->paginate(20);
+    }
+
+    /**
+     * @param int $id
+     * @return bool
+     */
+    public function remove(int $id): bool
+    {
+        $category = $this->model->findOrFail($id);
+        $category->icons()->detach();
+        $category->delete();
+        return true;
     }
 }
