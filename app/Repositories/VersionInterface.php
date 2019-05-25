@@ -9,6 +9,8 @@
 namespace App\Repositories;
 
 
+use Illuminate\Pagination\LengthAwarePaginator;
+
 /**
  * Interface VersionInterface
  * @package App\Repositories

@@ -18,12 +18,31 @@ class VersionController extends Controller
     protected $version;
 
     /**
+     * @var array
+     */
+    protected $columns;
+
+    /**
      * VersionController constructor.
      * @param Version $version
      */
     public function __construct(Version $version)
     {
         $this->version = $version;
+        $this->columns = array(
+            array(
+                'name' => 'ID',
+                'field' => 'id'
+            ),
+            array(
+                'name' => 'Version',
+                'field' => 'version'
+            ),
+            array(
+                'name' => 'Change Log',
+                'field' => 'changeLog'
+            )
+        );
     }
 
     /**
@@ -34,6 +53,9 @@ class VersionController extends Controller
     {
         $search = $request->get('search');
         $versions = $this->version->list($search);
-        return view('admin.version.list', compact('versions'));
+        return view('admin.version.list', [
+            'data' => $versions,
+            'columns' => $this->columns
+        ]);
     }
 }

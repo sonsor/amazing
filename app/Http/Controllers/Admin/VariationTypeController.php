@@ -18,12 +18,35 @@ class VariationTypeController extends Controller
     protected $variationType;
 
     /**
+     * @var array
+     */
+    protected $columns;
+
+    /**
      * VariationTypeController constructor.
      * @param VariationType $variationType
      */
     public function __construct(VariationType $variationType)
     {
         $this->variationType = $variationType;
+        $this->columns = array(
+            array(
+                'name' => 'ID',
+                'field' => 'id'
+            ),
+            array(
+                'name' => 'Name',
+                'field' => 'name'
+            ),
+            array(
+                'name' => 'Slug',
+                'field' => 'slug'
+            ),
+            array(
+                'name' => 'Classes',
+                'field' => 'classes'
+            )
+        );
     }
 
     /**
@@ -34,7 +57,10 @@ class VariationTypeController extends Controller
     {
         $search = $request->get('search');
         $variationTypes = $this->variationType->list($search);
-        return view('admin.variation-type.list', compact('variationTypes'));
+        return view('admin.variation-type.list', [
+            'data' => $variationTypes,
+            'columns' => $this->columns
+        ]);
 
     }
 }

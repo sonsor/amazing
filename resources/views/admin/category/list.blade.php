@@ -17,6 +17,7 @@
                         @foreach ($columns as $col)
                         <th>{{ $col['name'] }}</th>
                         @endforeach
+                        <th>Actions</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -25,12 +26,28 @@
                         @foreach ($columns as $col)
                             <th>{{ ColumnValue::get($col['field'], $row) }}</th>
                         @endforeach
+                        <td>
+                            {{ Form::open(array('method' => 'delete')) }}
+                            {{ Form::token() }}
+                            <input type="hidden" name="id" value="{{ $row->id }}" />
+                            <a href="{{ route('admin.category.edit', $row->id) }}">
+                                <i class="far fa-edit"></i>
+                            </a>
+                            <button class="btn btn-default">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                            {{ Form::close() }}
+                        </td>
                     </tr>
                     @endforeach
                     </tbody>
                 </table>
+                <div class="row">
+                    <div class="col-md-12">
+                    {{ $data->appends($_GET)->fragment(5)->links() }}
+                    </div>
+                </div>
             </div>
-            {{ $data->appends($_GET)->fragment(5)->links() }}
         </div>
     </div>
 @stop

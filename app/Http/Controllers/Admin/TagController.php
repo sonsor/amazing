@@ -18,12 +18,31 @@ class TagController extends Controller
     protected $tag;
 
     /**
+     * @var array
+     */
+    protected $columns;
+
+    /**
      * TagController constructor.
      * @param Tag $tag
      */
     public function __construct(Tag $tag)
     {
         $this->tag = $tag;
+        $this->columns = array(
+            array(
+                'name' => 'ID',
+                'field' => 'id'
+            ),
+            array(
+                'name' => 'Name',
+                'field' => 'name'
+            ),
+            array(
+                'name' => 'Slug',
+                'field' => 'slug'
+            )
+        );
     }
 
     /**
@@ -34,6 +53,9 @@ class TagController extends Controller
     {
         $search = $request->get('search');
         $tags = $this->tag->list($search);
-        return view('admin.tag.list', compact('tags'));
+        return view('admin.tag.list', [
+            'data' => $tags,
+            'columns' => $this->columns
+        ]);
     }
 }

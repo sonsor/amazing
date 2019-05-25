@@ -2,6 +2,7 @@
 namespace App\Repositories;
 
 use \App\Version as Model;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 /**
  * Class Version
