@@ -2,6 +2,7 @@
 namespace App\Repositories;
 
 use \App\Icon as Model;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 /**
  * Class Icon
@@ -91,6 +92,11 @@ class Icon implements IconInterface
 
     }
 
+    /**
+     * @param string $slug
+     * @param string $variation
+     * @return Model
+     */
     public function one(string $slug, string $variation): Model
     {
         $icon = $this->model->newQuery();
@@ -105,6 +111,10 @@ class Icon implements IconInterface
         return $icon->get()->first();
     }
 
+    /**
+     * @param Model $icon
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
+     */
     public function related(Model $icon)
     {
         $related = $this->model->newQuery();
@@ -125,5 +135,47 @@ class Icon implements IconInterface
 
         return $related->get();
     }
+
+    /**
+     * @param string|null $search
+     * @return LengthAwarePaginator
+     */
+    public function list(?string $search): LengthAwarePaginator
+    {
+        $icons = $this->model->newQuery();
+        $icons->with('version');
+
+        $icons->whereHas('variation', function ($q) {
+            $q->where('slug', 'icon');
+        });
+
+        if ($search) {
+            $icons->when('name', 'like', '%' . $search . '%');
+        }
+
+        return $icons->paginate(20);
+    }
+
+    public function variations(int $id, ?string $search): LengthAwarePaginator
+    {
+        $icons = $this->model->newQuery();
+        $icons->with([
+            'version',
+            'variation'
+        ]);
+
+        $icons->where('parent_id', $id);
+
+        $icons->whereHas('variation', function ($q) {
+            $q->where('slug', '!=', 'icon');
+        });
+
+        if ($search) {
+            $icons->when('name', 'like', '%' . $search . '%');
+        }
+
+        return $icons->paginate(20);
+    }
+
 
 }

@@ -30,10 +30,10 @@
                                 {{ Form::open(array('method' => 'delete')) }}
                                 {{ Form::token() }}
                                 <input type="hidden" name="id" value="{{ $row->id }}" />
-                                <a href="{{ route('admin.version.edit', $row->id) }}">
-                                    <i class="far fa-edit"></i>
+                                <a class="btn btn-link" href="{{ route('admin.version.edit', $row->id) }}">
+                                    <i class="fas fa-edit"></i>
                                 </a>
-                                <button class="btn btn-default">
+                                <button class="btn btn-link">
                                     <i class="fas fa-trash"></i>
                                 </button>
                                 {{ Form::close() }}

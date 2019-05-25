@@ -44,6 +44,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/', 'Admin\\IconController@list')->name('admin.icons.list');
         Route::get('/new', 'Admin\\IconController@list')->name('admin.icons.create');
         Route::get('/{id}', 'Admin\\IconController@list')->name('admin.icons.edit');
+        Route::get('/{id}/variation', 'Admin\\IconController@variations')->name('admin.icons.variations.list');
     });
 
 });

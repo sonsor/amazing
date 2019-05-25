@@ -1,13 +1,13 @@
 @extends('admin.layouts.default')
 
-@section('title', 'Tags')
+@section('title', 'Variations')
 
 @section('content')
 
     <div class="card mb-3">
         <div class="card-header">
             <i class="fas fa-table"></i>
-            <span>Tags</span>
+            <span>Variations</span>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -30,7 +30,7 @@
                                 {{ Form::open(array('method' => 'delete')) }}
                                 {{ Form::token() }}
                                 <input type="hidden" name="id" value="{{ $row->id }}" />
-                                <a class="btn btn-link" href="{{ route('admin.tag.edit', $row->id) }}">
+                                <a class="btn btn-link" href="{{ route('admin.icons.edit', $row->id) }}">
                                     <i class="fas fa-edit"></i>
                                 </a>
                                 <button class="btn btn-link">
