@@ -18,12 +18,35 @@ class CategoryController extends Controller
     protected $category;
 
     /**
+     * @var array
+     */
+    protected $columns;
+
+    /**
      * CategoryController constructor.
      * @param Category $category
      */
     public function __construct(Category $category)
     {
         $this->category = $category;
+        $this->columns = array(
+            array(
+                'name' => 'ID',
+                'field' => 'id'
+            ),
+            array(
+                'name' => 'Name',
+                'field' => 'name'
+            ),
+            array(
+                'name' => 'Slug',
+                'field' => 'slug'
+            ),
+            array(
+                'name' => 'Parent',
+                'field' => 'parent.name'
+            )
+        );
     }
 
     /**
@@ -34,6 +57,9 @@ class CategoryController extends Controller
     {
         $search = $request->get('search');
         $categories = $this->category->list($search);
-        return view('admin.category.list', compact('categories'));
+        return view('admin.category.list', [
+            'data' => $categories,
+            'columns' => $this->columns
+        ]);
     }
 }

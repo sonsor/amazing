@@ -15,5 +15,4 @@ class OptionFacade extends Facade
     {
         return 'App\Repositories\OptionInterface';
     }
-
 }
