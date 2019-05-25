@@ -4,13 +4,10 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>SB Admin - Dashboard</title>
+<title>Amazing Neo - @yield('title')</title>
 
 <!-- Custom fonts for this template-->
-<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-<!-- Page level plugin CSS-->
-<link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+<link href="{{ asset('admin/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
 <!-- Custom styles for this template-->
-<link href="css/sb-admin.css" rel="stylesheet">
+<link href="{{ asset('admin/css/sb-admin.min.css') }}" rel="stylesheet">

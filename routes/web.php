@@ -11,23 +11,34 @@
 |
 */
 
-Route::group(['prefix' => 'admin'], function(){
+
+Route::group(['prefix' => 'admin'], function () {
     Auth::routes();
 
-    Route::group(['prefix' => 'category'], function() {
-        Route::get('/', 'Admin\\CategoryController@list');
+    Route::get('/dashboard', 'Admin\\DashboardController@index')->name('admin.dashboard');
+    Route::group(['prefix' => 'category'], function () {
+        Route::get('/', 'Admin\\CategoryController@list')->name('admin.category.list');
+        Route::get('/new', 'Admin\\CategoryController@list')->name('admin.category.create');
     });
 
-    Route::group(['prefix' => 'tag'], function() {
-        Route::get('/', 'Admin\\TagController@list');
+    Route::group(['prefix' => 'tag'], function () {
+        Route::get('/', 'Admin\\TagController@list')->name('admin.tag.list');
+        Route::get('/new', 'Admin\\TagController@list')->name('admin.tag.create');
     });
 
     Route::group(['prefix' => 'variation-type'], function() {
-        Route::get('/', 'Admin\\VariationTypeontroller@list');
+        Route::get('/', 'Admin\\VariationTypeontroller@list')->name('admin.variation.type.list');
+        Route::get('/new', 'Admin\\VariationTypeontroller@list')->name('admin.variation.type.create');
     });
 
     Route::group(['prefix' => 'version'], function() {
-        Route::get('/', 'Admin\\VersionController@list');
+        Route::get('/', 'Admin\\VersionController@list')->name('admin.version.list');
+        Route::get('/new', 'Admin\\VersionController@list')->name('admin.version.create');
+    });
+
+    Route::group(['prefix' => 'icon'], function() {
+        Route::get('/', 'Admin\\IconController@list')->name('admin.icons.list');
+        Route::get('/new', 'Admin\\IconController@list')->name('admin.icons.create');
     });
 
 });
@@ -70,5 +81,3 @@ Route::group(['prefix' => '/'], function() {
     Route::get('/terms-and-conditions', 'PagesController@tac');
 
 });
-
-Route::get('/home', 'HomeController@index')->name('home');

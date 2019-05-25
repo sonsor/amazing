@@ -145,7 +145,7 @@
         <!-- /.container-fluid -->
 
         <!-- Sticky Footer -->
-        @include('admin.include.footer')
+        @include('admin.includes.footer')
 
     </div>
     <!-- /.content-wrapper -->
@@ -158,22 +158,15 @@
     <i class="fas fa-angle-up"></i>
 </a>
 
-<!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('admin/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('admin/js/bootstrap.bundle.min.js') }}"></script>
 
-<!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('admin/js/jquery.easing.min.js') }}"></script>
 
-<!-- Page level plugin JavaScript-->
-<script src="vendor/datatables/jquery.dataTables.js"></script>
-<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-
-<!-- Custom scripts for all pages-->
-<script src="js/sb-admin.min.js"></script>
-
-<!-- Demo scripts for this page-->
-<script src="js/demo/datatables-demo.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('admin/js/sb-admin.min.js') }}"></script>
 
 </body>
 
