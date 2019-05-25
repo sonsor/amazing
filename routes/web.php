@@ -18,8 +18,12 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/dashboard', 'Admin\\DashboardController@index')->name('admin.dashboard');
     Route::group(['prefix' => 'category'], function () {
         Route::get('/', 'Admin\\CategoryController@list')->name('admin.category.list');
-        Route::get('/new', 'Admin\\CategoryController@list')->name('admin.category.create');
-        Route::get('/{id}', 'Admin\\CategoryController@list')->name('admin.category.edit');
+        Route::get('/new', 'Admin\\CategoryController@edit')->name('admin.category.create');
+        Route::get('/{id}', 'Admin\\CategoryController@edit')->name('admin.category.edit');
+
+        Route::put('/new', 'Admin\\CategoryController@store');
+        Route::put('/{id}', 'Admin\\CategoryController@store')->name('admin.category.update');
+
         Route::delete('/{id}', 'Admin\\CategoryController@remove')->name('admin.category.remove');
     });
 

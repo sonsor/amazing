@@ -76,4 +76,16 @@ class CategoryController extends Controller
         }
         return ['status' => 'error'];
     }
+
+    public function edit(Request $request)
+    {
+        $id = $request->route('id', null);
+        $data = $this->category->get($id);
+        $options = $this->category->options($id);
+
+        return view('admin.category.form', [
+            'data' => $data,
+            'categories' => $options
+        ]);
+    }
 }

@@ -60,4 +60,29 @@ class Category implements CategoryInterface
         $category->delete();
         return true;
     }
+
+    public function get(?int $id): Model
+    {
+        if (!$id) {
+            return $this->model;
+        }
+
+        return $this->model->findOrFail($id);
+    }
+
+    public function options(?int $id): array
+    {
+        $query = $this->model->newQuery();
+        $query->select('id', 'name');
+        $query->where('id', '!=', $id);
+        $query->orderBy('name', 'asc');
+        $query = $query->get();
+
+        $options = [];
+        foreach ($query as $row) {
+            $options[$row->id] = $row->name;
+        }
+        return $options;
+
+    }
 }
