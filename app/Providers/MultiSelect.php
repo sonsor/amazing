@@ -26,10 +26,10 @@ class MultiSelect extends ServiceProvider
         \Form::macro('multiselect', function (
             string $name,
             array $options,
-            array $value,
+            $value,
             array $attributes = array()
         ) {
-
+            $value = !is_array($value) ? (array) $value: $value;
             $attributes = implode(
                 ' ',
                 array_map(

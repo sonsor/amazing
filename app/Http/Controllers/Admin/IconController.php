@@ -129,7 +129,7 @@ class IconController extends Controller
 
         $categories = $this->category->options(null);
         $tags = $this->tag->options(null);
-        $variationType = $this->variationType->getPublicVariationTypesId()[0];
+        $variationType = $this->variationType->getPRivateVariationTypeId();
         $versions = $this->version->options(null);
 
         return view('admin.icons.form', [

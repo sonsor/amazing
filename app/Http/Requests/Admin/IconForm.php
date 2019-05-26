@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class IconForm extends FormRequest
 {
@@ -30,8 +31,13 @@ class IconForm extends FormRequest
             ],
             'slug' => [
                 'required',
-                'max:255'
-                //Rule::unique('categories', 'slug')->ignore($this->route('id', null))
+                'max:255',
+                Rule::unique('icons')->where(function ($query) {
+                    return $query
+                        ->where('id', '!=', $this->route('id'))
+                        ->where('slug', $this->slug)
+                        ->where('variation_id', $this->variation_id);
+                })
             ],
             'classes' => [
                 'required',

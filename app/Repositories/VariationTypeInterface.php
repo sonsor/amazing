@@ -53,4 +53,9 @@ interface VariationTypeInterface
      * @return int
      */
     public function store(?int $id, $data): int;
+
+    /**
+     * @return int
+     */
+    public function getPRivateVariationTypeId(): int;
 }

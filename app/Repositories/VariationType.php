@@ -26,6 +26,14 @@ class VariationType implements VariationTypeInterface
     }
 
     /**
+     * @return int
+     */
+    public function getPRivateVariationTypeId(): int
+    {
+        return $this->model->whereIn('slug', ['icon'])->pluck('id')->first();
+    }
+
+    /**
      * @return array
      */
     public function getPublicVariationTypesId(): array
