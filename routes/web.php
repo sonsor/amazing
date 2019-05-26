@@ -17,6 +17,7 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::group(['middleware' => 'auth'], function () {
 
+        Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('admin.logout');
         Route::get('/dashboard', 'Admin\\DashboardController@index')->name('admin.dashboard');
         Route::group(['prefix' => 'category'], function () {
             Route::get('/', 'Admin\\CategoryController@list')->name('admin.category.list');
