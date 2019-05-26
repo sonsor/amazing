@@ -120,7 +120,7 @@ Route::group(['prefix' => '/'], function() {
     Route::get('/tags', 'TagController@list');
     Route::get('/variation-types', 'VariationTypeController@list');
 
-    Route::get('/', 'PagesController@index');
+    Route::get('/', 'PagesController@index')->name('home');
     Route::get('/examples', 'PagesController@examples');
     Route::get('/faq', 'PagesController@faq');
     Route::get('/license', 'PagesController@license');

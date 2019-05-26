@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand logo" href="index.html"><!-- <img src="images/logo.png" class="img-responsive" alt=""> --></a>
+            <a class="navbar-brand logo" href="{{ route('home') }}"><!-- <img src="images/logo.png" class="img-responsive" alt=""> --></a>
         </div>
 
         @include('includes.nav')
