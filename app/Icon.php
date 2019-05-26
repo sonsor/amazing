@@ -15,6 +15,24 @@ use App\Version;
 class Icon extends Model
 {
     /**
+     * @var array
+     */
+    protected $fillable = array(
+        'name',
+        'slug',
+        'classes',
+        'version_id',
+        'variation_id',
+        'parent_id',
+        'description_id',
+        'price',
+        'filename',
+        'paid',
+        'ios',
+        'android'
+    );
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function children()

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\Admin\VariationTypeForm;
 use App\Repositories\VariationType;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -76,5 +77,36 @@ class VariationTypeController extends Controller
             return ['status' => 'success'];
         }
         return ['status' => 'error'];
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function edit(Request $request)
+    {
+        $id = $request->route('id', null);
+        $data = $this->variationType->get($id);
+
+        return view('admin.variation-type.form', [
+            'data' => $data
+        ]);
+    }
+
+    /**
+     * @param CategoryForm $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(VariationTypeForm $request)
+    {
+        $id = $request->route('id', null);
+        $data = $request->all();
+        $id = $this->variationType->store($id, $data);
+        if ($id) {
+            session()->flash('success', 'Successfully Saved!');
+            return redirect()->route('admin.variation.type.edit', $id);
+        }
+
+        return redirect()->back()->withErrors('save_eror', ['There is error in saving']);
     }
 }

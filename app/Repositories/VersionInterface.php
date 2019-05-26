@@ -8,7 +8,7 @@
 
 namespace App\Repositories;
 
-
+use \App\Version as Model;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 /**
@@ -34,4 +34,17 @@ interface VersionInterface
      * @return bool
      */
     public function remove(int $id): bool;
+
+    /**
+     * @param int|null $id
+     * @return Model
+     */
+    public function get(?int $id): Model;
+
+    /**
+     * @param int|null $id
+     * @param $data
+     * @return int
+     */
+    public function store(?int $id, $data): int;
 }

@@ -12,6 +12,14 @@ use App\Tag;
 class Tag extends Model
 {
     /**
+     * @var array
+     */
+    protected $fillable = array(
+        'name',
+        'slug'
+    );
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function icon()

@@ -17,7 +17,8 @@ class VariationType extends Model
     protected $fillable = [
         'name',
         'slug',
-        'order'
+        'order',
+        'classes'
     ];
 
     /**

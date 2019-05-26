@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\Admin\TagForm;
 use App\Repositories\Tag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -71,5 +72,36 @@ class TagController extends Controller
             return ['status' => 'success'];
         }
         return ['status' => 'error'];
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function edit(Request $request)
+    {
+        $id = $request->route('id', null);
+        $data = $this->tag->get($id);
+
+        return view('admin.tag.form', [
+            'data' => $data
+        ]);
+    }
+
+    /**
+     * @param CategoryForm $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(TagForm $request)
+    {
+        $id = $request->route('id', null);
+        $data = $request->all();
+        $id = $this->tag->store($id, $data);
+        if ($id) {
+            session()->flash('success', 'Successfully Saved!');
+            return redirect()->route('admin.tag.edit', $id);
+        }
+
+        return redirect()->back()->withErrors('save_eror', ['There is error in saving']);
     }
 }

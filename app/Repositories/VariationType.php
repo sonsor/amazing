@@ -65,4 +65,30 @@ class VariationType implements VariationTypeInterface
         $variationType->delete();
         return true;
     }
+
+    /**
+     * @param int|null $id
+     * @return Model
+     */
+    public function get(?int $id): Model
+    {
+        if (!$id) {
+            return $this->model;
+        }
+
+        return $this->model->findOrFail($id);
+    }
+
+    /**
+     * @param int|null $id
+     * @param $data
+     * @return int
+     */
+    public function store(?int $id, $data): int
+    {
+        $instance = $id ? $this->model->find($id): new $this->model;
+        $instance->fill($data);
+        $instance->save();
+        return $instance->id;
+    }
 }

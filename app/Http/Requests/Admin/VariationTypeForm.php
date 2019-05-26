@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class VariationTypeForm extends FormRequest
 {
@@ -13,7 +14,7 @@ class VariationTypeForm extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -28,7 +29,7 @@ class VariationTypeForm extends FormRequest
             'slug' => [
                 'required',
                 'max:255',
-                Rule::unique('variation_types', 'slug')
+                Rule::unique('variation_types', 'slug')->ignore($this->route('id', null))
             ]
         ];
     }

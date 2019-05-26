@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\Admin\VersionForm;
 use App\Repositories\Version;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -71,5 +72,36 @@ class VersionController extends Controller
             return ['status' => 'success'];
         }
         return ['status' => 'error'];
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function edit(Request $request)
+    {
+        $id = $request->route('id', null);
+        $data = $this->version->get($id);
+
+        return view('admin.version.form', [
+            'data' => $data
+        ]);
+    }
+
+    /**
+     * @param CategoryForm $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(VersionForm $request)
+    {
+        $id = $request->route('id', null);
+        $data = $request->all();
+        $id = $this->version->store($id, $data);
+        if ($id) {
+            session()->flash('success', 'Successfully Saved!');
+            return redirect()->route('admin.version.edit', $id);
+        }
+
+        return redirect()->back()->withErrors('save_eror', ['There is error in saving']);
     }
 }

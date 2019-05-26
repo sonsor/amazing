@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class VersionForm extends FormRequest
 {
@@ -13,7 +14,7 @@ class VersionForm extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -27,7 +28,7 @@ class VersionForm extends FormRequest
             'version' => [
                 'required',
                 'max:255',
-                Rule::unique('versions', 'version')
+                Rule::unique('versions', 'version')->ignore($this->route('id', null))
             ]
         ];
     }

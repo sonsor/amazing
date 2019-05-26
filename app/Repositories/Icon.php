@@ -208,4 +208,17 @@ class Icon implements IconInterface
         $icon->delete();
         return true;
     }
+
+    /**
+     * @param int|null $id
+     * @param $data
+     * @return int
+     */
+    public function store(?int $id, $data): int
+    {
+        $instance = $id ? $this->model->find($id): new $this->model;
+        $instance->fill($data);
+        $instance->save();
+        return $instance->id;
+    }
 }

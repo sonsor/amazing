@@ -12,6 +12,14 @@ use App\Icon;
 class Version extends Model
 {
     /**
+     * @var array
+     */
+    protected $fillable = array(
+        'version',
+        'changeLog'
+    );
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function icons()

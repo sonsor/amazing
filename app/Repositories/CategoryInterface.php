@@ -8,7 +8,7 @@
 
 namespace App\Repositories;
 
-
+use \App\Category as Model;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 
@@ -34,6 +34,12 @@ interface CategoryInterface
      * @return bool
      */
     public function remove(int $id): bool;
+
+    /**
+     * @param int|null $id
+     * @return Model
+     */
+    public function get(?int $id): Model;
 
     /**
      * @param int|null $id

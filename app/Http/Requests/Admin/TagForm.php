@@ -14,7 +14,7 @@ class TagForm extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class TagForm extends FormRequest
             'slug' => [
                 'required',
                 'max:255',
-                Rule::unique('tags', 'slug')
+                Rule::unique('tags', 'slug')->ignore($this->route('id', null))
             ]
         ];
     }
