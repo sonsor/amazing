@@ -82,4 +82,23 @@ class Version implements VersionInterface
         $instance->save();
         return $instance->id;
     }
+
+    /**
+     * @param int|null $id
+     * @return array
+     */
+    public function options(?int $id): array
+    {
+        $query = $this->model->newQuery();
+        $query->select('id', 'version');
+        $id ? $query->where('id', '!=', $id): '';
+        $query->orderBy('version', 'asc');
+        $query = $query->get();
+
+        $options = [];
+        foreach ($query as $row) {
+            $options[$row->id] = $row->version;
+        }
+        return $options;
+    }
 }

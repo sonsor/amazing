@@ -56,5 +56,5 @@ interface IconInterface
      * @param $data
      * @return int
      */
-    public function store(?int $id, $data): int;
+    public function store(?int $id, array $data): int;
 }

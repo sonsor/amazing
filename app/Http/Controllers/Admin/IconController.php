@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\Admin\IconForm;
+use App\Repositories\CategoryInterface;
 use App\Repositories\IconInterface;
+use App\Repositories\TagInterface;
+use App\Repositories\VariationTypeInterface;
+use App\Repositories\VersionInterface;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -18,17 +23,50 @@ class IconController extends Controller
     protected $icons;
 
     /**
+     * @var CategoryInterface
+     */
+    protected $category;
+
+    /**
+     * @var TagInterface
+     */
+    protected $tag;
+
+    /**
+     * @var VariationTypeInterface
+     */
+    protected $variationType;
+
+    /**
+     * @var VersionInterface
+     */
+    protected $version;
+
+    /**
      * @var array
      */
     protected $columns;
 
     /**
      * IconController constructor.
-     * @param Icon $icons
+     * @param IconInterface $icons
+     * @param CategoryInterface $category
+     * @param TagInterface $tag
+     * @param VariationTypeInterface $variationType
+     * @param VersionInterface $version
      */
-    public function __construct(IconInterface $icons)
-    {
+    public function __construct(
+        IconInterface $icons,
+        CategoryInterface $category,
+        TagInterface $tag,
+        VariationTypeInterface $variationType,
+        VersionInterface $version
+    ) {
         $this->icons = $icons;
+        $this->category = $category;
+        $this->tag = $tag;
+        $this->variationType = $variationType;
+        $this->version = $version;
         $this->columns = array(
             array(
                 'name' => 'ID',
@@ -69,40 +107,6 @@ class IconController extends Controller
 
     /**
      * @param Request $request
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function variations(Request $request)
-    {
-        $id = $request->route('id');
-        $search = $request->get('search');
-        $icons = $this->icons->variations($id, $search);
-
-        $columns = array_merge(
-            $this->columns,
-            array(
-                array(
-                    'name' => 'Variation',
-                    'field' => 'variation.name'
-                ),
-                array(
-                    'name' => 'iOS Code',
-                    'field' => 'ios'
-                ),
-                array(
-                    'name' => 'Android Code',
-                    'field' => 'android'
-                )
-            )
-        );
-
-        return view('admin.icons.variations', [
-            'data' => $icons,
-            'columns' => $columns
-        ]);
-    }
-
-    /**
-     * @param Request $request
      * @return array
      */
     public function remove(Request $request)
@@ -113,5 +117,45 @@ class IconController extends Controller
             return ['status' => 'success'];
         }
         return ['status' => 'error'];
+    }
+
+    /**
+     * @param Request $request
+     */
+    public function edit(Request $request)
+    {
+        $id = $request->route('id', null);
+        $data = $this->icons->get($id);
+
+        $categories = $this->category->options(null);
+        $tags = $this->tag->options(null);
+        $variationType = $this->variationType->getPublicVariationTypesId()[0];
+        $versions = $this->version->options(null);
+
+        return view('admin.icons.form', [
+            'data' => $data,
+            'categories' => $categories,
+            'tags' => $tags,
+            'variationType' => $variationType,
+            'versions' => $versions,
+            'title' => 'Icon'
+        ]);
+    }
+
+    /**
+     * @param IconForm $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(IconForm $request)
+    {
+        $id = $request->route('id', null);
+        $data = $request->all();
+        $id = $this->icons->store($id, $data);
+        if ($id) {
+            session()->flash('success', 'Successfully Saved!');
+            return redirect()->route('admin.icons.edit', $id);
+        }
+
+        return redirect()->back()->withErrors('save_eror', ['There is error in saving']);
     }
 }

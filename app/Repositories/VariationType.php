@@ -91,4 +91,23 @@ class VariationType implements VariationTypeInterface
         $instance->save();
         return $instance->id;
     }
+
+    /**
+     * @param int|null $id
+     * @return array
+     */
+    public function options(?int $id): array
+    {
+        $query = $this->model->newQuery();
+        $query->select('id', 'name');
+        $id ? $query->where('id', '!=', $id): '';
+        $query->orderBy('name', 'asc');
+        $query = $query->get();
+
+        $options = [];
+        foreach ($query as $row) {
+            $options[$row->id] = $row->name;
+        }
+        return $options;
+    }
 }

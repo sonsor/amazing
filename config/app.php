@@ -178,6 +178,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         App\Providers\RepositoryServiceProvider::class,
         App\Providers\Admin\NavProvider::class,
+        App\Providers\MultiSelect::class
 
     ],
 

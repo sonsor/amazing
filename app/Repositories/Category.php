@@ -82,7 +82,7 @@ class Category implements CategoryInterface
     {
         $query = $this->model->newQuery();
         $query->select('id', 'name');
-        $query->where('id', '!=', $id);
+        $id ? $query->where('id', '!=', $id): '';
         $query->orderBy('name', 'asc');
         $query = $query->get();
 
@@ -91,7 +91,6 @@ class Category implements CategoryInterface
             $options[$row->id] = $row->name;
         }
         return $options;
-
     }
 
     /**

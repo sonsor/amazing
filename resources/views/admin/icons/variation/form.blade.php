@@ -10,21 +10,12 @@
         </div>
 
         <div class="card-body">
-            {{ Form::model($data, ['route' => ['admin.icons.update', $data->id ?? 'new'], 'method' => 'put']) }}
+            {{ Form::model($data, ['route' => ['admin.icons.variations.update',  $icon, $data->id ?? 'new'], 'method' => 'put']) }}
             {{ Form::token() }}
             {{ Form::hidden('description[id]') }}
             {{ Form::hidden('price', 0) }}
-            {{ Form::hidden('variation_id', $variationType) }}
-
-            <div class="form-group">
-                {{ Form::label('name', 'Name *') }}
-                {{ Form::text('name') }}
-            </div>
-
-            <div class="form-group">
-                {{ Form::label('slug', 'Slug *') }}
-                {{ Form::text('slug') }}
-            </div>
+            {{ Form::hidden('name') }}
+            {{ Form::hidden('slug') }}
 
             <div class="form-group">
                 {{ Form::label('classes', 'Classes *') }}
@@ -49,6 +40,11 @@
             <div class="form-group">
                 {{ Form::label('version_id', 'Version *') }}
                 {{ Form::select('version_id', [null => 'Please Select'] + $versions) }}
+            </div>
+
+            <div class="form-group">
+                {{ Form::label('variation_id', 'Variation Type *') }}
+                {{ Form::select('variation_id', [null => 'Please Select'] + $variationTypes) }}
             </div>
 
             <div class="form-group">

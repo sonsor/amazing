@@ -16,12 +16,18 @@ class Icon implements IconInterface
     protected $model;
 
     /**
+     * @var DescriptionInterface
+     */
+    protected $description;
+
+    /**
      * Option constructor.
      * @param Model $mode
      */
-    public function __construct(Model $model)
+    public function __construct(Model $model, DescriptionInterface $description)
     {
         $this->model = $model;
+        $this->description = $description;
     }
 
     /**
@@ -211,14 +217,40 @@ class Icon implements IconInterface
 
     /**
      * @param int|null $id
-     * @param $data
+     * @return Model
+     */
+    public function get(?int $id): Model
+    {
+        $instance = $id ? $this->model->findOrFail($id): $this->model;
+        $instance->categories = $instance->categories->pluck('id')->toArray();
+        $instance->tags = $instance->tags->pluck('id')->toArray();
+        return $instance;
+    }
+
+    /**
+     * @param int|null $id
+     * @param array $data
      * @return int
      */
-    public function store(?int $id, $data): int
+    public function store(?int $id, array $data): int
     {
+        $description = $this->description->store(
+            $data['description']['id'] ?? null,
+            $data['description'] + ['slug' => $data['slug']]
+        );
+
         $instance = $id ? $this->model->find($id): new $this->model;
         $instance->fill($data);
+        $instance->description()->associate($description);
         $instance->save();
+        $instance->categories()->sync($data['categories']);
+        $instance->tags()->sync($data['tags']);
+
+        foreach ($instance->children as $children) {
+            $children->slug = $data['slug'];
+            $children->save();
+        }
+
         return $instance->id;
     }
 }

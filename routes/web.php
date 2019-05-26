@@ -66,12 +66,22 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::group(['prefix' => 'icon'], function () {
         Route::get('/', 'Admin\\IconController@list')->name('admin.icons.list');
-        Route::get('/new', 'Admin\\IconController@list')->name('admin.icons.create');
 
+        Route::get('/new', 'Admin\\IconController@edit')->name('admin.icons.create');
         Route::get('/{id}', 'Admin\\IconController@edit')->name('admin.icons.edit');
+
+        Route::put('/new', 'Admin\\IconController@store');
+        Route::put('/{id}', 'Admin\\IconController@store')->name('admin.icons.update');
+
         Route::delete('/{id}', 'Admin\\IconController@remove')->name('admin.icons.remove');
 
-        Route::get('/{id}/variation', 'Admin\\IconController@variations')->name('admin.icons.variations.list');
+        Route::get('/{id}/variation', 'Admin\\VariationController@list')->name('admin.icons.variations.list');
+
+        Route::get('/{icon}/variation/new', 'Admin\\VariationController@edit')->name('admin.icons.variations.create');
+        Route::get('/{icon}/variation/{id}', 'Admin\\VariationController@edit')->name('admin.icons.variations.edit');
+
+        Route::put('/{icon}/variation/new', 'Admin\\VariationController@store');
+        Route::put('/{icon}/variation/{id}', 'Admin\\VariationController@store')->name('admin.icons.variations.update');
     });
 
 });

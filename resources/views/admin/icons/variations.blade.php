@@ -27,7 +27,7 @@
                                 <th>{{ ColumnValue::get($col['field'], $row) }}</th>
                             @endforeach
                             <td>
-                                <a class="btn btn-link" href="{{ route('admin.icons.edit', $row->id) }}">
+                                <a class="btn btn-link" href="{{ route('admin.icons.variations.edit', [$row->parent_id, $row->id]) }}">
                                     <i class="fas fa-edit"></i>
                                 </a>
                                 <a class="btn btn-link js-remove" href="{{ route('admin.icons.remove', $row->id) }}">
