@@ -2,6 +2,8 @@
 namespace App\Repositories;
 
 
+use Illuminate\Pagination\LengthAwarePaginator;
+
 /**
  * Interface IconInterface
  * @package App\Repositories
@@ -29,4 +31,30 @@ interface IconInterface
         int $page,
         int $limit
     ): array;
+
+    /**
+     * @param string|null $search
+     * @return LengthAwarePaginator
+     */
+    public function list(?string $search): LengthAwarePaginator;
+
+    /**
+     * @param int $id
+     * @param string|null $search
+     * @return LengthAwarePaginator
+     */
+    public function variations(int $id, ?string $search): LengthAwarePaginator;
+
+    /**
+     * @param int $id
+     * @return bool
+     */
+    public function remove(int $id): bool;
+
+    /**
+     * @param int|null $id
+     * @param $data
+     * @return int
+     */
+    public function store(?int $id, array $data): int;
 }

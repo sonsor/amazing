@@ -176,7 +176,9 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Collective\Html\HtmlServiceProvider::class,
-        App\Providers\RepositoryServiceProvider::class
+        App\Providers\RepositoryServiceProvider::class,
+        App\Providers\Admin\NavProvider::class,
+        App\Providers\MultiSelect::class
 
     ],
 
@@ -230,7 +232,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
        'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Option' => \App\Facades\OptionFacade::class
+        'Option' => \App\Facades\OptionFacade::class,
+        'ColumnValue' => \App\Helpers\ColumnValue::class
 
     ]
 

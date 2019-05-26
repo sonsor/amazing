@@ -11,12 +11,18 @@ use App\Icon;
  */
 class Category extends Model
 {
+    protected $fillable = array(
+        'name',
+        'slug',
+        'parent_id'
+    );
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function children()
     {
-        return $this->hasMany(Category::class);
+        return $this->hasMany(Category::class, 'parent_id');
     }
 
     /**

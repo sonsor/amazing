@@ -17,7 +17,8 @@ class VariationType extends Model
     protected $fillable = [
         'name',
         'slug',
-        'order'
+        'order',
+        'classes'
     ];
 
     /**
@@ -25,7 +26,7 @@ class VariationType extends Model
      */
     public function icons()
     {
-        return $this->hasMany(Icon::class);
+        return $this->hasMany(Icon::class, 'variation_id');
     }
 }
 

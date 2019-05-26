@@ -2,6 +2,7 @@
 namespace App\Repositories;
 
 use \App\Icon as Model;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 /**
  * Class Icon
@@ -15,12 +16,18 @@ class Icon implements IconInterface
     protected $model;
 
     /**
+     * @var DescriptionInterface
+     */
+    protected $description;
+
+    /**
      * Option constructor.
      * @param Model $mode
      */
-    public function __construct(Model $model)
+    public function __construct(Model $model, DescriptionInterface $description)
     {
         $this->model = $model;
+        $this->description = $description;
     }
 
     /**
@@ -91,6 +98,11 @@ class Icon implements IconInterface
 
     }
 
+    /**
+     * @param string $slug
+     * @param string $variation
+     * @return Model
+     */
     public function one(string $slug, string $variation): Model
     {
         $icon = $this->model->newQuery();
@@ -105,6 +117,10 @@ class Icon implements IconInterface
         return $icon->get()->first();
     }
 
+    /**
+     * @param Model $icon
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
+     */
     public function related(Model $icon)
     {
         $related = $this->model->newQuery();
@@ -126,4 +142,115 @@ class Icon implements IconInterface
         return $related->get();
     }
 
+    /**
+     * @param string|null $search
+     * @return LengthAwarePaginator
+     */
+    public function list(?string $search): LengthAwarePaginator
+    {
+        $icons = $this->model->newQuery();
+        $icons->with([
+            'version',
+            'variation'
+        ]);
+
+        $icons->whereHas('variation', function ($q) {
+            $q->where('slug', 'icon');
+        });
+
+        if ($search) {
+            $icons->when('name', 'like', '%' . $search . '%');
+        }
+
+        return $icons->paginate(20);
+    }
+
+    /**
+     * @param int $id
+     * @param string|null $search
+     * @return LengthAwarePaginator
+     */
+    public function variations(int $id, ?string $search): LengthAwarePaginator
+    {
+        $icons = $this->model->newQuery();
+        $icons->with([
+            'version',
+            'variation'
+        ]);
+
+        $icons->where('parent_id', $id);
+
+        $icons->whereHas('variation', function ($q) {
+            $q->where('slug', '!=', 'icon');
+        });
+
+        if ($search) {
+            $icons->when('name', 'like', '%' . $search . '%');
+        }
+
+        return $icons->paginate(20);
+    }
+
+
+    /**
+     * @param int $id
+     * @return bool
+     * @throws \Exception
+     */
+    public function remove(int $id): bool
+    {
+        /** @var Model $icon */
+        $icon = $this->model->findOrFail($id);
+        $variations = $icon->children()->get();
+        if ($variations->count() > 0) {
+            foreach ($variations as $variation) {
+                $this->remove($variation->id);
+            }
+        }
+
+        $icon->description() ? $icon->description()->delete(): '';
+        $icon->categories()->detach();
+        $icon->tags()->detach();
+        $icon->delete();
+        return true;
+    }
+
+    /**
+     * @param int|null $id
+     * @return Model
+     */
+    public function get(?int $id): Model
+    {
+        $instance = $id ? $this->model->findOrFail($id): $this->model;
+        $instance->categories = $instance->categories->pluck('id')->toArray();
+        $instance->tags = $instance->tags->pluck('id')->toArray();
+        return $instance;
+    }
+
+    /**
+     * @param int|null $id
+     * @param array $data
+     * @return int
+     */
+    public function store(?int $id, array $data): int
+    {
+        $description = $this->description->store(
+            $data['description']['id'] ?? null,
+            $data['description'] + ['slug' => $data['slug']]
+        );
+
+        $instance = $id ? $this->model->find($id): new $this->model;
+        $instance->fill($data);
+        $instance->description()->associate($description);
+        $instance->save();
+        $instance->categories()->sync($data['categories']);
+        $instance->tags()->sync($data['tags']);
+
+        foreach ($instance->children as $children) {
+            $children->slug = $data['slug'];
+            $children->save();
+        }
+
+        return $instance->id;
+    }
 }

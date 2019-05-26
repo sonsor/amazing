@@ -11,6 +11,21 @@ use Illuminate\Database\Eloquent\Model;
 class Description extends Model
 {
     /**
+     * @var array
+     */
+    protected $fillable = array(
+        'slug',
+        'shortDescription',
+        'smallDescription1',
+        'smallDescription2',
+        'mediumDescription1',
+        'mediumDescription2',
+        'mediumDescription3',
+        'mediumDescription4',
+        'description1',
+        'description2'
+    );
+    /**
      * @var bool
      */
     public $timestamps = false;

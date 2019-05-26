@@ -82,6 +82,10 @@ class IconController extends Controller
         );
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function detail(Request $request)
     {
         $slug = $request->route('slug');
