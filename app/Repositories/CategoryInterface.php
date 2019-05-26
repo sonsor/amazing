@@ -34,4 +34,11 @@ interface CategoryInterface
      * @return bool
      */
     public function remove(int $id): bool;
+
+    /**
+     * @param int|null $id
+     * @param $data
+     * @return int
+     */
+    public function store(?int $id, $data): int;
 }

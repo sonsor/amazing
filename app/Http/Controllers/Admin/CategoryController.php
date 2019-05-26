@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\Admin\CategoryForm;
 use App\Repositories\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -77,6 +78,10 @@ class CategoryController extends Controller
         return ['status' => 'error'];
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function edit(Request $request)
     {
         $id = $request->route('id', null);
@@ -87,5 +92,22 @@ class CategoryController extends Controller
             'data' => $data,
             'categories' => $options
         ]);
+    }
+
+    /**
+     * @param CategoryForm $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(CategoryForm $request)
+    {
+        $id = $request->route('id', null);
+        $data = $request->all();
+        $id = $this->category->store($id, $data);
+        if ($id) {
+            session()->flash('success', 'Successfully Saved!');
+            return redirect()->route('admin.category.edit', $id);
+        }
+
+        return redirect()->back()->withErrors('save_eror', ['There is error in saving']);
     }
 }

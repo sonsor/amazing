@@ -61,6 +61,10 @@ class Category implements CategoryInterface
         return true;
     }
 
+    /**
+     * @param int|null $id
+     * @return Model
+     */
     public function get(?int $id): Model
     {
         if (!$id) {
@@ -70,6 +74,10 @@ class Category implements CategoryInterface
         return $this->model->findOrFail($id);
     }
 
+    /**
+     * @param int|null $id
+     * @return array
+     */
     public function options(?int $id): array
     {
         $query = $this->model->newQuery();
@@ -84,5 +92,18 @@ class Category implements CategoryInterface
         }
         return $options;
 
+    }
+
+    /**
+     * @param int|null $id
+     * @param $data
+     * @return int
+     */
+    public function store(?int $id, $data): int
+    {
+        $instance = $id ? $this->model->find($id): new $this->model;
+        $instance->fill($data);
+        $instance->save();
+        return $instance->id;
     }
 }

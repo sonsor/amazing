@@ -22,6 +22,22 @@
 
             <div class="alert js-alert hidden" role="alert"></div>
 
+            @if (Session::has('success'))
+                <div class="alert alert-success">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    {{ Session::get('success') }}
+                </div>
+            @endif
+
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    <div class="alert alert-warning">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        {{$error}}
+                    </div>
+                @endforeach
+            @endif
+
             <!-- Breadcrumbs-->
             @yield('content')
 

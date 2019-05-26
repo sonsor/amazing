@@ -14,7 +14,7 @@ class CategoryForm extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class CategoryForm extends FormRequest
             'slug' => [
                 'required',
                 'max:255',
-                Rule::unique('categories', 'slug')
+                Rule::unique('categories', 'slug')->ignore($this->route('id', null))
             ]
         ];
     }
