@@ -93,7 +93,7 @@ Route::group(['prefix' => 'admin'], function () {
 Route::group(['prefix' => '/'], function() {
 
     Route::group(['prefix' => 'contact'], function() {
-        Route::get('/', 'ContactController@index');
+        Route::get('/', 'ContactController@index')->name('contact');
         Route::put('/', 'ContactController@save')->name('contact.save');
         Route::get('/thank-you', 'ContactController@thankyou')->name('contact.thankyou');
     });
@@ -126,5 +126,10 @@ Route::group(['prefix' => '/'], function() {
     Route::get('/license', 'PagesController@license');
     Route::get('/privacy-policy', 'PagesController@privacyPolicy');
     Route::get('/terms-and-conditions', 'PagesController@tac');
+
+    Route::get('mailable', function() {
+        $download = App\Downloads::find(1);
+        return new App\Mail\DownloadFont($download);
+    });
 
 });

@@ -82,6 +82,11 @@ class DownloadsController extends Controller
         return view('download.success');
     }
 
+    public function error()
+    {
+        return 'errror';
+    }
+
     /**
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse|\Symfony\Component\HttpFoundation\BinaryFileResponse
