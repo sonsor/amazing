@@ -8,6 +8,7 @@
         <div class="card-header">
             <i class="fas fa-table"></i>
             <span>Variation Types</span>
+            <a href="{{ route('admin.variation.type.create')  }}" clas="btn btn-primary">Add New</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">

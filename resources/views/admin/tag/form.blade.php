@@ -24,7 +24,7 @@
             </div>
 
             {{ Form::submit('Save', ['class' => 'btn btn-primary']) }}
-            {{ Form::button('Cancel', ['class' => 'btn btn-default']) }}
+            <a href="{{ URL::previous() }}" class="btn btn-default">Cancel</a>
 
             {{ Form::close() }}
         </div>

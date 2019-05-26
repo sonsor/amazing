@@ -1,12 +1,12 @@
 @extends('admin.layouts.default')
 
-@section('title', $data->id ? 'Edit {$title} : '. $data->name: 'Add New {$title}')
+@section('title', $data->id ? 'Edit Variation : ' . $data->name: 'Add New Variation')
 
 @section('content')
     <div class="card mb-3">
         <div class="card-header">
             <i class="fas fa-table"></i>
-            <span>{{ $data->id ? 'Edit {$title} : '. $data->name: 'Add New {$title}' }}</span>
+            <span>{{ $data->id ? 'Edit Variation : '. $data->name: 'Add New Variation' }}</span>
         </div>
 
         <div class="card-body">
@@ -104,7 +104,7 @@
 
 
             {{ Form::submit('Save', ['class' => 'btn btn-primary']) }}
-            {{ Form::button('Cancel', ['class' => 'btn btn-default']) }}
+            <a href="{{ URL::previous() }}" class="btn btn-default">Cancel</a>
 
             {{ Form::close() }}
         </div>

@@ -137,8 +137,7 @@ class IconController extends Controller
             'categories' => $categories,
             'tags' => $tags,
             'variationType' => $variationType,
-            'versions' => $versions,
-            'title' => 'Icon'
+            'versions' => $versions
         ]);
     }
 

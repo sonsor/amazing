@@ -36,8 +36,9 @@ class VariationController extends IconController
             )
         );
 
-        return view('admin.icons.variations', [
+        return view('admin.icons.variation.list', [
             'data' => $icons,
+            'icon' => $id,
             'columns' => $columns
         ]);
     }
@@ -62,8 +63,7 @@ class VariationController extends IconController
             'categories' => $categories,
             'tags' => $tags,
             'variationTypes' => $variationTypes,
-            'versions' => $versions,
-            'title' => 'Icon'
+            'versions' => $versions
         ]);
     }
 

@@ -8,6 +8,7 @@
         <div class="card-header">
             <i class="fas fa-table"></i>
             <span>Categories</span>
+            <a href="{{ route('admin.category.create')  }}" clas="btn btn-primary">Add New</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
