@@ -14,7 +14,7 @@
         <div class="input-group">
             <input name="search" type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" value="{{ Request::query('search') }}" />
             <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
+                <button type="submit" class="btn btn-primary" type="button">
                     <i class="fas fa-search"></i>
                 </button>
             </div>

@@ -15,74 +15,77 @@
 Route::group(['prefix' => 'admin'], function () {
     Auth::routes();
 
-    Route::get('/dashboard', 'Admin\\DashboardController@index')->name('admin.dashboard');
-    Route::group(['prefix' => 'category'], function () {
-        Route::get('/', 'Admin\\CategoryController@list')->name('admin.category.list');
-        Route::get('/new', 'Admin\\CategoryController@edit')->name('admin.category.create');
-        Route::get('/{id}', 'Admin\\CategoryController@edit')->name('admin.category.edit');
+    Route::group(['middleware' => 'auth'], function () {
 
-        Route::put('/new', 'Admin\\CategoryController@store');
-        Route::put('/{id}', 'Admin\\CategoryController@store')->name('admin.category.update');
+        Route::get('/dashboard', 'Admin\\DashboardController@index')->name('admin.dashboard');
+        Route::group(['prefix' => 'category'], function () {
+            Route::get('/', 'Admin\\CategoryController@list')->name('admin.category.list');
+            Route::get('/new', 'Admin\\CategoryController@edit')->name('admin.category.create');
+            Route::get('/{id}', 'Admin\\CategoryController@edit')->name('admin.category.edit');
 
-        Route::delete('/{id}', 'Admin\\CategoryController@remove')->name('admin.category.remove');
-    });
+            Route::put('/new', 'Admin\\CategoryController@store');
+            Route::put('/{id}', 'Admin\\CategoryController@store')->name('admin.category.update');
 
-    Route::group(['prefix' => 'tag'], function () {
-        Route::get('/', 'Admin\\TagController@list')->name('admin.tag.list');
+            Route::delete('/{id}', 'Admin\\CategoryController@remove')->name('admin.category.remove');
+        });
 
-        Route::get('/new', 'Admin\\TagController@edit')->name('admin.tag.create');
-        Route::get('/{id}', 'Admin\\TagController@edit')->name('admin.tag.edit');
+        Route::group(['prefix' => 'tag'], function () {
+            Route::get('/', 'Admin\\TagController@list')->name('admin.tag.list');
 
-        Route::put('/new', 'Admin\\TagController@store');
-        Route::put('/{id}', 'Admin\\TagController@store')->name('admin.tag.update');
+            Route::get('/new', 'Admin\\TagController@edit')->name('admin.tag.create');
+            Route::get('/{id}', 'Admin\\TagController@edit')->name('admin.tag.edit');
+
+            Route::put('/new', 'Admin\\TagController@store');
+            Route::put('/{id}', 'Admin\\TagController@store')->name('admin.tag.update');
 
 
-        Route::delete('/{id}', 'Admin\\TagController@remove')->name('admin.tag.remove');
-    });
+            Route::delete('/{id}', 'Admin\\TagController@remove')->name('admin.tag.remove');
+        });
 
-    Route::group(['prefix' => 'variation-type'], function() {
-        Route::get('/', 'Admin\\VariationTypeController@list')->name('admin.variation.type.list');
+        Route::group(['prefix' => 'variation-type'], function() {
+            Route::get('/', 'Admin\\VariationTypeController@list')->name('admin.variation.type.list');
 
-        Route::get('/new', 'Admin\\VariationTypeController@edit')->name('admin.variation.type.create');
-        Route::get('/{id}', 'Admin\\VariationTypeController@edit')->name('admin.variation.type.edit');
+            Route::get('/new', 'Admin\\VariationTypeController@edit')->name('admin.variation.type.create');
+            Route::get('/{id}', 'Admin\\VariationTypeController@edit')->name('admin.variation.type.edit');
 
-        Route::put('/new', 'Admin\\VariationTypeController@store');
-        Route::put('/{id}', 'Admin\\VariationTypeController@store')->name('admin.variation.type.update');
+            Route::put('/new', 'Admin\\VariationTypeController@store');
+            Route::put('/{id}', 'Admin\\VariationTypeController@store')->name('admin.variation.type.update');
 
-        Route::delete('/{id}', 'Admin\\VariationTypeController@remove')->name('admin.variation.type.remove');
-    });
+            Route::delete('/{id}', 'Admin\\VariationTypeController@remove')->name('admin.variation.type.remove');
+        });
 
-    Route::group(['prefix' => 'version'], function() {
-        Route::get('/', 'Admin\\VersionController@list')->name('admin.version.list');
+        Route::group(['prefix' => 'version'], function() {
+            Route::get('/', 'Admin\\VersionController@list')->name('admin.version.list');
 
-        Route::get('/new', 'Admin\\VersionController@edit')->name('admin.version.create');
-        Route::get('/{id}', 'Admin\\VersionController@edit')->name('admin.version.edit');
+            Route::get('/new', 'Admin\\VersionController@edit')->name('admin.version.create');
+            Route::get('/{id}', 'Admin\\VersionController@edit')->name('admin.version.edit');
 
-        Route::put('/new', 'Admin\\VersionController@store');
-        Route::put('/{id}', 'Admin\\VersionController@store')->name('admin.version.update');
+            Route::put('/new', 'Admin\\VersionController@store');
+            Route::put('/{id}', 'Admin\\VersionController@store')->name('admin.version.update');
 
-        Route::delete('/{id}', 'Admin\\VersionController@remove')->name('admin.version.remove');
-    });
+            Route::delete('/{id}', 'Admin\\VersionController@remove')->name('admin.version.remove');
+        });
 
-    Route::group(['prefix' => 'icon'], function () {
-        Route::get('/', 'Admin\\IconController@list')->name('admin.icons.list');
+        Route::group(['prefix' => 'icon'], function () {
+            Route::get('/', 'Admin\\IconController@list')->name('admin.icons.list');
 
-        Route::get('/new', 'Admin\\IconController@edit')->name('admin.icons.create');
-        Route::get('/{id}', 'Admin\\IconController@edit')->name('admin.icons.edit');
+            Route::get('/new', 'Admin\\IconController@edit')->name('admin.icons.create');
+            Route::get('/{id}', 'Admin\\IconController@edit')->name('admin.icons.edit');
 
-        Route::put('/new', 'Admin\\IconController@store');
-        Route::put('/{id}', 'Admin\\IconController@store')->name('admin.icons.update');
+            Route::put('/new', 'Admin\\IconController@store');
+            Route::put('/{id}', 'Admin\\IconController@store')->name('admin.icons.update');
 
-        Route::delete('/{id}', 'Admin\\IconController@remove')->name('admin.icons.remove');
+            Route::delete('/{id}', 'Admin\\IconController@remove')->name('admin.icons.remove');
 
-        Route::get('/{id}/variation', 'Admin\\VariationController@list')->name('admin.icons.variations.list');
+            Route::get('/{id}/variation', 'Admin\\VariationController@list')->name('admin.icons.variations.list');
 
-        Route::get('/{icon}/variation/new', 'Admin\\VariationController@edit')->name('admin.icons.variations.create');
-        Route::get('/{icon}/variation/{id}', 'Admin\\VariationController@edit')->name('admin.icons.variations.edit');
+            Route::get('/{icon}/variation/new', 'Admin\\VariationController@edit')->name('admin.icons.variations.create');
+            Route::get('/{icon}/variation/{id}', 'Admin\\VariationController@edit')->name('admin.icons.variations.edit');
 
-        Route::put('/{icon}/variation/new', 'Admin\\VariationController@store');
-        Route::put('/{icon}/variation/{id}', 'Admin\\VariationController@store')->name('admin.icons.variations.update');
-    });
+            Route::put('/{icon}/variation/new', 'Admin\\VariationController@store');
+            Route::put('/{icon}/variation/{id}', 'Admin\\VariationController@store')->name('admin.icons.variations.update');
+        });
+    });;
 
 });
 
