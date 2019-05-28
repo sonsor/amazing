@@ -1,2 +1,2 @@
-#!/usr/bin/bash
+#!/bin/bash
 docker-compose exec amazing php artisan $@
