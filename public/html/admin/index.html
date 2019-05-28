@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/jquery.dataTables.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />   
+</head>
+<body>
+
+    <!-- nav bar -->
+    <div class="header">
+        <a href="#" id="menu-action"> <i class="fa fa-bars"></i> <span>Close</span> </a>
+        <div class="logo"><a href="index.html"><img src="images/logo.svg" height="20" /></a></div>
+        <nav class="navbar navbar-default pull-right">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" data-hover="dropdown" data-animations="zoomIn">
+                <ul class="nav navbar-nav navbar-right ">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">dropdown</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="examples.html">Examples</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                    <li class="s-icon"><a href="#" id="addClass" class="s-icon" data-toggle="modal" data-target="#modal-search"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div> <!-- / nav bar end -->
+    <!-- side bar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html" data-toggle="tooltip" data-placement="right" title="Dashboard"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Icons">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-forumbee"></i><span>Icons</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manag-icons.html">Manage Icons</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-icons.html">Add Icons</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Fonts">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-text-width"></i><span>Fonts</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manage-font.html">Manage Fonts</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-font.html">Add Font</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="user">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-user"></i><span>Users</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manag-users.html">Manage Users</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-user.html">Add Users</a></li>
+                </ul>
+            </li>
+
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Messages">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-envelope-o"></i><span>Messages</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="emails.html">Messages</a></li>
+                    <li class="divider"></li>
+                    <li><a href="sent-emails.html">Send Messag</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Iconic Font">
+                <a href="#" data-toggle="dropdown"><i class="fa fa fa-object-ungroup"></i><span>Amazing Neo</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="amazing-icon-font.html">Amazing Neo Icons</a></li>
+                    <li><a href="amazing-pricing.html">Amazing neo pricing</a></li>
+                    <li class="divider"></li>
+                    <li><a href="update-amazing-font-version.html">Update Font Version</a></li>
+                </ul>
+            </li>
+
+            <li><a href="payments.html" data-toggle="tooltip" data-placement="right" title="payments"><i class="fa fa-dollar"></i><span>Payments</span></a></li>
+            <li><a href="settinges.html" data-toggle="tooltip" data-placement="right" title="Settings"><i class="fa fa-cog"></i><span>Settings</span></a></li>
+        </ul>
+    </div> <!-- / side bar end -->
+    <!-- Content -->
+    <div class="main">
+        <div class="hipsum">
+
+            <div class="col-md-12 clearfix">
+                <h4 class="pull-left">Dashboard</h4>
+                <ul class="breadcrumb pull-right">
+                    <li class="active">Home</li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-block">
+                                <div class="media">
+                                    <div class="media-body text-xs-left">
+                                        <h3 class="pink">278</h3>
+                                        <span>All Users</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <i class="fa fa-user pink float-xs-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-block">
+                                <div class="media">
+                                    <div class="media-body text-xs-left">
+                                        <h3 class="skey">156</h3>
+                                        <span>Download fonts</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <i class="fa fa-text-width skey float-xs-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-block">
+                                <div class="media">
+                                    <div class="media-body text-xs-left">
+                                        <h3 class="deep-orange">1400</h3>
+                                        <span>icons</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <i class="fa fa-forumbee deep-orange float-xs-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-block">
+                                <div class="media">
+                                    <div class="media-body text-xs-left">
+                                        <h3 class="cyan">23</h3>
+                                        <span>Icons Request</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <i class="fa fa-cog cyan float-xs-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-block">
+                                <div class="media">
+                                    <div class="media-body text-xs-left">
+                                        <h3 class="warning">28</h3>
+                                        <span>Emails</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <i class="fa fa-cog warning float-xs-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-block">
+                                <div class="media">
+                                    <div class="media-body text-xs-left">
+                                        <h3 class="teal">156</h3>
+                                        <span>New Clients</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <i class="fa fa-cog teal float-xs-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--/ project charts -->
+            <div class="row">
+                <div class="col-sm-12 col-md-8">
+                    <div class="card p-15">
+                        <div class="card-body">
+                            <ul class="list-inline text-xs-center pt-2 m-0">
+                                <li class="mr-1">
+                                    <h6><i class="fa fa-pie-chart warning"></i> <span class="grey darken-1">Icons</span></h6>
+                                </li>
+                                <li class="mr-1">
+                                    <h6><i class="fa fa-pie-chart teal"></i> <span class="grey darken-1">Fonts</span></h6>
+                                </li>
+                            </ul>
+                            <div class="chartjs height-250">
+                                <canvas id="line-stacked-area" height="250"></canvas>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-xs-3 text-xs-center">
+                                    <span class="text-muted">Current Users</span>
+                                    <h2 class="block font-weight-normal">18</h2>
+                                    <progress class="progress progress-xs mt-2 progress-success" value="70" max="100"></progress>
+                                </div>
+                                <div class="col-xs-3 text-xs-center">
+                                    <span class="text-muted">Today Users</span>
+                                    <h2 class="block font-weight-normal">125</h2>
+                                    <progress class="progress progress-xs mt-2 progress-success" value="40" max="100"></progress>
+                                </div>
+                                <div class="col-xs-3 text-xs-center">
+                                    <span class="text-muted">this week</span>
+                                    <h2 class="block font-weight-normal">242</h2>
+                                    <progress class="progress progress-xs mt-2 progress-success" value="60" max="100"></progress>
+                                </div>
+                                <div class="col-xs-3 text-xs-center">
+                                    <span class="text-muted">Past Weeke</span>
+                                    <h2 class="block font-weight-normal">1582</h2>
+                                    <progress class="progress progress-xs mt-2 progress-success" value="90" max="100"></progress>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+
+                <style>
+                    .display-4 {
+                        font-size: 3.5rem;
+                        font-weight: 300;
+                    }
+                    .position-absolute {
+                        position: absolute !important;
+                    }
+                    .white {
+                        color: #FFFFFF !important;
+                    }
+
+
+                    .position-bottom-0 {
+                        bottom: 0;
+                    }
+                    .progress {
+                        height: 10px;
+                        border-radius: 10px;
+                    }
+                    progress {
+                        background-color: #eee;
+                    }
+                </style>
+
+
+                <div class="col-sm-12 col-md-4">
+                    <div class="card card-inverse bg-info">
+                        <div class="card-body">
+                            <div class="position-relative">
+                                <div class="chart-title position-absolute m-l-15 white">
+                                    <h1 class="display-4">84% up</h1>
+                                    <span>Sale Satisfied</span>
+                                </div>
+                                <canvas id="emp-satisfaction" height="450"  class="block bg-cyan"></canvas>
+                                <div class="chart-stats position-absolute position-bottom-0 position-right-0 mb-2 mr-3 white">
+                                    <a href="#" class="btn bg-info bg-darken-3 mr-1 white">Statistics <i class="icon-stats-bars"></i></a> for the last year.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ project charts -->
+
+            <!-- Area Chart -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Area Chart</h4>
+                        <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+                        <div class="heading-elements">
+                            <ul class="list-inline mb-0">
+                                <li><a data-action="collapse"><i class="icon-minus4"></i></a></li>
+                                <li><a data-action="reload"><i class="icon-reload"></i></a></li>
+                                <li><a data-action="expand"><i class="icon-expand2"></i></a></li>
+                                <li><a data-action="close"><i class="icon-cross2"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body collapse in">
+                        <div class="card-block chartjs">
+                            <canvas id="area-chart" height="500"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+   
+
+
+        </div>
+    </div>
+  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/chart.min.js"></script>
+    <!--<script src="assats/charts/line/line-stacked-area.js"></script>-->
+    <script src="assats/charts/line/line-area.min.js"></script>
+    <script src="assats/charts/line/line-stacked-area.js"></script>
+    <script src="assats/charts/line/line.min.js"></script>
+    <script src="js/dashboard-lite.js"></script>
+</body>
+</html>

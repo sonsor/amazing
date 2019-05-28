@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
@@ -7,67 +7,62 @@
 
 </head>
 
-<body id="page-top">
+<!-- nav bar -->
+<div class="header">
 
     @include('admin.includes.header')
 
-<div id="wrapper">
+</div>
 
+<!-- side bar -->
+<div class="sidebar">
     <!-- Sidebar -->
     @include('admin.includes.nav')
 
-    <div id="content-wrapper">
+</div>
 
-        <div class="container-fluid">
+<!-- START MAIN -->
+<div class="main">
+    <!-- START BIGSUM -->
+    <div class="hipsum">
 
-            <div class="alert js-alert hidden" role="alert"></div>
-
-            @if (Session::has('success'))
-                <div class="alert alert-success">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    {{ Session::get('success') }}
-                </div>
-            @endif
-
-            @if ($errors->any())
-                @foreach ($errors->all() as $error)
-                    <div class="alert alert-warning">
-                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        {{$error}}
-                    </div>
-                @endforeach
-            @endif
-
-            <!-- Breadcrumbs-->
-            @yield('content')
-
+        <div class="col-md-12 clearfix">
+            <h4 class="pull-left">Dashboard</h4>
+            <ul class="breadcrumb pull-right">
+                <li class="active">Home</li>
+            </ul>
         </div>
-        <!-- /.container-fluid -->
 
-        <!-- Sticky Footer -->
-        @include('admin.includes.footer')
+        <div class="alert js-alert hidden" role="alert"></div>
+
+        @if (Session::has('success'))
+            <div class="alert alert-success">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                {{ Session::get('success') }}
+            </div>
+        @endif
+
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                <div class="alert alert-warning">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    {{$error}}
+                </div>
+            @endforeach
+        @endif
+
+        <!-- Breadcrumbs-->
+        @yield('content')
 
     </div>
-    <!-- /.content-wrapper -->
+    <!-- END BIGSUM -->
 
 </div>
-<!-- /#wrapper -->
+<!-- END BIGSUM -->
 
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
-    <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('admin/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('admin/js/bootstrap.bundle.min.js') }}"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="{{ asset('admin/js/jquery.easing.min.js') }}"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="{{ asset('admin/js/sb-admin.js') }}"></script>
+    <script src="{{ asset('admin/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admin/js/custom.js') }}"></script>
 
 </body>
-
 </html>

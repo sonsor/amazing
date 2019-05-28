@@ -1,21 +1,24 @@
-<ul class="sidebar navbar-nav">
+<ul>
     @foreach ($nav as $link)
-    <li class="nav-item {{ count($link['children']) > 0 ? 'dropdown': '' }}">
+    <li class="{{ count($link['children']) > 0 ? 'dropdown': ''  }}">
         <a
-                class="nav-link {{ count($link['children']) > 0 ? 'dropdown-toggle': '' }}"
-                href="{{ route($link['route']) }}"
-                id="{{ $link['name'] }}"
-                role="button"
+                href="{{ count($link['children']) > 0 ? '#': route($link['route']) }}"
+                data-toggle="tooltip"
+                data-placement="right"
+                title="{{ $link['label'] }}"
         >
             <i class="fas fa-fw fa-{{ $link['icon'] }}"></i>
             <span>{{ $link['label'] }}</span>
         </a>
+
         @if (count($link['children']) > 0)
-            <div class="dropdown-menu" aria-labelledby="{{ $link['name']  }}">
+            <ul class="child-menu">
                 @foreach ($link['children'] as $child)
-                    <a class="dropdown-item" href="{{ route($child['route']) }}">{{ $child['label'] }}</a>
+                    <li>
+                        <a href="{{ route($child['route']) }}">{{ $child['label'] }}</a>
+                    </li>
                 @endforeach
-            </div>
+            </ul>
         @endif
     </li>
     @endforeach

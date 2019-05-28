@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>Email Compose</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />    
+    <link href="assats/bootstrap-wysihtml5-0.0.2/libs/css/bootstrap-wysihtml5.css" rel="stylesheet" />
+    <link href="assats/bootstrap-wysihtml5-0.0.2/libs/css/bootstrap3-wysiwyg5-color.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- nav bar -->
+    <div class="header">
+        <a href="#" id="menu-action"> <i class="fa fa-bars"></i> <span>Close</span> </a>
+        <div class="logo"><a href="index.html"><img src="images/logo.svg" height="20" /></a></div>
+        <nav class="navbar navbar-default pull-right">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" data-hover="dropdown" data-animations="zoomIn">
+                <ul class="nav navbar-nav navbar-right ">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">dropdown</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="examples.html">Examples</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                    <li class="s-icon"><a href="#" id="addClass" class="s-icon" data-toggle="modal" data-target="#modal-search"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div> <!-- / nav bar end -->
+    <!-- side bar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html" data-toggle="tooltip" data-placement="right" title="Dashboard"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Icons">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-forumbee"></i><span>Icons</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manag-icons.html">Manage Icons</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-icons.html">Add Icons</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Fonts">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-text-width"></i><span>Fonts</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manage-font.html">Manage Fonts</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-font.html">Add Font</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="user">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-user"></i><span>Users</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manag-users.html">Manage Users</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-user.html">Add Users</a></li>
+                </ul>
+            </li>
+
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Messages">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-envelope-o"></i><span>Messages</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="emails.html">Messages</a></li>
+                    <li class="divider"></li>
+                    <li><a href="sent-emails.html">Send Messag</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Iconic Font">
+                <a href="#" data-toggle="dropdown"><i class="fa fa fa-object-ungroup"></i><span>Amazing Neo</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="amazing-icon-font.html">Amazing Neo Icons</a></li>
+                    <li><a href="amazing-pricing.html">Amazing neo pricing</a></li>
+                    <li class="divider"></li>
+                    <li><a href="update-amazing-font-version.html">Update Font Version</a></li>
+                </ul>
+            </li>
+
+            <li><a href="payments.html" data-toggle="tooltip" data-placement="right" title="payments"><i class="fa fa-dollar"></i><span>Payments</span></a></li>
+            <li><a href="settinges.html" data-toggle="tooltip" data-placement="right" title="Settings"><i class="fa fa-cog"></i><span>Settings</span></a></li>
+        </ul>
+    </div> <!-- / side bar end -->
+     <!-- start content -->
+    <div class="main">
+        <div class="hipsum">
+
+            <div class="col-md-12 clearfix">
+                <h4 class="pull-left">Mailbox</h4>
+                <ul class="breadcrumb pull-right">
+                    <li><a href="index.html"><i class="fa fa-home"></i> Dashboard </a></li>
+                    <li><a href="emails.html">Mailbox</a></li>
+                    <li class="active"><strong>Compose</strong> </li>
+                </ul>
+            </div>           
+
+            <div class="col-lg-12">
+                <section class="box nobox">
+                    <div class="content-body">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4 col-xs-12">
+                                <a class="btn btn-warning btn-block" href='email-campose.html'>Compose</a>
+                                <ul class="list-unstyled mail_tabs">
+                                    <li class="">
+                                        <a href="emails.html">
+                                            <i class="fa fa-inbox"></i> Inbox <span class="badge badge-primary pull-right">6</span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="sent-emails.html">
+                                            <i class="fa fa-send-o"></i> Sent
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="email-drafts.html">
+                                            <i class="fa fa-edit"></i> Drafts <span class="badge badge-orange pull-right">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="email-templates.html">
+                                            <i class="fa fa-star-o"></i> Templates
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="email-trash.html">
+                                            <i class="fa fa-trash-o"></i> Trash
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <div class="col-md-9 col-sm-8 col-xs-12">
+                                <div class="mail_content">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <h3 class="mail_head">Compose</h3>
+                                            <i class='fa fa-refresh icon-primary icon-xs icon-orange mail_head_icon pull-right'></i>
+                                            <i class='fa fa-search icon-primary icon-xs icon-orange mail_head_icon pull-right'></i>
+                                        </div>
+
+                                        <div class="col-md-12 col-sm-12 col-xs-12 mail_view_title">
+
+                                            <div class="m-b-30">
+
+                                                <button class="btn btn-warning btn-sm" rel="tooltip" data-color-class="primary" data-animate=" animated fadeIn" data-toggle="tooltip" data-original-title="Send" data-placement="top"> <i class="fa fa-paper-plane-o icon-xs"></i></button>
+                                                <button class="btn btn-success btn-sm" rel="tooltip" data-color-class="primary" data-animate=" animated fadeIn" data-toggle="tooltip" data-original-title="Atach" data-placement="top"> <i class="fa fa-paperclip icon-xs"></i></button>
+                                                <button class="btn btn-danger btn-sm" rel="tooltip" data-color-class="primary" data-animate=" animated fadeIn" data-toggle="tooltip" data-original-title="Trash" data-placement="top"> <i class="fa fa-trash-o icon-xs"></i></button>
+
+
+                                        </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 mail_view_info">
+                                                <div class="form-group mail_cc_bcc">
+                                                    <label class="form-label" for="field-1">To:</label>
+                                                    <span class="desc">e.g. "someemail@example.com"</span>
+                                                    <div class="labels">
+                                                        <span class='label label-secondary cc'>CC</span> <span class='label label-secondary bcc'>BCC</span>
+                                                    </div>
+                                                    <div class="controls">
+                                                        <input type="text" class="form-control mail_compose_to" value="" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mail_compose_cc">
+                                                    <label class="form-label" for="field-1">CC:</label>
+                                                    <span class="desc">e.g. "someemail@example.com"</span>
+                                                    <div class="controls">
+                                                        <input type="text" class="form-control mail_compose_to" value="" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mail_compose_bcc">
+                                                    <label class="form-label" for="field-1">BCC:</label>
+                                                    <span class="desc">e.g. "someemail@example.com"</span>
+                                                    <div class="controls">
+                                                        <input type="text" class="form-control mail_compose_to" value="" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-label" for="field-1">Subject:</label>
+                                                    <span class="desc">e.g. "Meeting in 1st week"</span>
+                                                    <div class="controls">
+                                                        <input type="text" class="form-control" value="" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="box ">
+                                                        <div class="content-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                    <textarea class="bootstrap-wysihtml5-textarea" placeholder="Enter text ..." style="width: 100%; height: 250px; font-size: 14px; line-height: 23px; padding: 15px;"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class='pull-left'>
+                                                <button class="btn btn-warning">
+                                                    <i class="fa fa-paper-plane-o icon-xs"></i> Send
+                                                </button>
+                                               
+                                                <button class="btn btn-primary">
+                                                    <i class="fa fa-floppy-o icon-xs"></i> Save as Templet
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                        
+                        </div>
+                </section>
+            </div>
+
+
+        </div>
+    </div> 
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="assats/bootstrap-wysihtml5-0.0.2/libs/js/wysihtml5-0.3.0_rc2.js"></script>
+    <script src="assats/bootstrap-wysihtml5-0.0.2/libs/js/jquery-1.7.1.min.js"></script>
+    <script src="assats/bootstrap-wysihtml5-0.0.2/libs/js/bootstrap.min.js"></script>
+    <script src="assats/bootstrap-wysihtml5-0.0.2/libs/js/bootstrap3-wysihtml5.js"></script>
+
+    <script>
+        $('.textarea').wysihtml5({
+            "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+            "color": true, //Button to change color of font
+            "emphasis": true, //Italics, bold, etc. Default true
+            "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+            "html": true, //Button which allows you to edit the generated HTML. Default false
+            "link": true, //Button to insert a link. Default true
+            "image": true, //Button to insert an image. Default true,
+            "edit": true, //Button to edit. Default true,
+            "size": 'sm' //Button size like sm, xs etc.
+        });
+      
+    </script>
+</body>
+</html>

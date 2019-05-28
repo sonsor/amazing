@@ -1,36 +1,32 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-
-    <a class="navbar-brand mr-1" href="index.html">Amazing Neo</a>
-
-    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-        <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Navbar Search -->
-    {{ Form::open(array(
-        'method' => 'get',
-        'class' => 'd-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0'
-    )) }}
-        <div class="input-group">
-            <input name="search" type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" value="{{ Request::query('search') }}" />
-            <div class="input-group-append">
-                <button type="submit" class="btn btn-primary" type="button">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
+<!-- nav bar -->
+<div class="header">
+    <a href="#" id="menu-action"> <i class="fa fa-bars"></i> <span>Close</span> </a>
+    <div class="logo"><a href="index.html"><img src="images/logo.svg" height="20" /></a></div>
+    <nav class="navbar navbar-default pull-right">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-    {{ Form::close() }}
+        <div id="navbar" class="navbar-collapse collapse" data-hover="dropdown" data-animations="zoomIn">
+            <ul class="nav navbar-nav navbar-right ">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">dropdown</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
 
-    <!-- Navbar -->
-    <ul class="navbar-nav ml-auto ml-md-0">
-        <li class="nav-item dropdown no-arrow">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user-circle fa-fw"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="{{ route('admin.logout')  }}">Logout</a>
-            </div>
-        </li>
-    </ul>
-
-</nav>
+                <li><a href="#">What's New</a></li>
+                <li><a href="examples.html">Examples</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+                <li class="s-icon"><a href="#" id="addClass" class="s-icon" data-toggle="modal" data-target="#modal-search"><i class="fa fa-search"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+</div> <!-- / nav bar end -->

@@ -1,0 +1,552 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/jquery.dataTables.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- nav bar -->
+    <div class="header">
+        <a href="#" id="menu-action"> <i class="fa fa-bars"></i> <span>Close</span> </a>
+        <div class="logo"><a href="index.html"><img src="images/logo.svg" height="20" /></a></div>
+        <nav class="navbar navbar-default pull-right">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" data-hover="dropdown" data-animations="zoomIn">
+                <ul class="nav navbar-nav navbar-right ">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">dropdown</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="examples.html">Examples</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                    <li class="s-icon"><a href="#" id="addClass" class="s-icon" data-toggle="modal" data-target="#modal-search"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div> <!-- / nav bar end -->
+    <!-- side bar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html" data-toggle="tooltip" data-placement="right" title="Dashboard"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Icons">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-forumbee"></i><span>Icons</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manag-icons.html">Manage Icons</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-icons.html">Add Icons</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Fonts">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-text-width"></i><span>Fonts</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manage-font.html">Manage Fonts</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-font.html">Add Font</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="user">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-user"></i><span>Users</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manag-users.html">Manage Users</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-user.html">Add Users</a></li>
+                </ul>
+            </li>
+
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Messages">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-envelope-o"></i><span>Messages</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="emails.html">Messages</a></li>
+                    <li class="divider"></li>
+                    <li><a href="sent-emails.html">Send Messag</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Iconic Font">
+                <a href="#" data-toggle="dropdown"><i class="fa fa fa-object-ungroup"></i><span>Amazing Neo</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="amazing-icon-font.html">Amazing Neo Icons</a></li>
+                    <li><a href="amazing-pricing.html">Amazing neo pricing</a></li>
+                    <li class="divider"></li>
+                    <li><a href="update-amazing-font-version.html">Update Font Version</a></li>
+                </ul>
+            </li>
+
+            <li><a href="payments.html" data-toggle="tooltip" data-placement="right" title="payments"><i class="fa fa-dollar"></i><span>Payments</span></a></li>
+            <li><a href="settinges.html" data-toggle="tooltip" data-placement="right" title="Settings"><i class="fa fa-cog"></i><span>Settings</span></a></li>
+        </ul>
+    </div> <!-- / side bar end -->
+    <!-- Content -->
+    <div class="main">
+        <div class="hipsum">
+            <!-- breadcrumb & page title -->
+            <div class="col-md-12 clearfix">
+                <h4 class="pull-left">manage users</h4>
+                <ul class="breadcrumb pull-right">
+                    <li><a href="index.html">Home</a> </li>
+                    <li class="active">manage users</li>
+                </ul>
+            </div> <!-- / breadcrumb & page title end -->   
+        
+            <!-- user table -->
+            <div class="col-md-12">
+                <div class="jumbotron row">
+
+                    <!-- title -->
+                    <div class="title">
+                        <h1 class="pull-left">Manag Users</h1>
+                        <a class="btn btn-primary pull-right" href="add-user.html" role="button">add new User</a>
+                    </div> <!-- / title end -->
+
+                    <div class="tabs widget">
+                        <!-- table tabs -->
+                        <ul class="nav nav-tabs widget">
+                            <li class="active"> <a data-toggle="tab" href="#all-users"> All Users <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
+                            <li> <a data-toggle="tab" href="#premim-users"> Premim <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
+                            <li> <a data-toggle="tab" href="#standard-users"> standard <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
+                            <li> <a data-toggle="tab" href="#advance-users"> Advance <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
+                            <li> <a data-toggle="tab" href="#free-users"> Free <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
+                        </ul> <!-- / table tabs end -->
+                        <!-- table data -->
+                        <div class="tab-content">
+                        <!-- All users  -->
+                            <div id="all-users" class="tab-pane active">                                
+                                <table id="all-fonts" class="display table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Image</th>
+                                            <th>User Name</th>
+                                            <th>Email</th>
+                                            <th>Contact Number</th>
+                                            <th>User Type</th>
+                                            <th>Status</th>
+                                            <th>Country</th>
+                                            <th>Created & EXP Date</th>
+                                            <th>Downloads</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img class="user-img" src="images/user.jpg" alt="example image"></td>
+                                            <td><a href="user-detail.html"></a> user name here </td>
+                                            <td>example@gmail.com</td>
+                                            <td>0411234567</td>
+                                            <td>standard</td>
+                                            <td class="center"><a href="#" data-toggle="modal" data-target="#active-user" data-uid="1" class="label label-danger"> deactive </a><br><span class="smal text-red">Muhammad Waseem</span></td>
+                                            <td>Pakistan</td>
+                                            <td class="center"> 2017/02/03 <br /> <span class="smal text-success"> EXP 2017/02/03</span></td>
+                                            <td class="center"><strong>250</strong></td>
+                                            <td class="menu-action rounded-btn">                                               
+                                                <a href="#" type="button" data-placement="top" data-toggle="tooltip" data-original-title="Send Email" class="btn btn-success btn-sm"><span data-toggle="modal" data-target="#delete" data-uid="1" class="glyphicon glyphicon-envelope"></span></a>
+                                                <a href="edit-user.html" data-placement="top" data-toggle="tooltip" data-original-title="Edit" class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#edit" data-uid="1"></span></a>
+                                                <a href="user-detail.html" data-toggle="tooltip" data-uid="1" title="" class="update btn btn-gary btn-sm" data-original-title="User detail"><span class="fa fa-eye"></span></a>
+                                                <a data-toggle="modal" data-target="#delete-user" data-uid="1"><span data-toggle="tooltip" data-uid="1" title="" class="delete btn btn-danger btn-sm" data-original-title="Detele User"><span class="fa fa-trash"></span></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img class="user-img" src="images/user.jpg" alt="example image"></td>
+                                            <td>user name here </td>
+                                            <td>example@gmail.com</td>
+                                            <td>0411234567</td>
+                                            <td>Free</td>
+                                            <td class="center"><a href="#" data-toggle="modal" data-target="#disable-user" data-uid="1" class="label label-success"> active</a></td>
+                                            <td>Pakistan</td>
+                                            <td class="center"> 2017/02/03 <br /> <span class="smal text-success"> EXP 2017/02/03</span></td>
+                                            <td class="center"><strong>250</strong></td>
+                                            <td class="menu-action rounded-btn">
+                                                <a href="#" type="button" data-placement="top" data-toggle="tooltip" data-original-title="Send Email" class="btn btn-success btn-sm"><span data-toggle="modal" data-target="#delete" data-uid="1" class="glyphicon glyphicon-envelope"></span></a>
+                                                <a href="edit-user.html" data-placement="top" data-toggle="tooltip" data-original-title="Edit" class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#edit" data-uid="1"></span></a>
+                                                <a href="user-detail.html" data-toggle="tooltip" data-uid="1" title="" class="update btn btn-gary btn-sm" data-original-title="User detail"><span class="fa fa-eye"></span></a>
+                                                <a data-toggle="modal" data-target="#delete-user" data-uid="1"><span data-toggle="tooltip" data-uid="1" title="" class="delete btn btn-danger btn-sm" data-original-title="Detele User"><span class="fa fa-trash"></span></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img class="user-img" src="images/user.jpg" alt="example image"></td>
+                                            <td>user name here </td>
+                                            <td>example@gmail.com</td>
+                                            <td>0411234567</td>
+                                            <td>PRIMEM</td>
+                                            <td class="center">
+                                                <a href="#" data-toggle="modal" data-target="#disable-user" data-uid="1" class="label label-success"> active</a>
+                                                <br>
+                                                <a href="#" class="smal text-cyan" data-toggle="modal" data-target="#active-user-note" data-uid="1"><img src="images/note.png" /> <br /> Waqass</a>
+
+                                            </td>
+                                            <td>Pakistan</td>
+                                            <td class="center"> 2017/02/03 <br /> <span class="smal text-success"> EXP 2017/02/03</span></td>
+                                            <td class="center"><strong>250</strong></td>
+                                            <td class="menu-action rounded-btn">
+                                                <a href="#" type="button" data-placement="top" data-toggle="tooltip" data-original-title="Send Email" class="btn btn-success btn-sm"><span data-toggle="modal" data-target="#delete" data-uid="1" class="glyphicon glyphicon-envelope"></span></a>
+                                                <a href="edit-user.html" data-placement="top" data-toggle="tooltip" data-original-title="Edit" class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#edit" data-uid="1"></span></a>
+                                                <a href="user-detail.html" data-toggle="tooltip" data-uid="1" title="" class="update btn btn-gary btn-sm" data-original-title="User detail"><span class="fa fa-eye"></span></a>
+                                                <a data-toggle="modal" data-target="#delete-user" data-uid="1"><span data-toggle="tooltip" data-uid="1" title="" class="delete btn btn-danger btn-sm" data-original-title="Detele User"><span class="fa fa-trash"></span></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img class="user-img" src="images/user.jpg" alt="example image"></td>
+                                            <td>user name here </td>
+                                            <td>example@gmail.com</td>
+                                            <td>0411234567</td>
+                                            <td>ADVANCE</td>
+                                            <td class="center"><a href="#" data-toggle="modal" data-target="#disable-user" data-uid="1" class="label label-success"> active</a></td>
+                                            <td>Pakistan</td>
+                                            <td class="center"> 2017/02/03 <br /> <span class="smal text-success"> EXP 2017/02/03</span></td>
+                                            <td class="center"><strong>250</strong></td>
+                                            <td class="menu-action rounded-btn">
+                                                <a href="#" type="button" data-placement="top" data-toggle="tooltip" data-original-title="Send Email" class="btn btn-success btn-sm"><span data-toggle="modal" data-target="#delete" data-uid="1" class="glyphicon glyphicon-envelope"></span></a>
+                                                <a href="edit-user.html" data-placement="top" data-toggle="tooltip" data-original-title="Edit" class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#edit" data-uid="1"></span></a>
+                                                <a href="user-detail.html" data-toggle="tooltip" data-uid="1" title="" class="update btn btn-gary btn-sm" data-original-title="User detail"><span class="fa fa-eye"></span></a>
+                                                <a data-toggle="modal" data-target="#delete-user" data-uid="1"><span data-toggle="tooltip" data-uid="1" title="" class="delete btn btn-danger btn-sm" data-original-title="Detele User"><span class="fa fa-trash"></span></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img class="user-img" src="images/user.jpg" alt="example image"></td>
+                                            <td>user name here </td>
+                                            <td>example@gmail.com</td>
+                                            <td>0411234567</td>
+                                            <td>Free</td>
+                                            <td class="center"><a href="#" data-toggle="modal" data-target="#disable-user" data-uid="1" class="label label-success"> active</a></td>
+                                            <td>Pakistan</td>
+                                            <td class="center"> 2017/02/03 <br /> <span class="smal text-success"> EXP 2017/02/03</span></td>
+                                            <td class="center"><strong>250</strong></td>
+                                            <td class="menu-action rounded-btn">
+                                                <a href="#" type="button" data-placement="top" data-toggle="tooltip" data-original-title="Send Email" class="btn btn-success btn-sm"><span data-toggle="modal" data-target="#delete" data-uid="1" class="glyphicon glyphicon-envelope"></span></a>
+                                                <a href="edit-user.html" data-placement="top" data-toggle="tooltip" data-original-title="Edit" class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#edit" data-uid="1"></span></a>
+                                                <a href="user-detail.html" data-toggle="tooltip" data-uid="1" title="" class="update btn btn-gary btn-sm" data-original-title="User detail"><span class="fa fa-eye"></span></a>
+                                                <a data-toggle="modal" data-target="#delete-user" data-uid="1"><span data-toggle="tooltip" data-uid="1" title="" class="delete btn btn-danger btn-sm" data-original-title="Detele User"><span class="fa fa-trash"></span></span></a>
+                                            </td>
+                                        </tr>
+
+
+                                       
+
+                                    </tbody>
+                                </table> 
+                            </div> <!-- / All users end -->
+                            <!-- premim users -->
+                            <div id="premim-users" class="tab-pane">
+                                <table id="premim-fonts" class="display">
+                                    <thead>
+                                        <tr>
+
+                                            <th>#</th>
+                                            <th>Font Name</th>
+                                            <th>Font Designer</th>
+                                            <th>Date Created</th>
+                                            <th>Font Ratting</th>
+                                            <td>Type</td>
+                                            <th>Price</th>
+                                            <th>Downloads</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Paroxoma Nova</td>
+                                            <td>Mike</td>
+                                            <td>1 Aug 2017</td>
+                                            <td>4.5</td>
+                                            <td>Premim</td>
+                                            <td>$0.00</td>
+                                            <td>315</td>
+                                            <td>Active</td>
+                                            <td>
+                                                <button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button>
+                                                <button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button>
+                                                <button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-gary btn-sm"><span class="glyphicon glyphicon-eye-close"></span></button>
+                                                <button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> <!-- / premim users end -->
+                            <!-- standard users -->
+                            <div id="standard-users" class="tab-pane">
+                                <table id="free-fonts" class="display">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Font Name</th>
+                                            <th>Font Designer</th>
+                                            <th>Date Created</th>
+                                            <th>Font Ratting</th>
+                                            <td>Type</td>
+                                            <th>Price</th>
+                                            <th>Downloads</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Arial</td>
+                                            <td>yasir Khan</td>
+                                            <td>1 Aug 2017</td>
+                                            <td>5</td>
+                                            <td>Free</td>
+                                            <td>$0.00</td>
+                                            <td>4501</td>
+                                            <td>Active</td>
+                                            <td>
+                                                <button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button>
+                                                <button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button>
+                                                <button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-gary btn-sm"><span class="glyphicon glyphicon-eye-close"></span></button>
+                                                <button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>  <!-- / standard users end -->
+                            <!-- advance users -->
+                            <div id="advance-users" class="tab-pane">
+                                <table id="active-fonts" class="display">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Font Name</th>
+                                            <th>Font Designer</th>
+                                            <th>Date Created</th>
+                                            <th>Font Ratting</th>
+                                            <td>Type</td>
+                                            <th>Price</th>
+                                            <th>Downloads</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Paroxoma Nova</td>
+                                            <td>Mike</td>
+                                            <td>1 Aug 2017</td>
+                                            <td>4.5</td>
+                                            <td>Premim</td>
+                                            <td>$0.00</td>
+                                            <td>315</td>
+                                            <td>Active</td>
+                                            <td>
+                                                <button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button>
+                                                <button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button>
+                                                <button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-gary btn-sm"><span class="glyphicon glyphicon-eye-close"></span></button>
+                                                <button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button>
+                                            </td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table> 
+                            </div> <!-- / advance users end -->
+                            <!-- free users -->
+                            <div id="free-users" class="tab-pane">
+                                <table id="active-fonts" class="display">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Font Name</th>
+                                            <th>Font Designer</th>
+                                            <th>Date Created</th>
+                                            <th>Font Ratting</th>
+                                            <td>Type</td>
+                                            <th>Price</th>
+                                            <th>Downloads</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Paroxoma Nova</td>
+                                            <td>Mike</td>
+                                            <td>1 Aug 2017</td>
+                                            <td>4.5</td>
+                                            <td>Premim</td>
+                                            <td>$0.00</td>
+                                            <td>315</td>
+                                            <td>Active</td>
+                                            <td>
+                                                <button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button>
+                                                <button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button>
+                                                <button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-gary btn-sm"><span class="glyphicon glyphicon-eye-close"></span></button>
+                                                <button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div> <!-- / advance users end -->
+                        </div> <!-- / table data end -->
+                        <!-- tab-content -->
+                    </div>                   
+                </div>
+            </div> <!-- / user table end -->
+        </div>
+    </div> <!-- / Content end -->
+
+    <!-- delete modal -->
+    <div class="modal fade text-xs-left" id="delete-user" tabindex="-1" role="dialog" aria-labelledby="id2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <label class="modal-title text-text-bold-600" id="id2">Delete User</label>
+                </div>
+                <div class="modal-body">
+                    <div class="text-red text-center">
+                        <h2> Warning !</h2>
+                        <h4>Are You Sure You want to delete This User</h4>
+                    </div>
+                </div>
+                <div class="row clearfix p-b-35">
+                    <div class=" text-center">
+                        <input type="reset" class="btn btn-danger btn-lg" data-dismiss="modal" value="Delete">
+                        <input type="submit" class="btn btn-success btn-lg" data-dismiss="modal" value="Cancel">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- / delete modal end -->
+
+    <!-- disable modal -->
+    <div class="modal fade text-xs-left" id="disable-user" tabindex="-1" role="dialog" aria-labelledby="id1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <label class="modal-title text-text-bold-600" id="id1">Disable User</label>
+                </div>
+                <div class="modal-body">
+                    <div class="text-warning text-center">
+                        <h2> Warning !</h2>
+                        <h4>Are You Sure You want to disable This User</h4>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectinput8">Add Resion</label>
+                        <textarea id="projectinput8" rows="5" class="form-control" name="comment" placeholder="Resion here..."></textarea>
+                    </div>
+
+                </div>
+                <div class="row clearfix p-b-35">
+                    <div class=" text-center">
+                        <input type="reset" class="btn btn-danger btn-lg" data-dismiss="modal" value="disable">
+                        <input type="submit" class="btn btn-success btn-lg" data-dismiss="modal" value="Cancel">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- / disable modal end -->
+
+    <!-- active User modal -->
+    <div class="modal fade text-xs-left" id="active-user" tabindex="-1" role="dialog" aria-labelledby="id1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <label class="modal-title text-text-bold-600" id="id1">Active User</label>
+                </div>
+                <div class="modal-body">
+                    <div class="text-success text-center">
+                        <h2> Active User !</h2>
+                        <h4>Are You Sure You want to Active This User</h4>
+                    </div>
+                    <hr />
+                    <h4>Deactive Reason</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="form-group">
+                        <label for="projectinput8">Add Note</label>
+                        <textarea id="projectinput8" rows="5" class="form-control" name="comment" placeholder="Note here..."></textarea>
+                    </div>
+                </div>
+                <div class="row clearfix p-b-35">
+                    <div class=" text-center">
+                        <a class="btn btn-primary" data-dismiss="modal">Active</a>
+                        <a class="btn btn-warning" data-dismiss="modal">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- / active User modal end -->
+
+    <!-- active icon modal with note -->
+    <div class="modal fade text-xs-left" id="active-user-note" tabindex="-1" role="dialog" aria-labelledby="id1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <label class="modal-title text-text-bold-600" id="id1">Active User</label>
+                </div>
+                <div class="modal-body">
+                    <div class="text-success text-center">
+                        <h2>Deactive User Reason & Note</h2>
+                    </div>
+                    <hr />
+                    <h4>Deactive Reason</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <h4>Note</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                </div>
+                <div class="row clearfix p-b-35">
+                    <div class=" text-center">
+
+                        <a class="btn btn-warning" data-dismiss="modal">Close</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- / active User modal with note end -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/dashboard-lite.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+
+    <title>bootstrap-wysihtml5</title>
+
+    <link href="libs/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="libs/css/bootstrap-wysihtml5.css" rel="stylesheet" />  
+    <link href="libs/css/bootstrap3-wysiwyg5-color.css" rel="stylesheet" />
+</head>
+<body> 
+       
+      
+    
+        <div class="container">
+            <div class="hero-unit" style="margin-top:40px">
+                <textarea class="textarea" placeholder="Enter text ..." style="width: 810px; height: 200px;"></textarea>
+            </div>
+        </div>
+
+
+
+    <script src="libs/js/wysihtml5-0.3.0_rc2.js"></script>
+    <script src="libs/js/jquery-1.7.1.min.js"></script>
+    <script src="libs/js/bootstrap.min.js"></script>
+    <script src="libs/js/bootstrap3-wysihtml5.js"></script>
+
+        <script>
+            $('.textarea').wysihtml5({
+                "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+                "color": true, //Button to change color of font  
+                "emphasis": true, //Italics, bold, etc. Default true
+                "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+                "html": true, //Button which allows you to edit the generated HTML. Default false
+                "link": true, //Button to insert a link. Default true
+                "image": true, //Button to insert an image. Default true,
+                "edit": true, //Button to edit. Default true,
+                "size": 'sm' //Button size like sm, xs etc.
+            });
+        </script>
+    
+</body>
+</html>

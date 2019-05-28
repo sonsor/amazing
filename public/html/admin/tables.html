@@ -1,0 +1,623 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/jquery.dataTables.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />   
+</head>
+<body>
+    <div class="header">
+        <a href="#" id="menu-action">
+            <i class="fa fa-bars"></i>
+            <span>Close</span>
+        </a>
+        <div class="logo">
+            <img src="images/logo-green.png" height="20"/>
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+            <li><a href="#"><i class="fa fa-forumbee"></i><span>Icons</span></a></li>
+            <li><a href="#"><i class="fa fa-text-width"></i><span>Fonts</span></a></li>            
+            <li><a href="#"><i class="fa fa-table"></i><span>Categories</span></a></li>
+            <li><a href="#"><i class="fa fa-user"></i><span>Users</span></a></li>
+            <li><a href="#"><i class="fa fa-envelope-o"></i><span>Messages</span></a></li>
+            <li><a href="#"><i class="fa fa-cog"></i><span>Settings</span></a></li>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
+    <g fill="none">
+        <g style="stroke-width:1;stroke:#B1B1B1">
+            <path d="M1.3 14.3L14.6 1"></path>
+            <path d="M14.7 14.3L1.4 1"></path>
+        </g>
+    </g>
+</svg></a></li>
+            </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="main">
+        <div class="hipsum">
+            <div class="jumbotron">
+                <h1 id="hello,-world!">Hello, world!<a class="anchorjs-link" href="#hello,-world!"><span class="anchorjs-icon"></span></a></h1>
+                <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <p><a class="btn btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+       
+
+
+            <!-- data table -->
+            <table id="table_id" class="display">
+                <thead>
+                    <tr>
+                        
+                        <th>#</th>
+                        <th>Full Name</th>
+                        <th>email address</th>
+                        <th>Company Name</th>
+                        <th>Country</th>
+                        <th>Package Type</th>
+                        <th>Joining date</th>
+                        <th>Expairy date</th>
+                        <th>Edit</th>
+                        <th>Email</th>
+                        <th>Balock</th>
+                        <th>Delete</th>
+                       
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>yasir khan</td>
+                        <td>yasir@gmail.com</td>
+                        <td>ITC</td>
+                        <td>Pakistan</td>
+                        <td>Premim</td>
+                        <td>28-7-2017</td>
+                        <td>28-7-2018</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-gary btn-sm"><span class="glyphicon glyphicon-eye-close"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>yasir khan</td>
+                        <td>yasir@gmail.com</td>
+                        <td>ITC</td>
+                        <td>Pakistan</td>
+                        <td>Premim</td>
+                        <td>28-7-2017</td>
+                        <td>28-6-2018</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-gary btn-sm"><span class="glyphicon glyphicon-eye-close"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mudassar Hussain</td>
+                        <td>mudssar.pk@gmail.com</td>
+                        <td>Andropple</td>
+                        <td>Pakistan</td>
+                        <td>Advance</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>M.Abdullah</td>
+                        <td>abdullah@gmail.com</td>
+                        <td>Appliconic</td>
+                        <td>Pakistan</td>
+                        <td>STANDARD</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Arsalan Khalid</td>
+                        <td>arsalan@gmail.com</td>
+                        <td>Arsal Soft</td>
+                        <td>Pakistan</td>
+                        <td>FREE</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Muzmmal Hussain</td>
+                        <td>muzammal_swl@gmail.com</td>
+                        <td>Muzammal Tech</td>
+                        <td>Pakistan</td>
+                        <td>Regular</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>6</td>
+                        <td>Arsalan Khalid</td>
+                        <td>arsalan@gmail.com</td>
+                        <td>Arsal Soft</td>
+                        <td>Pakistan</td>
+                        <td>FREE</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td>7</td>
+                        <td>yasir khan</td>
+                        <td>yasir@gmail.com</td>
+                        <td>ITC</td>
+                        <td>Pakistan</td>
+                        <td>Premim</td>
+                        <td>28-7-2017</td>
+                        <td>28-7-2018</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-gary btn-sm"><span class="glyphicon glyphicon-eye-close"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+
+
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Mudassar Hussain</td>
+                        <td>mudssar.pk@gmail.com</td>
+                        <td>Andropple</td>
+                        <td>Pakistan</td>
+                        <td>Advance</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>M.Abdullah</td>
+                        <td>abdullah@gmail.com</td>
+                        <td>Appliconic</td>
+                        <td>Pakistan</td>
+                        <td>STANDARD</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>10</td>
+                        <td>Arsalan Khalid</td>
+                        <td>arsalan@gmail.com</td>
+                        <td>Arsal Soft</td>
+                        <td>Pakistan</td>
+                        <td>FREE</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>11</td>
+                        <td>Muzmmal Hussain</td>
+                        <td>muzammal_swl@gmail.com</td>
+                        <td>Muzammal Tech</td>
+                        <td>Pakistan</td>
+                        <td>Regular</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>yasir khan</td>
+                        <td>yasir@gmail.com</td>
+                        <td>ITC</td>
+                        <td>Pakistan</td>
+                        <td>Premim</td>
+                        <td>28-7-2017</td>
+                        <td>28-7-2018</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-gary btn-sm"><span class="glyphicon glyphicon-eye-close"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>yasir khan</td>
+                        <td>yasir@gmail.com</td>
+                        <td>ITC</td>
+                        <td>Pakistan</td>
+                        <td>Premim</td>
+                        <td>28-7-2017</td>
+                        <td>28-6-2018</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-gary btn-sm"><span class="glyphicon glyphicon-eye-close"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mudassar Hussain</td>
+                        <td>mudssar.pk@gmail.com</td>
+                        <td>Andropple</td>
+                        <td>Pakistan</td>
+                        <td>Advance</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>M.Abdullah</td>
+                        <td>abdullah@gmail.com</td>
+                        <td>Appliconic</td>
+                        <td>Pakistan</td>
+                        <td>STANDARD</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Arsalan Khalid</td>
+                        <td>arsalan@gmail.com</td>
+                        <td>Arsal Soft</td>
+                        <td>Pakistan</td>
+                        <td>FREE</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Muzmmal Hussain</td>
+                        <td>muzammal_swl@gmail.com</td>
+                        <td>Muzammal Tech</td>
+                        <td>Pakistan</td>
+                        <td>Regular</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>6</td>
+                        <td>Arsalan Khalid</td>
+                        <td>arsalan@gmail.com</td>
+                        <td>Arsal Soft</td>
+                        <td>Pakistan</td>
+                        <td>FREE</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td>7</td>
+                        <td>yasir khan</td>
+                        <td>yasir@gmail.com</td>
+                        <td>ITC</td>
+                        <td>Pakistan</td>
+                        <td>Premim</td>
+                        <td>28-7-2017</td>
+                        <td>28-7-2018</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-gary btn-sm"><span class="glyphicon glyphicon-eye-close"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+
+
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Mudassar Hussain</td>
+                        <td>mudssar.pk@gmail.com</td>
+                        <td>Andropple</td>
+                        <td>Pakistan</td>
+                        <td>Advance</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>M.Abdullah</td>
+                        <td>abdullah@gmail.com</td>
+                        <td>Appliconic</td>
+                        <td>Pakistan</td>
+                        <td>STANDARD</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>10</td>
+                        <td>Arsalan Khalid</td>
+                        <td>arsalan@gmail.com</td>
+                        <td>Arsal Soft</td>
+                        <td>Pakistan</td>
+                        <td>FREE</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>11</td>
+                        <td>Muzmmal Hussain</td>
+                        <td>muzammal_swl@gmail.com</td>
+                        <td>Muzammal Tech</td>
+                        <td>Pakistan</td>
+                        <td>Regular</td>
+                        <td>28-7-2017</td>
+                        <td>-</td>
+                        <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-sky btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    </tr>
+                    
+                </tbody>
+            </table> <!-- / data table -->
+
+            <!-- table -->
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table> <!-- / table -->
+          
+
+
+
+
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Logo / Photos</th>
+                        <th>Clients</th>
+                        <th>Start Date</th>
+                        <th>Status</th>
+                        <th>Revenue</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img height="80" src="img/avatar/avatar.jpg" alt="example image"></td>
+                        <td>Zoe Corp </td>
+                        <td class="center">2010/02/03</td>
+                        <td class="center">
+                            <span class="label label-success">Finish</span>
+                        </td>
+                        <td class="center"><strong>$ 250</strong></td>
+                        <td class="menu-action rounded-btn">
+                            <a class="btn menu-icon vd_bg-green" data-placement="top" data-toggle="tooltip" data-original-title="view">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                            <a class="btn menu-icon vd_bg-yellow" data-placement="top" data-toggle="tooltip" data-original-title="edit">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                            <a class="btn menu-icon vd_bg-red" data-placement="top" data-toggle="tooltip" data-original-title="delete">
+                                <i class="fa fa-times"></i>
+                            </a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><img height="80" src="img/avatar/avatar-2.jpg" alt="example image"></td>
+                        <td>Zoe Corp </td>
+                        <td class="center">2010/02/03</td>
+                        <td class="center">
+                            <span class="label label-success">Finish</span>
+                        </td>
+                        <td class="center"><strong>$ 250</strong></td>
+                        <td class="menu-action rounded-btn">
+                            <a class="btn menu-icon vd_bg-green" data-placement="top" data-toggle="tooltip" data-original-title="view">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                            <a class="btn menu-icon vd_bg-yellow" data-placement="top" data-toggle="tooltip" data-original-title="edit">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                            <a class="btn menu-icon vd_bg-red" data-placement="top" data-toggle="tooltip" data-original-title="delete">
+                                <i class="fa fa-times"></i>
+                            </a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><img height="80" src="img/avatar/avatar-3.jpg" alt="example image"></td>
+                        <td>Zoe Corp </td>
+                        <td class="center">2010/02/03</td>
+                        <td class="center">
+                            <span class="label label-success">Finish</span>
+                        </td>
+                        <td class="center"><strong>$ 250</strong></td>
+                        <td class="menu-action rounded-btn">
+                            <a class="btn menu-icon vd_bg-green" data-placement="top" data-toggle="tooltip" data-original-title="view">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                            <a class="btn menu-icon vd_bg-yellow" data-placement="top" data-toggle="tooltip" data-original-title="edit">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                            <a class="btn menu-icon vd_bg-red" data-placement="top" data-toggle="tooltip" data-original-title="delete">
+                                <i class="fa fa-times"></i>
+                            </a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><img height="80" src="img/avatar/avatar-4.jpg" alt="example image"></td>
+                        <td>Zoe Corp </td>
+                        <td class="center">2010/02/03</td>
+                        <td class="center">
+                            <span class="label label-success">Finish</span>
+                        </td>
+                        <td class="center"><strong>$ 250</strong></td>
+                        <td class="menu-action rounded-btn">
+                            <a class="btn menu-icon vd_bg-green" data-placement="top" data-toggle="tooltip" data-original-title="view">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                            <a class="btn menu-icon vd_bg-yellow" data-placement="top" data-toggle="tooltip" data-original-title="edit">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                            <a class="btn menu-icon vd_bg-red" data-placement="top" data-toggle="tooltip" data-original-title="delete">
+                                <i class="fa fa-times"></i>
+                            </a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><img height="80" src="img/avatar/avatar-5.jpg" alt="example image"></td>
+                        <td>Zoe Corp </td>
+                        <td class="center">2010/02/03</td>
+                        <td class="center">
+                            <span class="label label-success">Finish</span>
+                        </td>
+                        <td class="center"><strong>$ 250</strong></td>
+                        <td class="menu-action rounded-btn">
+                            <a class="btn menu-icon vd_bg-green" data-placement="top" data-toggle="tooltip" data-original-title="view">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                            <a class="btn menu-icon vd_bg-yellow" data-placement="top" data-toggle="tooltip" data-original-title="edit">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                            <a class="btn menu-icon vd_bg-red" data-placement="top" data-toggle="tooltip" data-original-title="delete">
+                                <i class="fa fa-times"></i>
+                            </a>
+
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+
+
+
+
+            <div class="row">
+                <div class="col-sm-12">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/jquery.dataTables.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assats/upload/css/dropzone.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- nav bar -->
+    <div class="header">
+        <a href="#" id="menu-action"> <i class="fa fa-bars"></i> <span>Close</span> </a>
+        <div class="logo"><a href="index.html"><img src="images/logo.svg" height="20" /></a></div>
+        <nav class="navbar navbar-default pull-right">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" data-hover="dropdown" data-animations="zoomIn">
+                <ul class="nav navbar-nav navbar-right ">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">dropdown</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="examples.html">Examples</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                    <li class="s-icon"><a href="#" id="addClass" class="s-icon" data-toggle="modal" data-target="#modal-search"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div> <!-- / nav bar end -->
+    <!-- side bar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html" data-toggle="tooltip" data-placement="right" title="Dashboard"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Icons">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-forumbee"></i><span>Icons</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manag-icons.html">Manage Icons</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-icons.html">Add Icons</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Fonts">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-text-width"></i><span>Fonts</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manage-font.html">Manage Fonts</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-font.html">Add Font</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="user">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-user"></i><span>Users</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manag-users.html">Manage Users</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-user.html">Add Users</a></li>
+                </ul>
+            </li>
+
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Messages">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-envelope-o"></i><span>Messages</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="emails.html">Messages</a></li>
+                    <li class="divider"></li>
+                    <li><a href="sent-emails.html">Send Messag</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Iconic Font">
+                <a href="#" data-toggle="dropdown"><i class="fa fa fa-object-ungroup"></i><span>Amazing Neo</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="amazing-icon-font.html">Amazing Neo Icons</a></li>
+                    <li><a href="amazing-pricing.html">Amazing neo pricing</a></li>
+                    <li class="divider"></li>
+                    <li><a href="update-amazing-font-version.html">Update Font Version</a></li>
+                </ul>
+            </li>
+
+            <li><a href="payments.html" data-toggle="tooltip" data-placement="right" title="payments"><i class="fa fa-dollar"></i><span>Payments</span></a></li>
+            <li><a href="settinges.html" data-toggle="tooltip" data-placement="right" title="Settings"><i class="fa fa-cog"></i><span>Settings</span></a></li>
+        </ul>
+    </div> <!-- / side bar end -->
+    <!-- Content -->
+    <div class="main">
+        <div class="hipsum">
+            <!-- breadcrumb -->
+            <div class="col-md-12 clearfix">
+                <h4 class="pull-left">Add font</h4>
+                <ul class="breadcrumb pull-right">
+                    <li><a href="index.html">Home</a> </li>
+                    <li><a href="manage-font.html">manage font</a> </li>
+                    <li class="active">Add font</li>
+                </ul>
+            </div>  <!-- / breadcrumb end -->
+
+            <div class="col-md-12">
+                <div class="jumbotron row">
+                    <div class="title">
+                        <h1 class="pull-left">Add New font Catagory</h1>
+                    </div>
+
+                    <form class="">                        
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="fontName" placeholder="New Font Catagory Name">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save New Catagory</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="jumbotron row">
+
+                    <div class="title">
+                        <h1 class="pull-left">Font Info</h1>
+                        <a class="btn btn-warning pull-right" href="manage-font.html"> <i class="icon-cross2"></i>Back</a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="projectinput1">Font Name</label>
+                                <input type="text" id="font-name" class="form-control" placeholder="Font Name" name="fname">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="projectinput2">Font Designer</label>
+                                <input type="text" id="designer" class="form-control" placeholder="Font Designer Name" name="lname">
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="projectinput3">E-mail</label>
+                                <input type="text" id="email" class="form-control" placeholder="E-mail" name="email">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="projectinput4">Contact Number</label>
+                                <input type="text" id="ph" class="form-control" placeholder="Phone" name="phone">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="projectinput4"> Website or Profile Url</label>
+                                <input type="text" id="ph" class="form-control" placeholder="example (http://domain.com)" name="url">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="ratting">Ratting</label>
+                                <select id="ratting" name="interested" class="form-control">
+                                    <option value="none" selected="" disabled="">Star Ratting</option>
+                                    <option value="design">Enable</option>
+                                    <option value="development">Desable</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="ratting">Catagory</label>
+                                <select id="ratting" name="interested" class="form-control">
+                                    <option value="none" selected="" disabled="">all</option>
+                                    <option value="1">Iconic</option>
+                                    <option value="1">3D </option>
+                                    <option value="45">Animals </option>
+                                    <option value="60">Bitmap/Pixel</option>
+                                    <option value="31">Brush </option>
+                                    <option value="26">Calligraphy </option>
+                                    <option value="14">Cartoon </option>
+                                    <option value="42">Celtic </option>
+                                    <option value="52">Compact </option>
+                                    <option value="56">Curly </option>
+                                    <option value="2">Decorative </option>
+                                    <option value="44">Dingbats </option>
+                                    <option value="9">Distorted </option>
+                                    <option value="17">Famous </option>
+                                    <option value="16">Fontbats </option>
+                                    <option value="55">Foreign</option>
+                                    <option value="33">Graffiti</option>
+                                    <option value="20">Grunge/Trash</option>
+                                    <option value="6">Handwriting </option>
+                                    <option value="4">Heavy</option>
+                                    <option value="32">Horror </option>
+                                    <option value="3">Initial Caps</option>
+                                    <option value="30">Italic </option>
+                                    <option value="40">LCD </option>
+                                    <option value="37">Medieval </option>
+                                    <option value="5">Minimalist</option>
+                                    <option value="11">Normal </option>
+                                    <option value="18">Old English</option>
+                                    <option value="35">Oriental </option>
+                                    <option value="12">Outline </option>
+                                    <option value="19">Retro </option>
+                                    <option value="15">Rounded </option>
+                                    <option value="21">Sans </option>
+                                    <option value="7">SciFi </option>
+                                    <option value="25">Script </option>
+                                    <option value="29">Serif </option>
+                                    <option value="23">Square </option>
+                                    <option value="22">Stencil </option>
+                                    <option value="8">Typewriter </option>
+                                    <option value="43">Wild West </option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="type">Font Type</label>
+                                <select id="ratting" name="interested" class="form-control">
+                                    <option value="none" selected="" disabled="">Select Free or Paid</option>
+                                    <option value="design">Paid</option>
+                                    <option value="development">Free</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="font-price">Price</label>
+                                <input type="text" id="font-price" class="form-control" placeholder="Font Price in $USD (Numaric Number Only)" name="price">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label> Upload Image </label>
+                                <form action="/file-upload" class="dropzone" id="demo-upload">
+                                    <div class="fallback uploadFiles">
+                                        <input name="file" type="file" multiple />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Upload font File</label>
+                                <form action="/file-upload" class="dropzone" id="demo-upload">
+                                    <div class="fallback uploadFiles">
+                                        <input name="file" type="file" multiple />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectinput8">About Font</label>
+                            <textarea id="projectinput8" rows="5" class="form-control" name="comment" placeholder="About Project"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-actions text-center">
+                        <a class="btn btn-warning" href="manage-font.html"> <i class="icon-cross2"></i>Cancle</a>
+                        <a class="btn btn-primary"> <i class="icon-check2"></i> Save</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/dashboard-lite.js"></script>
+    <script src="assats/upload/js/dropzone.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/jquery.dataTables.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assats/upload/css/dropzone.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- nav bar -->
+    <div class="header">
+        <a href="#" id="menu-action"> <i class="fa fa-bars"></i> <span>Close</span> </a>
+        <div class="logo"><a href="index.html"><img src="images/logo.svg" height="20" /></a></div>
+        <nav class="navbar navbar-default pull-right">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" data-hover="dropdown" data-animations="zoomIn">
+                <ul class="nav navbar-nav navbar-right ">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">dropdown</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="examples.html">Examples</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                    <li class="s-icon"><a href="#" id="addClass" class="s-icon" data-toggle="modal" data-target="#modal-search"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div> <!-- / nav bar end -->
+    <!-- side bar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html" data-toggle="tooltip" data-placement="right" title="Dashboard"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Icons">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-forumbee"></i><span>Icons</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manag-icons.html">Manage Icons</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-icons.html">Add Icons</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Fonts">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-text-width"></i><span>Fonts</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manage-font.html">Manage Fonts</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-font.html">Add Font</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="user">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-user"></i><span>Users</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="manag-users.html">Manage Users</a></li>
+                    <li class="divider"></li>
+                    <li><a href="add-user.html">Add Users</a></li>
+                </ul>
+            </li>
+
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Messages">
+                <a href="#" data-toggle="dropdown"><i class="fa fa-envelope-o"></i><span>Messages</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="emails.html">Messages</a></li>
+                    <li class="divider"></li>
+                    <li><a href="sent-emails.html">Send Messag</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" data-toggle="tooltip" data-placement="right" title="Iconic Font">
+                <a href="#" data-toggle="dropdown"><i class="fa fa fa-object-ungroup"></i><span>Amazing Neo</span><b class="caret"></b></a>
+                <ul class="child-menu">
+                    <li><a href="amazing-icon-font.html">Amazing Neo Icons</a></li>
+                    <li><a href="amazing-pricing.html">Amazing neo pricing</a></li>
+                    <li class="divider"></li>
+                    <li><a href="update-amazing-font-version.html">Update Font Version</a></li>
+                </ul>
+            </li>
+
+            <li><a href="payments.html" data-toggle="tooltip" data-placement="right" title="payments"><i class="fa fa-dollar"></i><span>Payments</span></a></li>
+            <li><a href="settinges.html" data-toggle="tooltip" data-placement="right" title="Settings"><i class="fa fa-cog"></i><span>Settings</span></a></li>
+        </ul>
+    </div> <!-- / side bar end -->
+    <div class="main">
+        <div class="hipsum">
+            <!-- breadcrumb -->
+            <div class="col-md-12 clearfix">
+                <h4 class="pull-left">update font Icon</h4>
+                <ul class="breadcrumb pull-right">
+                    <li><a href="index.html">Home</a> </li>
+                    <li><a href="amazing-icon-font.html">amazing icon font</a> </li>                    
+                    <li class="active">update font Icon</li>
+                </ul>
+            </div> <!-- / breadcrumb end -->
+             <!-- versions -->
+            <div class="col-md-12">
+                <div class="jumbotron row">
+                    <!-- title -->
+                    <div class="title">
+                        <h1 class="pull-left">Icon Reales versions</h1>
+
+                        <div class="col-md-6 pull-right" >
+                            <div class="versions">
+                                <a href="#">Amazing Neo 1.1 </a>
+                                <span class="text-warning versions-type">Beta versions</span>
+                                <span class="upload-date">24 Aug 2016</span>
+                            </div>
+                        </div>
+                    </div> <!-- / title end -->
+                </div>
+            </div> <!-- / versions end -->
+            <div class="col-md-12">
+                <div class="jumbotron row">
+                    <!-- title -->
+                    <div class="title">
+                        <h1 class="pull-left">Upload Font Icons & Info</h1>
+                    </div> <!-- / title end -->
+                    <div class="form-body">
+                        <div class="row">
+                            <div class="add-an-icon clearfix">
+                                <div class="col-md-12">
+                                    <div class="an-detail">
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="form-group">
+                                                <label>Icon Name</label>
+                                                <input type="text" id="Icon-name" class="form-control" placeholder="Icon Name" name="fname">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="form-group">
+                                                <label>Icon Class</label>
+                                                <input type="text" id="designer" class="form-control" placeholder="Example (an an-amazing)" name="lname">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="form-group">
+                                                <label>Icon Type</label>
+                                                <select id="ratting" name="interested" class="form-control">
+                                                    <option value="none" selected="" disabled="">Select Free or Paid</option>
+                                                    <option value="design">Paid</option>
+                                                    <option value="development">Free</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="form-group">
+                                                <label>Status</label>
+                                                <select name="interested" class="form-control">
+                                                    <option value="none" selected="" disabled="">Status Enable, Desable </option>
+                                                    <option value="design">Enable</option>
+                                                    <option value="development">Desable</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label> Upload .AI File & Price</label>
+                                        <form action="/file-upload" class="dropzone" id="demo-upload1">
+                                            <div class="fallback uploadFiles">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                        <div class="form-group">
+                                            <input type="text" id="font-price" class="form-control" placeholder="Icon Price in USD ($0.00)" name="price">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Upload .EPS File & Price</label>
+                                        <form action="/file-upload" class="dropzone" id="demo-upload2">
+                                            <div class="fallback uploadFiles">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                        <div class="form-group">
+                                            <input type="text" id="font-price" class="form-control" placeholder="Icon Price in USD ($0.00)" name="price">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label> Upload .PSD File & Price </label>
+                                        <form action="/file-upload" class="dropzone" id="demo-upload3">
+                                            <div class="fallback uploadFiles">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                        <div class="form-group">
+                                            <input type="text" id="font-price" class="form-control" placeholder="Icon Price in USD ($0.00)" name="price">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Upload .SVG File & Price</label>
+                                        <form action="/file-upload" class="dropzone" id="demo-upload4">
+                                            <div class="fallback uploadFiles">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                        <div class="form-group">
+                                            <input type="text" id="font-price" class="form-control" placeholder="Icon Price in USD ($0.00)" name="price">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label> Upload .PNG File & Price </label>
+                                        <form action="/file-upload" class="dropzone" id="demo-upload5">
+                                            <div class="fallback uploadFiles">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                        <div class="form-group">
+                                            <input type="text" id="font-price" class="form-control" placeholder="Icon Price in USD ($0.00)" name="price">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Upload .sketch File & Price</label>
+                                        <form action="/file-upload" class="dropzone" id="demo-upload6">
+                                            <div class="fallback uploadFiles">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                        <div class="form-group">
+                                            <input type="text" id="font-price" class="form-control" placeholder="Icon Price in USD ($0.00)" name="price">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="projectinput8">About Icon</label>
+                                        <textarea id="projectinput8" rows="5" class="form-control" name="comment" placeholder="About Project"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions text-center">
+                            <a class="btn btn-warning" href="amazing-icon-font.html"> <i class="icon-cross2"></i>Cancel</a>
+                            <button value="submit" class="btn btn-primary"> <i class="icon-check2"></i> Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/dashboard-lite.js"></script>
+    <script src="assats/upload/js/dropzone.js"></script>
+</body>
+</html>

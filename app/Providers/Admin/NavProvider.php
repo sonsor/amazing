@@ -18,14 +18,14 @@ class NavProvider extends ServiceProvider
                 'name' => 'dashoard',
                 'label' => 'Dashboard',
                 'route' => 'admin.dashboard',
-                'icon' => 'tachometer-alt',
+                'icon' => 'fa-dashboard',
                 'children' => []
             ],
             [
                 'name' => 'icon',
                 'label' => 'Icons',
                 'route' => 'admin.icons.list',
-                'icon' => 'italic',
+                'icon' => 'text-width',
                 'children' => [
                     [
                         'label' => 'All Icons',
