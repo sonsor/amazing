@@ -25,7 +25,7 @@ class NavProvider extends ServiceProvider
                 'name' => 'icon',
                 'label' => 'Icons',
                 'route' => 'admin.icons.list',
-                'icon' => 'text-width',
+                'icon' => 'forumbee',
                 'children' => [
                     [
                         'label' => 'All Icons',

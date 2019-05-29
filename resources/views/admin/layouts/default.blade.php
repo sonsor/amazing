@@ -25,14 +25,14 @@
 <div class="main">
     <!-- START BIGSUM -->
     <div class="hipsum">
-
+<!--
         <div class="col-md-12 clearfix">
             <h4 class="pull-left">Dashboard</h4>
             <ul class="breadcrumb pull-right">
                 <li class="active">Home</li>
             </ul>
         </div>
-
+-->
         <div class="alert js-alert hidden" role="alert"></div>
 
         @if (Session::has('success'))

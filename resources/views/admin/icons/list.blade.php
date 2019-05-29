@@ -10,7 +10,7 @@
 
             <div class="title">
                 <h1 class="pull-left">Icons</h1>
-                <a class="btn btn-primary pull-right" href="{{ route('admin.icons.create')  }}" role="button">add new font</a>
+                <a class="btn btn-primary pull-right" href="{{ route('admin.icons.create')  }}" role="button">add new icon</a>
             </div> <!-- / page title end -->
 
             <div class="tabs widget">
