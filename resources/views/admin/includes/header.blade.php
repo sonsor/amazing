@@ -1,7 +1,11 @@
 <!-- nav bar -->
 <div class="header">
     <a href="#" id="menu-action"> <i class="fa fa-bars"></i> <span>Close</span> </a>
-    <div class="logo"><a href="index.html"><img src="images/logo.svg" height="20" /></a></div>
+    <div class="logo">
+        <a href="{{ route('admin.dashboard') }}">
+            <img src="{{ asset('admin/images/logo.svg') }}" height="20" />
+        </a>
+    </div>
     <nav class="navbar navbar-default pull-right">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">

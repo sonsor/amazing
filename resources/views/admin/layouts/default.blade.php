@@ -7,58 +7,60 @@
 
 </head>
 
-<!-- nav bar -->
-<div class="header">
+<body>
 
-    @include('admin.includes.header')
+    <!-- nav bar -->
+    <div class="header">
 
-</div>
+        @include('admin.includes.header')
 
-<!-- side bar -->
-<div class="sidebar">
-    <!-- Sidebar -->
-    @include('admin.includes.nav')
+    </div>
 
-</div>
+    <!-- side bar -->
+    <div class="sidebar">
+        <!-- Sidebar -->
+        @include('admin.includes.nav')
 
-<!-- START MAIN -->
-<div class="main">
-    <!-- START BIGSUM -->
-    <div class="hipsum">
-<!--
-        <div class="col-md-12 clearfix">
-            <h4 class="pull-left">Dashboard</h4>
-            <ul class="breadcrumb pull-right">
-                <li class="active">Home</li>
-            </ul>
-        </div>
--->
-        <div class="alert js-alert hidden" role="alert"></div>
+    </div>
 
-        @if (Session::has('success'))
-            <div class="alert alert-success">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                {{ Session::get('success') }}
+    <!-- START MAIN -->
+    <div class="main">
+        <!-- START BIGSUM -->
+        <div class="hipsum">
+    <!--
+            <div class="col-md-12 clearfix">
+                <h4 class="pull-left">Dashboard</h4>
+                <ul class="breadcrumb pull-right">
+                    <li class="active">Home</li>
+                </ul>
             </div>
-        @endif
+    -->
+            <div class="alert js-alert hidden" role="alert"></div>
 
-        @if ($errors->any())
-            @foreach ($errors->all() as $error)
-                <div class="alert alert-warning">
+            @if (Session::has('success'))
+                <div class="alert alert-success">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    {{$error}}
+                    {{ Session::get('success') }}
                 </div>
-            @endforeach
-        @endif
+            @endif
 
-        <!-- Breadcrumbs-->
-        @yield('content')
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    <div class="alert alert-warning">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        {{$error}}
+                    </div>
+                @endforeach
+            @endif
+
+            <!-- Breadcrumbs-->
+            @yield('content')
+
+        </div>
+        <!-- END BIGSUM -->
 
     </div>
     <!-- END BIGSUM -->
-
-</div>
-<!-- END BIGSUM -->
 
     <script src="{{ asset('admin/js/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/js/bootstrap.min.js') }}"></script>

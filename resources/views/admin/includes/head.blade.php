@@ -9,10 +9,10 @@
 
 <link href="{{ asset('admin/css/font-awesome.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet" />
-@if (\Request::is('/admin/login'))
+@if (\Request::routeIs('login'))
 <link href="{{ asset('admin/css/extra-style.css') }}" rel="stylesheet" />
 @endif
 
-@if (!\Request::is('/admin/login'))
+@if (!\Request::routeIs('login'))
 <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet" />
 @endif
