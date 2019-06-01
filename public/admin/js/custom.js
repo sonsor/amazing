@@ -1,5 +1,11 @@
 (function ($) {
 
+    var csrf = $('meta[name="csrf-token"]').attr('content');
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': csrf
+        }
+    });
     // side menu
     $('#menu-action').click(function () {
         $('.sidebar').toggleClass('active');
@@ -53,8 +59,44 @@
         $(this).closest('li').find('span').toggleClass('glyphicon-unchecked');
         $(this).closest('li').find('span').toggleClass('glyphicon-check');
     });
+
+    $("body").on('click', '.js-remove', function(e) {
+        e.preventDefault();
+        confirm($(this).attr('href'));
+    });
+
+    function confirm(url) {
+        BootstrapDialog.show({
+            title: 'Warning',
+            message: 'Are you sure you want to delete /',
+            buttons: [{
+                label: 'Yes',
+                action: function(dialog){
+                    remove(url);
+                    dialog.close();
+                }
+            }, {
+                label: 'No, Take me back',
+                cssClass: 'btn-primary',
+                action: function(dialogItselfdialog){
+                    dialog.close();
+                }
+            }]
+        });
+    }
+
+    function remove(url) {
+        $.ajax({
+            method: 'DELETE',
+            url: url,
+            success: success
+        });
+    }
+
+    function success() {
+        BootstrapDialog.success('Successfully Deleted');
+        window.location.reload();
+    }
+
+
 })(jQuery)
-
-
-
-

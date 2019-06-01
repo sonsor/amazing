@@ -14,5 +14,6 @@
 @endif
 
 @if (!\Request::routeIs('login'))
+    <link href="{{ asset('admin/css/bootstrap-dialog.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet" />
 @endif

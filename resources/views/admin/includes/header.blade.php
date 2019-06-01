@@ -18,18 +18,12 @@
         <div id="navbar" class="navbar-collapse collapse" data-hover="dropdown" data-animations="zoomIn">
             <ul class="nav navbar-nav navbar-right ">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">dropdown</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
+                        <li><a href="{{ route('logout') }}">logout</a></li>
                     </ul>
                 </li>
 
-                <li><a href="#">What's New</a></li>
-                <li><a href="examples.html">Examples</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
-                <li class="s-icon"><a href="#" id="addClass" class="s-icon" data-toggle="modal" data-target="#modal-search"><i class="fa fa-search"></i></a></li>
             </ul>
         </div>
     </nav>
