@@ -483,3 +483,16 @@ input.cmn-toggle-round:checked + label:after {margin-left: 25px;  }
  payment Mathod
 *****************/
 .payment{margin-bottom:30px; padding-bottom:15px; border-bottom:1px solid #eee;}
+.well {
+    height: 300px;
+    overflow: auto;
+}
+.well ul li {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.well ul li.active,
+.well ul li.item-primary,
+.well ul li:hover {
+    background: rgb(0, 65, 128);
+}

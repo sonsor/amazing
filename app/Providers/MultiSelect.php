@@ -36,7 +36,8 @@ class MultiSelect extends ServiceProvider
                     function ($v, $k) {
                         return $k . '="' . $v . '"';
                     },
-                    $attributes
+                    $attributes,
+                    array_keys($attributes)
                 )
             );
 
