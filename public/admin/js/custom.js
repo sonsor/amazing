@@ -45,6 +45,14 @@
 
         }
     });
+
+    $("body").on('click', '.well ul li label', function(e) {
+        console.log($(this));
+        $(this).closest('li').toggleClass('active');
+
+        $(this).closest('li').find('span').toggleClass('glyphicon-unchecked');
+        $(this).closest('li').find('span').toggleClass('glyphicon-check');
+    });
 })(jQuery)
 
 
