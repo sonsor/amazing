@@ -19,7 +19,7 @@
                 <!-- page title -->
                 <div class="title">
                     <h1 class="pull-left">{{ $data->id ? 'Edit Variation : '. $data->name: 'Add New Variation' }}</h1>
-                    <a class="btn btn-warning pull-right" href="{{ route('admin.icons.variations.list', $data->parent_id) }}">
+                    <a class="btn btn-warning pull-right" href="{{ route('admin.icons.variations.list', $icon) }}">
                         <i class="icon-cross2"></i>
                         <spaN>Back</spaN>
                     </a>
