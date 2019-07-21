@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512.2 512" style="enable-background:new 0 0 512.2 512;" xml:space="preserve">
+<g>
+	<g>
+		<rect x="225.1" y="422.2" width="62" height="90"/>
+		<rect x="225.1" width="62" height="90"/>
+		<rect y="225.1" width="90" height="62"/>
+		<rect x="422.2" y="225.1" width="90" height="62"/>
+		<rect x="330.7" y="393.9" transform="matrix(0.866 -0.5 0.5 0.866 -170.9876 239.6449)" width="62" height="90"/>
+		<rect x="119.6" y="28.3" transform="matrix(0.866 -0.5 0.5 0.866 -16.466 85.1215)" width="62" height="90"/>
+		<rect x="407.9" y="316.7" transform="matrix(0.5 -0.866 0.866 0.5 -93.7898 560.9067)" width="62" height="90"/>
+		<rect x="42.3" y="105.5" transform="matrix(0.5 -0.866 0.866 0.5 -93.7403 138.7113)" width="62" height="90"/>
+		<rect x="393.9" y="119.5" transform="matrix(0.866 -0.5 0.5 0.866 -16.465 239.6074)" width="90" height="62"/>
+		<rect x="28.3" y="330.7" transform="matrix(0.866 -0.5 0.5 0.866 -171.0251 85.1224)" width="90" height="62"/>
+		<rect x="316.7" y="42.3" transform="matrix(0.5 -0.866 0.866 0.5 117.3826 349.8837)" width="90" height="62"/>
+		<rect x="105.6" y="407.9" transform="matrix(0.5 -0.866 0.866 0.5 -304.8126 349.8342)" width="90" height="62"/>
+		<path d="M256.1,122.2c-74,0-134,60-134,134s60,134,134,134s134-60,134-134S330.1,122.2,256.1,122.2z"/>
+	</g>
+</g>
+</svg>
