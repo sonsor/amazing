@@ -44,6 +44,61 @@ class GenerateJson extends Command
                 return strpos($item, 'svg');
             }
         );
-        var_dump($files);
+
+        $json = '[';
+        foreach ($files as $file) {
+            $slug = $this->getFileName($file);
+            $json .= $this->getIcon($slug) . ',';
+        }
+        $json = rtrim($json, ",");
+        $json .= ']';
+        var_dump($json);
+    }
+
+    private function getFileName($fileName)
+    {
+        return basename($fileName, '.svg');
+    }
+
+    private function getIcon($fileName)
+    {
+        $obj = '{
+            "name": "{{name}}",
+            "slug": "{{slug}}",
+            "classes": "{{slug}}",
+            "version": "1.0.0",
+            "ios": "{{slug}}",
+            "android": "{{slug}}",
+            "variations": [
+              {
+                "paid": true,
+                "type": "solid",
+                "price": "0.00",
+                "version": "1.0.0",
+                "ios": "{{slug}}",
+                "android": "{{slug}}"
+              },
+              {
+                "paid": true,
+                "type": "light",
+                "price": "0.00",
+                "version": "1.0.0",
+                "ios": "{{slug}}",
+                "android": "{{slug}}"
+              },
+              {
+                "paid": false,
+                "type": "regular",
+                "price": "0.00",
+                "version": "1.0.0",
+                "ios": "{{slug}}",
+                "android": "{{slug}}"
+              }
+            ]
+          }';
+
+        $obj = str_replace('{{name}}', ucfirst($fileName), $obj);
+        $obj = str_replace('{{slug}}', $fileName, $obj);
+        return $obj;
     }
 }
