@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/Console/Commands/GenerateJson.php" line="40" />
+    <bookmark url="file://$PROJECT_DIR$/app/Console/Commands/GenerateJson.php" line="41" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a321e4ea-e788-4e7c-8206-9a57be6eee4c" name="Default Changelist" comment="">
@@ -22,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/GenerateJson.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1361">
-              <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+            <state relative-caret-position="210">
+              <caret line="68" column="25" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="25" />
               <folding>
                 <element signature="e#40#71#0#PHP" expanded="true" />
               </folding>
@@ -34,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/data/amazing-neo.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="41" selection-end-column="3" />
+            <state relative-caret-position="231">
+              <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -59,6 +59,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>handle</find>
+      <find>an-</find>
+      <find>brand</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -154,7 +161,7 @@
       <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="27" />
     <option name="width" value="684" />
     <option name="height" value="708" />
@@ -164,7 +171,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,11 +211,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
@@ -243,15 +250,17 @@
       <updated>1563683979999</updated>
       <workItem from="1563683981420" duration="82000" />
       <workItem from="1563684064889" duration="7072000" />
-      <workItem from="1565499987741" duration="3125000" />
+      <workItem from="1565499987741" duration="7388000" />
+      <workItem from="1566999994635" duration="54000" />
+      <workItem from="1567939083848" duration="3672000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10279000" />
+    <option name="totallyTimeSpent" value="18268000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-37" width="1368" height="805" extended-state="6" />
+    <frame x="0" y="27" width="1368" height="708" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25460124" />
@@ -325,20 +334,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/data/old-icons.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504" />
+        <state relative-caret-position="146">
+          <caret line="11783" column="12" selection-start-line="11783" selection-start-column="7" selection-end-line="11783" selection-end-column="12" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/data/amazing-neo.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="41" selection-end-column="3" />
+        <state relative-caret-position="231">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/GenerateJson.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1361">
-          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+        <state relative-caret-position="210">
+          <caret line="68" column="25" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="25" />
           <folding>
             <element signature="e#40#71#0#PHP" expanded="true" />
           </folding>

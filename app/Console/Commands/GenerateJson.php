@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 
+
 class GenerateJson extends Command
 {
     /**
@@ -50,9 +51,22 @@ class GenerateJson extends Command
             $slug = $this->getFileName($file);
             $json .= $this->getIcon($slug) . ',';
         }
+
+        $files = array_filter(
+            Storage::disk('svg')->files('brand'),
+            function ($item) {
+                return strpos($item, 'svg');
+            }
+        );
+
+        foreach ($files as $file) {
+            $slug = $this->getFileName($file);
+            $json .= $this->getBrandIcon($slug) . ',';
+        }
+
         $json = rtrim($json, ",");
         $json .= ']';
-        var_dump($json);
+        file_put_contents('amazing-neo.json', $json);
     }
 
     private function getFileName($fileName)
@@ -71,7 +85,7 @@ class GenerateJson extends Command
             "android": "{{slug}}",
             "variations": [
               {
-                "paid": true,
+                "paid": false,
                 "type": "solid",
                 "price": "0.00",
                 "version": "1.0.0",
@@ -87,8 +101,34 @@ class GenerateJson extends Command
                 "android": "{{slug}}"
               },
               {
-                "paid": false,
+                "paid": true,
                 "type": "regular",
+                "price": "0.00",
+                "version": "1.0.0",
+                "ios": "{{slug}}",
+                "android": "{{slug}}"
+              }
+            ]
+          }';
+
+        $obj = str_replace('{{name}}', ucfirst($fileName), $obj);
+        $obj = str_replace('{{slug}}', $fileName, $obj);
+        return $obj;
+    }
+
+    private function getBrandIcon($fileName)
+    {
+        $obj = '{
+            "name": "{{name}}",
+            "slug": "{{slug}}",
+            "classes": "{{slug}}",
+            "version": "1.0.0",
+            "ios": "{{slug}}",
+            "android": "{{slug}}",
+            "variations": [
+              {
+                "paid": false,
+                "type": "brand",
                 "price": "0.00",
                 "version": "1.0.0",
                 "ios": "{{slug}}",
