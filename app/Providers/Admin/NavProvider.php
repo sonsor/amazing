@@ -18,7 +18,7 @@ class NavProvider extends ServiceProvider
                 'name' => 'dashoard',
                 'label' => 'Dashboard',
                 'route' => 'admin.dashboard',
-                'icon' => 'fa-dashboard',
+                'icon' => 'dashboard',
                 'children' => []
             ],
             [
@@ -41,7 +41,7 @@ class NavProvider extends ServiceProvider
                 'name' => 'category',
                 'label' => 'Categories',
                 'route' => 'admin.category.list',
-                'icon' => 'tachometer-alt',
+                'icon' => 'object-ungroup',
                 'children' => [
                     [
                         'label' => 'All Categories',
@@ -57,7 +57,7 @@ class NavProvider extends ServiceProvider
                 'name' => 'tag',
                 'label' => 'Tags',
                 'route' => 'admin.tag.list',
-                'icon' => 'tachometer-alt',
+                'icon' => 'tags',
                 'children' => [
                     [
                         'label' => 'All Tags',
@@ -73,7 +73,7 @@ class NavProvider extends ServiceProvider
                 'name' => 'variation-type',
                 'label' => 'Variation Types',
                 'route' => 'admin.variation.type.list',
-                'icon' => 'tachometer-alt',
+                'icon' => 'cog',
                 'children' => [
                     [
                         'label' => 'All Variation Types',
@@ -89,7 +89,7 @@ class NavProvider extends ServiceProvider
                 'name' => 'version',
                 'label' => 'Versions',
                 'route' => 'admin.version.list',
-                'icon' => 'tachometer-alt',
+                'icon' => 'cogs',
                 'children' => [
                     [
                         'label' => 'All Versions',

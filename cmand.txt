@@ -1,0 +1,10 @@
+php artisan
+
+php artisan generate.json
+
+
+
+
+----------------------------
+create data from json to DB
+php artisan db:seed

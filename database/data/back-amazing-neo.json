@@ -1,0 +1,124 @@
+[
+  {
+    "name": "Wheel Chair",
+    "slug": "wheelchair",
+    "classes": "wheelchair",
+    "version": "1.0.1",
+    "ios": "wheelchair",
+    "android": "wheelchair",
+    "variations": [
+      {
+        "paid": true,
+        "type": "solid",
+        "price": "0.00",
+        "version": "1.0.1",
+        "ios": "wheelchair",
+        "android": "wheelchair"
+      },
+      {
+        "paid": true,
+        "type": "light",
+        "price": "0.00",
+        "version": "1.0.0",
+        "ios": "wheelchair",
+        "android": "wheelchair"
+      },
+      {
+        "paid": false,
+        "type": "regular",
+        "price": "0.00",
+        "version": "1.0.0",
+        "ios": "wheelchair",
+        "android": "wheelchair"
+      }
+    ],
+    "categories": [
+      "accessibility",
+      "alert"
+    ],
+    "tags": [
+      "menu"
+    ]
+  },
+  {
+    "name": "Blind",
+    "slug": "blind",
+    "classes": "blind",
+    "version": "1.0.0",
+    "ios": "wheelchair",
+    "android": "wheelchair",
+    "variations": [
+      {
+        "paid": true,
+        "type": "solid",
+        "price": "0.00",
+        "version": "1.0.0",
+        "ios": "wheelchair",
+        "android": "wheelchair"
+      },
+      {
+        "paid": true,
+        "type": "light",
+        "price": "0.00",
+        "version": "1.0.0",
+        "ios": "wheelchair",
+        "android": "wheelchair"
+      },
+      {
+        "paid": false,
+        "type": "regular",
+        "price": "0.00",
+        "version": "1.0.0",
+        "ios": "wheelchair",
+        "android": "wheelchair"
+      }
+    ],
+    "categories": [
+      "accessibility",
+      "animals"
+    ],
+    "tags": [
+      "menu"
+    ]
+  },
+  {
+    "name": "Yuan",
+    "slug": "yuan",
+    "classes": "yuan",
+    "version": "1.0.0",
+    "ios": "wheelchair",
+    "android": "wheelchair",
+    "variations": [
+      {
+        "paid": true,
+        "type": "solid",
+        "price": "0.00",
+        "version": "1.0.0",
+        "ios": "wheelchair",
+        "android": "wheelchair"
+      },
+      {
+        "paid": true,
+        "type": "light",
+        "price": "0.00",
+        "version": "1.0.0",
+        "ios": "wheelchair",
+        "android": "wheelchair"
+      },
+      {
+        "paid": false,
+        "type": "regular",
+        "price": "0.00",
+        "version": "1.0.0",
+        "ios": "wheelchair",
+        "android": "wheelchair"
+      }
+    ],
+    "categories": [
+      "other"
+    ],
+    "tags": [
+      "arrow"
+    ]
+  }
+]

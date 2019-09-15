@@ -20063,39 +20063,6 @@
               }
             ]
           },{
-            "name": "Goal-pool",
-            "slug": "goal-pool",
-            "classes": "goal-pool",
-            "version": "1.0.0",
-            "ios": "goal-pool",
-            "android": "goal-pool",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "goal-pool",
-                "android": "goal-pool"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "goal-pool",
-                "android": "goal-pool"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "goal-pool",
-                "android": "goal-pool"
-              }
-            ]
-          },{
             "name": "Goggles",
             "slug": "goggles",
             "classes": "goggles",
@@ -23129,105 +23096,6 @@
                 "version": "1.0.0",
                 "ios": "inr",
                 "android": "inr"
-              }
-            ]
-          },{
-            "name": "Instagram-circle",
-            "slug": "instagram-circle",
-            "classes": "instagram-circle",
-            "version": "1.0.0",
-            "ios": "instagram-circle",
-            "android": "instagram-circle",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "instagram-circle",
-                "android": "instagram-circle"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "instagram-circle",
-                "android": "instagram-circle"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "instagram-circle",
-                "android": "instagram-circle"
-              }
-            ]
-          },{
-            "name": "Instagram-square",
-            "slug": "instagram-square",
-            "classes": "instagram-square",
-            "version": "1.0.0",
-            "ios": "instagram-square",
-            "android": "instagram-square",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "instagram-square",
-                "android": "instagram-square"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "instagram-square",
-                "android": "instagram-square"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "instagram-square",
-                "android": "instagram-square"
-              }
-            ]
-          },{
-            "name": "Instagram",
-            "slug": "instagram",
-            "classes": "instagram",
-            "version": "1.0.0",
-            "ios": "instagram",
-            "android": "instagram",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "instagram",
-                "android": "instagram"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "instagram",
-                "android": "instagram"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "instagram",
-                "android": "instagram"
               }
             ]
           },{
@@ -28775,105 +28643,6 @@
               }
             ]
           },{
-            "name": "Paypal-circle",
-            "slug": "paypal-circle",
-            "classes": "paypal-circle",
-            "version": "1.0.0",
-            "ios": "paypal-circle",
-            "android": "paypal-circle",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "paypal-circle",
-                "android": "paypal-circle"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "paypal-circle",
-                "android": "paypal-circle"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "paypal-circle",
-                "android": "paypal-circle"
-              }
-            ]
-          },{
-            "name": "Paypal-square",
-            "slug": "paypal-square",
-            "classes": "paypal-square",
-            "version": "1.0.0",
-            "ios": "paypal-square",
-            "android": "paypal-square",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "paypal-square",
-                "android": "paypal-square"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "paypal-square",
-                "android": "paypal-square"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "paypal-square",
-                "android": "paypal-square"
-              }
-            ]
-          },{
-            "name": "Paypal",
-            "slug": "paypal",
-            "classes": "paypal",
-            "version": "1.0.0",
-            "ios": "paypal",
-            "android": "paypal",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "paypal",
-                "android": "paypal"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "paypal",
-                "android": "paypal"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "paypal",
-                "android": "paypal"
-              }
-            ]
-          },{
             "name": "Pen-alt",
             "slug": "pen-alt",
             "classes": "pen-alt",
@@ -30785,39 +30554,6 @@
                 "version": "1.0.0",
                 "ios": "pyramid",
                 "android": "pyramid"
-              }
-            ]
-          },{
-            "name": "Python",
-            "slug": "python",
-            "classes": "python",
-            "version": "1.0.0",
-            "ios": "python",
-            "android": "python",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "python",
-                "android": "python"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "python",
-                "android": "python"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "python",
-                "android": "python"
               }
             ]
           },{
@@ -35372,6 +35108,39 @@
                 "version": "1.0.0",
                 "ios": "square-root",
                 "android": "square-root"
+              }
+            ]
+          },{
+            "name": "Stadium",
+            "slug": "stadium",
+            "classes": "stadium",
+            "version": "1.0.0",
+            "ios": "stadium",
+            "android": "stadium",
+            "variations": [
+              {
+                "paid": false,
+                "type": "solid",
+                "price": "0.00",
+                "version": "1.0.0",
+                "ios": "stadium",
+                "android": "stadium"
+              },
+              {
+                "paid": true,
+                "type": "light",
+                "price": "0.00",
+                "version": "1.0.0",
+                "ios": "stadium",
+                "android": "stadium"
+              },
+              {
+                "paid": true,
+                "type": "regular",
+                "price": "0.00",
+                "version": "1.0.0",
+                "ios": "stadium",
+                "android": "stadium"
               }
             ]
           },{
@@ -41939,204 +41708,6 @@
                 "version": "1.0.0",
                 "ios": "villa",
                 "android": "villa"
-              }
-            ]
-          },{
-            "name": "Vimeo-circle",
-            "slug": "vimeo-circle",
-            "classes": "vimeo-circle",
-            "version": "1.0.0",
-            "ios": "vimeo-circle",
-            "android": "vimeo-circle",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vimeo-circle",
-                "android": "vimeo-circle"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vimeo-circle",
-                "android": "vimeo-circle"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vimeo-circle",
-                "android": "vimeo-circle"
-              }
-            ]
-          },{
-            "name": "Vimeo-square",
-            "slug": "vimeo-square",
-            "classes": "vimeo-square",
-            "version": "1.0.0",
-            "ios": "vimeo-square",
-            "android": "vimeo-square",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vimeo-square",
-                "android": "vimeo-square"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vimeo-square",
-                "android": "vimeo-square"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vimeo-square",
-                "android": "vimeo-square"
-              }
-            ]
-          },{
-            "name": "Vimeo",
-            "slug": "vimeo",
-            "classes": "vimeo",
-            "version": "1.0.0",
-            "ios": "vimeo",
-            "android": "vimeo",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vimeo",
-                "android": "vimeo"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vimeo",
-                "android": "vimeo"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vimeo",
-                "android": "vimeo"
-              }
-            ]
-          },{
-            "name": "Vine-circle",
-            "slug": "vine-circle",
-            "classes": "vine-circle",
-            "version": "1.0.0",
-            "ios": "vine-circle",
-            "android": "vine-circle",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vine-circle",
-                "android": "vine-circle"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vine-circle",
-                "android": "vine-circle"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vine-circle",
-                "android": "vine-circle"
-              }
-            ]
-          },{
-            "name": "Vine-square",
-            "slug": "vine-square",
-            "classes": "vine-square",
-            "version": "1.0.0",
-            "ios": "vine-square",
-            "android": "vine-square",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vine-square",
-                "android": "vine-square"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vine-square",
-                "android": "vine-square"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vine-square",
-                "android": "vine-square"
-              }
-            ]
-          },{
-            "name": "Vine",
-            "slug": "vine",
-            "classes": "vine",
-            "version": "1.0.0",
-            "ios": "vine",
-            "android": "vine",
-            "variations": [
-              {
-                "paid": false,
-                "type": "solid",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vine",
-                "android": "vine"
-              },
-              {
-                "paid": true,
-                "type": "light",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vine",
-                "android": "vine"
-              },
-              {
-                "paid": true,
-                "type": "regular",
-                "price": "0.00",
-                "version": "1.0.0",
-                "ios": "vine",
-                "android": "vine"
               }
             ]
           },{
