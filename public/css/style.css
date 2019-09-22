@@ -190,7 +190,6 @@ ul.dropdown-menu li a {
     color: #fff;
     line-height: 31px;
 }
-}
  .navbar-default{
      transition:.35s ease-in-out;
      -webkit-transition:.35s ease-in-out;
@@ -366,7 +365,7 @@ ul.dropdown-menu li a {
      line-height: 20px;
      letter-spacing: 0px;
 }
-}
+
  h3 {
      font-size: 16.5px;
 }
@@ -1209,7 +1208,6 @@ ul{
      border-bottom: 1px solid #dee1e4;
      letter-spacing: .5px;
 }
-}
  .cod-example .example-icon {
      width: 250px;
      text-align: center;
@@ -1543,7 +1541,7 @@ pre {
      justify-content: space-between;
      margin: 0 0 20px;
 }
-}
+
  .form .form-group:last-child {
      margin: 0;
 }
@@ -2488,7 +2486,7 @@ pre {
     padding: 40px;
 }
  .icon-variant .ico-solid{
-    border-left: : 1px solid #bfbfbf;
+    border-left: 1px solid #bfbfbf;
 }
 /********************* icon set css **********************/
  .custom-card{
@@ -3746,18 +3744,26 @@ a.back-to-all-btn{
     right: 0px;
     text-align: center;
 }
+.btn-pro a, .btn-pro i {
+    text-decoration: none;
+}
+.btn-pro:hover i {
+    background:#1da7b6;
+}
 
 .btn-pro i {
     background: #0085ff;
     color: #fff;
-    padding: 23px 27px 25px 27px;
+    padding: 25px 27px 25px 27px;
+    float: left;
 }
 
 .btn-pro span {
     background: #e5e8ef;
-    padding: 20px 40px 20px 40px;
+    padding: 22px 40px 22px 40px;
     color: #333333;
-    margin-left: -4px;
+    margin-left: 0px;
+    float: left;
 }
 
 .btn-download {
@@ -4040,6 +4046,14 @@ ul.todo-list li p {
     font-weight: 300;
     letter-spacing: .5px;
 }
+
+
+.bg-black {
+    background: #000;
+}
+.bg-orange {
+    background: orange;
+}
 /********* terms and conditions **********/
  .terms-and-conditions {
     padding: 40px 0;
@@ -4084,3 +4098,21 @@ ul.todo-list li p {
   .scrollup {border-radius: 50%;height: 40px;width: 40px;font-size: 18px;color: #fff;text-align: center;position: fixed;bottom: 30px;right: 30px;line-height: 40px;cursor: pointer;display: none;z-index: 2;background: #000;    z-index: 99999;}
   .scrollup:hover {box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);-webkit-transition: all 0.4s ease-out;transition: all 0.4s ease-out;}
 
+
+ /* ********* example page ************* */
+ .code.html {
+    padding: 60px 30px;
+    margin-bottom: 50px;
+    display: flow-root;
+    background: rgb(236, 240, 244);
+    border-radius: 4px;
+ }
+  .example .prefix {
+    padding: 5px 10px;
+    font-size: 90%;
+    color: #ffffff;
+    background-color: #0085ff;
+    border-radius: 3px;
+    float: left;
+    margin: 0 10px 15px 0;
+}

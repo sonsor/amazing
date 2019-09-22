@@ -18,7 +18,7 @@
 <!-- scroll to up -->
 <div class="scroll-to-up">
     <div class="scrollup" style="display: block;">
-        <i class="an an-arrow-up"></i>
+        <i class="an an-long-arrow-up"></i>
     </div>
 </div> <!-- / scroll to up -->
 

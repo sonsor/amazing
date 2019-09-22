@@ -31,6 +31,77 @@
 }
 
 
+
+
+.an-lg {
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%;
+}
+
+
+.stroke-color-red, .an-red{color:#ff3249 }
+.stroke-color-blue, .an-blue{color:#0cadf0 }
+.stroke-color-orange, .an-orange{color:#FAB901 }
+.stroke-color-gray, .an-gray{color:#6f778a }
+.stroke-color-green, .an-green{color:#00bb27 }
+.stroke-color-light-gray, .an-light-gray{color:#e5e8ef}
+.stroke-color-black, .an-black{color:#000 }
+.an-stroke-1x {border: 1px solid;}
+.an-stroke-2x {border: 2px solid;}
+.an-fw { width: 1.28571429em; text-align: center}
+.an-ul { padding-left: 0; margin-left: 2.14285714em; list-style-type: none;}
+.an-ul>li { position: relative; }
+.an-li { width: 2.14285714em;}
+.an-li.an-lg { 	left: -1.85714286em}
+.an-border { padding: .2em .25em .15em; border: solid .08em #eee; border-radius: .1em}
+.an-pull-left {	float: left;}
+.an-pull-right { float: right;}
+.an.an-pull-left { margin-right: .3em;}
+.an.an-pull-right { margin-left: .3em;}
+.pull-right { float: right;}
+.pull-left { float: left;}
+.an.pull-left {	margin-right: .3em;}
+.an.pull-right { margin-left: .3em;}
+.an-center { left: 0; right: 0;	margin: auto;}
+.an-1x{ font-size:1em;}
+.an-2x{ font-size:2em;}
+.an-3x{ font-size:3em;}
+.an-4x{ font-size:4em;}
+.an-5x{ font-size:5em;}
+.an-6x{ font-size:6em;}
+.an-7x{ font-size:7em;}
+.an-8x{ font-size:8em;}
+.an-9x{ font-size:9em;}
+.an-10x{ font-size:10em;}
+.an-11x{ font-size:11em;}
+.an-12x{ font-size:12em;}
+.an-13x{ font-size:13em;}
+.an-14x{ font-size:14em;}
+.an-15x{ font-size:15em;}
+ /* icon animation */
+.an-shrink { -webkit-animation-name: pulse-shrink; animation-name: pulse-shrink; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-direction: alternate; animation-direction: alternate;}
+@-webkit-keyframes pulse-shrink { to { -webkit-transform: scale(0.8); transform: scale(0.8);}}
+@keyframes pulse-shrink { to { -webkit-transform: scale(0.8); transform: scale(0.8);}}
+/* spin animation */
+.an-spin { -webkit-animation: an-spin 2s infinite linear; animation: an-spin 2s infinite linear}
+.an-pulse { -webkit-animation: an-spin 1s infinite steps(8); animation: an-spin 1s infinite steps(8) }
+@-webkit-keyframes an-spin { 0% {-webkit-transform: rotate(0deg); transform: rotate(0deg)} 100% { -webkit-transform: rotate(359deg); transform: rotate(359deg)}}
+@keyframes an-spin { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg)} 100% { -webkit-transform: rotate(359deg); transform: rotate(359deg)} }
+/****** rotate *******/
+.an-rotate-90 { -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)"; -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg)}
+.an-rotate-180 { -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg)}
+.an-rotate-270 { -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)"; -webkit-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg)}
+.an-flip-horizontal { -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)"; -webkit-transform: scale(-1, 1); -ms-transform: scale(-1, 1); transform: scale(-1, 1)}
+.an-flip-vertical { -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)"; -webkit-transform: scale(1, -1); -ms-transform: scale(1, -1); transform: scale(1, -1)}
+:root .an-rotate-90, :root .an-rotate-180, :root .an-rotate-270, :root .an-flip-horizontal, :root .an-flip-vertical { filter: none}
+.sr-only { position: absolute;	width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0);	border: 0}
+.sr-only-focusable:active, .sr-only-focusable:focus { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto}
+
+
+
+
+
 /* Icons */
 
 

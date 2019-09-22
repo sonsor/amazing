@@ -340,7 +340,7 @@ th.tabco4 { border-right:1px solid #e5e5e5;padding: 20px 10px !important;font-si
   Amazing versions 
 *****************/
 .versions {line-height:40px; border-bottom: 1px solid #eeeeee; clear: both; height: 50px}
-.versions:hover{ border-bottom: 1px solid #1cc1a1;}{}
+.versions:hover{ border-bottom: 1px solid #1cc1a1;}
 .versions a { float:left; width:40%}
 .versions span {float:left; width:30%}
 .upload-date{font-size:12px; float:left; padding-left:35px; }
@@ -494,5 +494,9 @@ input.cmn-toggle-round:checked + label:after {margin-left: 25px;  }
 .well ul li.active,
 .well ul li.item-primary,
 .well ul li:hover {
-    background: rgb(0, 65, 128);
+    background: rgb(28, 193, 161);/*rgb(0, 65, 128);*/
+    color:#fff;
+}
+.well ul li label {
+    cursor: pointer;
 }

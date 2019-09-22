@@ -25,8 +25,8 @@
                 </ol>
             </div>
         </div>
-        <div class="code html">
-            <div class="col-md-12">
+        <div class="col-md-12">
+            <div class="code html">
                 <div class="example">
                     <h2>You are able to change icon size with default calacess </h2>
                     <div class="col-md-12">
@@ -107,15 +107,15 @@
                     </div>
                     <div class="col-md-12">
                     <pre class="htmlArea"><i class="an an-umbrella an-4x an-rotate-90"></i> <i class="an an-umbrella an-4x an-rotate-180"></i> <i class="an an-umbrella an-4x an-rotate-270"></i>
-<br /><code>&lt;i <span class="typ">class</span>=<span class="nam">"an an-class an-rotate-top"</span>&gt;&lt;/i&gt; </code> </pre>
+<br /><code>&lt;i <span class="typ">class</span>=<span class="nam">"an an-class an-rotate-90"</span>&gt;&lt;/i&gt; </code> </pre>
                     </div>
                     <div class="col-md-12">
                         <span class="prefix"> an-flip-horizonta </span>
                         <span class="prefix"> an-flip-vertical </span>
                     </div>
                     <div class="col-md-12">
-                    <pre class="htmlArea"> <i class="an an-network-wired an-4x an-flip-horizonta"></i>  <i class="an an-network-wired an-4x an-flip-vertical"></i>
-<br /><code>&lt;i <span class="typ">class</span>=<span class="nam">"an an-class an-rotate-top"</span>&gt;&lt;/i&gt; </code> </pre>
+                    <pre class="htmlArea"> <i class="an an an-arrow-click an-4x an-flip-horizonta"></i>  <i class="an an an-arrow-click an-4x an-flip-vertical"></i>
+<br /><code>&lt;i <span class="typ">class</span>=<span class="nam">"an an-class an-flip-vertical"</span>&gt;&lt;/i&gt; </code> </pre>
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@
                         <span class="prefix"> an-strocke-1x </span>
                         <span class="prefix"> an-strocke-2x </span>
                     </div>
-                    <div class="col-md-12"><pre class="htmlArea stroke"> <i style=" padding:10px;" class="an an-birthday an-4x an-stroke-1x"></i> <i style=" padding:10px;" class="an an-birthday an-4x an-stroke-2x"></i>
+                    <div class="col-md-12"><pre class="htmlArea stroke"> <i style=" padding:10px;" class="an an-birthday-cake an-4x an-stroke-1x"></i> <i style=" padding:10px;" class="an an-birthday-cake an-4x an-stroke-2x"></i>
 <br><code>&lt;i <span class="typ">class</span>=<span class="nam">"an an-class an-stroke-1x"</span>&gt;&lt;/i&gt; </code> </pre>
                     </div>
                 </div>

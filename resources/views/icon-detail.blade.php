@@ -71,10 +71,11 @@
                         <div class="pro-content">
                             <div class="pro-tag">
                                 <a class="btn-pro" href="{{ route('icon.seach')  }}">
-                                    <i class="an an an-arrow-left"> </i>
+                                    <i class="an an-arrow-rounded-left"> </i>
                                     <span> all icons</span>
                                 </a>
                             </div>
+
                             <div class="col-md-12 ico-var flex-end justify-between pt-4x">
                                 <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-1x"></i>
                                 <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-2x"></i>
