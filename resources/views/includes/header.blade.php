@@ -22,14 +22,14 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
-            <div class="modal-body">
-                <div id="search">
+            <div class="modal-body" style="margin-top: 10em;">
+                <div id="search" class="search-popup">
                     <?php echo Form::open(array(
                         'route' => 'icon.seach',
                         'method' => 'get',
                     )); ?>
-                        <input type="text" placeholder="Search Icon or font name..." value="" name="search" id="term">
-                        <button class="btn btn-primary btn-xl" type="submit"><span class="glyphicon glyphicon-search"></span> Search</button>
+                        <input type="text" placeholder="Search Icon ..." value="" name="search" id="term">
+                        <button class="btn btn-primary btn-xl" type="submit"><span class="an an-search"></span> Search</button>
                     <?php echo Form::close(); ?>
                 </div>
             </div>

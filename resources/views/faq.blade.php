@@ -25,16 +25,16 @@
             <!-- questions -->
             <div class="col-md-6">
                 <div class="panel-group" id="accordion1">
-
                     <div class="panel panel-default">
-                        <div class="panel-heading accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1,#accordion2,#accordion3" data-target="#collapseTwo1">
+                        <div class="panel-heading accordion-toggle collapsed" data-toggle="collapse" 
+                        data-parent="#accordion1,#accordion2,#accordion3,#accordion4,#accordion5" data-target="#collapseUse">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                                     Can I use Amazing Neo for commercial projects?
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseTwo1" class="panel-collapse collapse">
+                        <div id="collapseUse" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>Feel free to use all font icons for any commercial and personal use. For more information, please see the
                                     <a class="blue" href="/license/">license agreement</a> and
@@ -45,7 +45,8 @@
                     </div>
 
                     <div class="panel panel-default">
-                        <div class="panel-heading accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1,#accordion2,#accordion3" data-target="#collapseThree1">
+                        <div class="panel-heading accordion-toggle collapsed" data-toggle="collapse" 
+                        data-parent="#accordion1,#accordion2,#accordion3,#accordion4,#accordion5" data-target="#collapseDownload">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                                     How can I download Amazing Neo?
@@ -53,7 +54,7 @@
                             </h4>
 
                         </div>
-                        <div id="collapseThree1" class="panel-collapse collapse">
+                        <div id="collapseDownload" class="panel-collapse collapse">
                             <div class="panel-body">
                                 You can download Icon fonts and CSS file from home page in shape of zip file
                             </div>
@@ -61,15 +62,15 @@
                     </div>
 
                     <div class="panel panel-default">
-                        <div class="panel-heading accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1,#accordion2,#accordion3" data-target="#collapseFour1">
+                        <div class="panel-heading accordion-toggle collapsed" data-toggle="collapse" 
+                        data-parent="#accordion1,#accordion2,#accordion3,#accordion4,#accordion5" data-target="#collapseMobile">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                                     can I use Amazing Neo in mobile apps?
                                 </a>
                             </h4>
-
                         </div>
-                        <div id="collapseFour1" class="panel-collapse collapse">
+                        <div id="collapseMobile" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>Of course you can use Amazing Neo in mobile apps without any extra effects, We also created  examples for
                                     <a class="blue" href="/ios/">iOS</a> and
@@ -80,7 +81,8 @@
                     </div>
 
                     <div class="panel panel-default">
-                        <div class="panel-heading accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1,#accordion2,#accordion3" data-target="#collapseFour1">
+                        <div class="panel-heading accordion-toggle collapsed" data-toggle="collapse" 
+                        data-parent="#accordion1,#accordion2,#accordion3,#accordion4,#accordion5" data-target="#collapseCustomize">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                                     Do you offer customize icon or font ?
@@ -88,7 +90,7 @@
                             </h4>
 
                         </div>
-                        <div id="collapseFour1" class="panel-collapse collapse">
+                        <div id="collapseCustomize" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>Feel free to
                                     <a class="blue" href="/contact/">contact</a>
@@ -98,15 +100,16 @@
                     </div>
 
                     <div class="panel panel-default">
-                        <div class="panel-heading accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1,#accordion2,#accordion3" data-target="#collapseFour1">
+                        <div class="panel-heading accordion-toggle collapsed" data-toggle="collapse"
+                         data-parent="#accordion1,#accordion2,#accordion3,#accordion4,#accordion5" data-target="#collapsePay">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapsePay">
                                     Do I need to pay for download?
                                 </a>
                             </h4>
 
                         </div>
-                        <div id="collapseFour1" class="panel-collapse collapse">
+                        <div id="collapsePay" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>Amazing Neo is an open source project. you are able to use it free of cost.</p>
                             </div>

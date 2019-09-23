@@ -6,8 +6,8 @@
     <div class="feature-section">
         <div class="container">
             <div class="copyToClip">
-                <i style="color: #6f778a; padding-right: 10px;" class="an an-user"></i> |
 
+            <i style="color: #6f778a; padding-right: 10px;" class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-1x"></i> | 
                 <div id="copyTarget" class="ico-class">
                     <code data-balloon="Click to Copy HTML" data-balloon-pos="down"><span>&lt;i </span><span class="typ">class</span>=<span class="nam">"{{ $icon->variation->classes . ' an-' . $icon->classes  }}"</span><span>&gt;&lt;/i&gt;</span></code>
                 </div>
@@ -95,7 +95,7 @@
                     <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
                 </div>
                 <div class="contant">
-                    <p>{{ $icon->description->shortDescription }}</p>
+                    <p>{{ $icon->name }} {{ $icon->description->shortDescription }}</p>
                 </div>
             </div>
         </div>
@@ -103,23 +103,129 @@
             <div class="container">
 
                 <div class=col-md-7>
+
+
+<!-- ----------------------- moile tab-------------------------- -->
+
+<div class="navigation-tab">
+  <div class="navigation-tab-item active">   
+      <span class="navigation-tab__icon">
+    <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+        </span>
+    <span class="navigation-tab__txt">{{ $icon->name }}</span>
+  </div>
+  <div class="navigation-tab-item">
+  <span class="navigation-tab__icon">
+        <i class="an an-list"></i>         
+        </span>
+    <span class="navigation-tab__txt">List</span>
+  </div>
+  <div class="navigation-tab-item">
+    <span class="navigation-tab__icon">
+        <i class="an an-bag"></i>
+    </span>
+    <span class="navigation-tab__txt">Bag</span>
+  </div>
+  <div class="navigation-tab-item">
+    <span class="navigation-tab__icon">
+        <i class="an an-bell"></i>
+    </span>
+    <span class="navigation-tab__txt">Notifications</span>
+  </div>
+  <div class="navigation-tab-overlay"></div>
+</div>
+
+<!-- ----------------------- todo ---------------------------- -->
+
+
+<style>
+    .todo {
+        display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 500px;
+    background-color: #fafafa;
+    padding: 0px;
+    box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
+    margin: 6rem 0;
+    border-radius: 0.75rem;
+    }
+    .todo ul li {
+        padding: 1.5rem 2rem;
+        background:#343a40;
+    }
+    .todo ul li.active {
+        background: #2c3135;
+        color: #fff;
+    }
+    .todo ul li.active i {
+        background:  #343a40
+    }
+    .todo ul li.title {
+        padding-top: 1rem;
+        text-align: center;
+        color: gray;
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
+
+    .todo ul li i{
+        background:#2c3135;
+        padding: 20px;
+
+    }
+    .todo ul li span {
+        padding: 30px;
+    }
+    </style>
+
+
+<div class="todo">
+  <ul>
+  <li class="title">        
+        <span>Lorem ipsum dolor</span>
+    </li>
+    <li>
+        <i class="an an-search"></i>
+        <span>Lorem ipsum dolor</span>
+    </li>
+    <li class="active">
+        <i class="an an-search"></i>
+        <span>Lorem ipsum dolor</span>
+    </li>
+    <li>
+        <i class="an an-search"></i>
+        <span>Lorem ipsum dolor</span>
+    </li>
+    <li>
+        <i class="an an-search"></i>
+        <span>Lorem ipsum dolor</span>
+    </li>
+    
+   
+    
+  </ul>
+</div>
+
+<!-- ------------------------todo end ------------ -->
+
                     <div class="icon-showcase-todo">
                         <ul class="todo-list">
                             <li>
                                 <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
-                                <p>{{ $icon->description->mediumDescription1 }}</p>
+                                <p> {{ $icon->name }} {{ $icon->description->mediumDescription1 }}</p>
                             </li>
                             <li>
                                 <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
-                                <p>{{ $icon->description->mediumDescription2 }}</p>
+                                <p>{{ $icon->name }} {{ $icon->description->mediumDescription2 }}</p>
                             </li>
                             <li>
                                 <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
-                                <p>{{ $icon->description->mediumDescription3 }}</p>
+                                <p>{{ $icon->name }} {{ $icon->description->mediumDescription3 }}</p>
                             </li>
                             <li>
                                 <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
-                                <p>{{ $icon->description->mediumDescription4 }}</p>
+                                <p>{{ $icon->name }} {{ $icon->description->mediumDescription4 }}</p>
                             </li>
                         </ul>
                     </div>
@@ -128,12 +234,12 @@
                 <div class=col-md-5>
                     <div class="icon-waget one">
                         <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
-                        <p>{{ $icon->description->smallDescription1 }}</p>
+                        <p>{{ $icon->name }} {{ $icon->description->smallDescription1 }}</p>
                     </div>
 
                     <div class="icon-waget two">
                         <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
-                        <p>{{ $icon->description->smallDescription2 }}</p>
+                        <p>{{ $icon->name }} {{ $icon->description->smallDescription2 }}</p>
                     </div>
                 </div>
             </div>
@@ -143,13 +249,13 @@
                 <div class=col-md-6>
                     <div class="icon-waget-half">
                         <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} bg-orange"></i>
-                        <p>{{ $icon->description->description1 }}</p>
+                        <p> {{ $icon->name }} {{ $icon->description->description1 }}</p>
                     </div>
                 </div>
                 <div class=col-md-6>
                     <div class="icon-waget-half">
                         <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} bg-black"></i>
-                        <p>{{ $icon->description->description2 }}</p>
+                        <p>{{ $icon->name }} {{ $icon->description->description2 }}</p>
                     </div>
                 </div>
             </div>
