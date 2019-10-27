@@ -1,0 +1,27 @@
+﻿/*!
+ *  Amazing Neo Iconic Font, by Amazing Team - http://amazingneo.com/ 
+ *  License  (Font: SIL OFL 1.1, CSS: MIT License)
+ */body{background-color:#f2f2f2}@font-face{font-family:"amazing-neo";src:url("../fonts/amazing-neo-Iconic-Font.woff2?v=1.0") format("woff2"),url("../fonts/amazing-neo-Iconic-Font.woff?v=1.0") format("woff"),url("../fonts/amazing-neo-Iconic-Font.ttf?v=1.0") format("truetype");font-weight:normal;font-style:normal}.an{display:inline-block;font:normal normal normal 14px/1 "amazing-neo";font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.an-lg{font-size:1.33333em;line-height:.75em;vertical-align:-15%}.an-2x{font-size:2em}.an-3x{font-size:3em}.an-4x{font-size:4em}.an-5x{font-size:5em}.an-fw{width:1.28571em;text-align:center}.an-ul{padding-left:0;margin-left:2.14286em;list-style-type:none}.an-ul>li{position:relative}
+ .an-li{position:absolute;left:-2.14286em;width:2.14286em;top:.14286em;text-align:center}.an-li.an-lg{left:-1.85714em}.an-border{padding:.1em .25em;border:solid 0.1em #9E9E9E;border-radius:2px}
+ .an-border-circle{padding:.1em .25em;border:solid 0.1em #9E9E9E;border-radius:50%}
+ .an.pull-left{float:left;margin-right:.15em}.an.pull-right{float:right;
+ 	margin-left:.15em}.an-spin{animation:an-spin 1.5s infinite linear}
+ 	.an-spin-reverse{animation:an-spin-reverse 1.5s infinite linear}
+ 	@keyframes an-spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}
+ 	@keyframes an-spin-reverse{0%{transform:rotate(0deg)}100%{transform:rotate(-359deg)}}
+ 	.an-rotate-90{transform:rotate(90deg)}.an-rotate-180{transform:rotate(180deg)}
+ 	.an-rotate-270{transform:rotate(270deg)}.an-flip-horizontal{transform:scale(-1, 1)}
+ 	.an-flip-vertical{transform:scale(1, -1)}
+ 	.an-stack{position:relative;display:inline-block;width:2em;height:2em;line-height:2em;vertical-align:middle}
+ 	.an-stack-1x,.an-stack-2x{position:absolute;left:0;width:100%;text-align:center}
+ 	.an-stack-1x{line-height:inherit}
+ 	.an-stack-2x{font-size:2em}
+ 	.an-inverse{color:#fff}
+ 	.an-swap-alt:before{content:""}
+ 	.an-swap-vertical-circle:before{content:""}
+ 	.an-swap-vertical:before{content:""}
+ 	.an-swap:before{content:""}
+ 	.an-import-export:before{content:""}
+ 	.an-import-export:before{content:""}
+ 	.an-swap-vertical-:before{content:""}
+ 	body{background:red;line-height:auto}.an{font-size:2em}
