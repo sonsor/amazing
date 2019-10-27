@@ -14288,36 +14288,36 @@
     }
   ]
 },{
-  "name": "Dharmachakra",
-  "slug": "dharmachakra",
-  "classes": "dharmachakra",
+  "name": "ship-steering-wheel",
+  "slug": "ship-steering-wheel",
+  "classes": "ship-steering-wheel",
   "version": "1.0.0",
-  "ios": "dharmachakra",
-  "android": "dharmachakra",
+  "ios": "ship-steering-wheel",
+  "android": "ship-steering-wheel",
   "variations": [
     {
       "paid": false,
       "type": "solid",
       "price": "0.00",
       "version": "1.0.0",
-      "ios": "dharmachakra",
-      "android": "dharmachakra"
+      "ios": "ship-steering-wheel",
+      "android": "ship-steering-wheel"
     },
     {
       "paid": true,
       "type": "light",
       "price": "0.00",
       "version": "1.0.0",
-      "ios": "dharmachakra",
-      "android": "dharmachakra"
+      "ios": "ship-steering-wheel",
+      "android": "ship-steering-wheel"
     },
     {
       "paid": true,
       "type": "regular",
       "price": "0.00",
       "version": "1.0.0",
-      "ios": "dharmachakra",
-      "android": "dharmachakra"
+      "ios": "ship-steering-wheel",
+      "android": "ship-steering-wheel"
     }
   ]
 },{
@@ -28280,40 +28280,7 @@
     }
   ]
 },{
-  "name": "Paspoort",
-  "slug": "paspoort",
-  "classes": "paspoort",
-  "version": "1.0.0",
-  "ios": "paspoort",
-  "android": "paspoort",
-  "variations": [
-    {
-      "paid": false,
-      "type": "solid",
-      "price": "0.00",
-      "version": "1.0.0",
-      "ios": "paspoort",
-      "android": "paspoort"
-    },
-    {
-      "paid": true,
-      "type": "light",
-      "price": "0.00",
-      "version": "1.0.0",
-      "ios": "paspoort",
-      "android": "paspoort"
-    },
-    {
-      "paid": true,
-      "type": "regular",
-      "price": "0.00",
-      "version": "1.0.0",
-      "ios": "paspoort",
-      "android": "paspoort"
-    }
-  ]
-},{
-  "name": "Passport",
+  "name": "passport",
   "slug": "passport",
   "classes": "passport",
   "version": "1.0.0",
@@ -28343,6 +28310,39 @@
       "version": "1.0.0",
       "ios": "passport",
       "android": "passport"
+    }
+  ]
+},{
+  "name": "passport-alt",
+  "slug": "passport-alt",
+  "classes": "passport-alt",
+  "version": "1.0.0",
+  "ios": "passport-alt",
+  "android": "passport-alt",
+  "variations": [
+    {
+      "paid": false,
+      "type": "solid",
+      "price": "0.00",
+      "version": "1.0.0",
+      "ios": "passport-alt",
+      "android": "passport-alt"
+    },
+    {
+      "paid": true,
+      "type": "light",
+      "price": "0.00",
+      "version": "1.0.0",
+      "ios": "passport-alt",
+      "android": "passport-alt"
+    },
+    {
+      "paid": true,
+      "type": "regular",
+      "price": "0.00",
+      "version": "1.0.0",
+      "ios": "passport-alt",
+      "android": "passport-alt"
     }
   ]
 },{

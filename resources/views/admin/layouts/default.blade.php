@@ -64,8 +64,9 @@
 
     <script src="{{ asset('admin/js/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('admin/js/custom.js') }}"></script>
     <script src="{{ asset('admin/js/bootstrap-dialog.min.js') }}"></script>
-
+    <!-- upload file -->
+    <!-- <script src="{{ asset('admin/assats/upload/js/dropzone.js') }}"></script> -->
+    <script src="{{ asset('admin/js/custom.js') }}"></script>
 </body>
 </html>

@@ -12,30 +12,27 @@
         <div class="list-icon-warper">
             <!-- icon Tags -->
             <div class="tags-main">
-
-                <ul data-bind="foreach: variations">
+                <ul class="tags" data-bind="foreach: variations">
                     <!-- check boxes -->
-                    <li class="checkbox">
-                        <label data-bind="attr: {'for': slug}">
+                    <li>
+                        <label class="check-box"  data-bind="attr: {'for': slug}">
                             <input type="checkbox" name="categories" data-bind="attr: {id: slug }, value: value, checked: $parent.filters.variations">
-                            <i></i>
-                            <span data-bind="text: name"></span>
+                            <span><!-- icon here --></span>
+                            <i data-bind="text: name"></i>
                         </label>
                     </li>
-
                     <!-- / check boxes -->
                 </ul>
 
-                <ul data-bind="foreach: categories">
+                <ul class="tags" data-bind="foreach: categories">
                     <!-- check boxes -->
-                    <li class="checkbox">
-                        <label data-bind="attr: {'for': slug}">
-                            <input type="checkbox" name="categories" data-bind="attr: {id: slug }, value: value, checked: $parent.filters.categories">
-                            <i></i>
-                            <span data-bind="text: name"></span>
-                        </label>
+                    <li>
+                    <label class="check-box"  data-bind="attr: {'for': slug}">
+                        <input type="checkbox" name="categories" data-bind="attr: {id: slug }, value: value, checked: $parent.filters.categories">
+                        <span><!-- icon here --></span>
+                        <i data-bind="text: name"></i>
+                    </label>
                     </li>
-
                     <!-- / check boxes -->
                 </ul>
             </div> <!-- / icon tags -->

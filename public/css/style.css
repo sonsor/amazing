@@ -1879,8 +1879,8 @@ pre {
 }
  .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default {
      color: #fff;
-     background-color: #000;
-     border-color: #000;
+     background-color: #056ac8;
+     border-color: #056ac8;
 }
 
  .btn-black {
@@ -3218,16 +3218,96 @@ pre {
     padding-left: 0;
 }
 .radio { padding:5px; }
-.radio input[type="radio"] { opacity: 0; position: absolute; }
+.radio input[type="radio"] { opacity: 1; position: absolute; }
 .radio input[type="radio"] + label { color:#555; line-height:25px; display:inline-block; text-indent:-38px; }
 .radio input[type="radio"]:checked + label > mark:before {    content: ' '; background: #0085ff; width: 10px; height: 10px; display: inline-block; border-radius: 5px; top: 0; position: absolute; margin: 5px 0 0 3px;}
 .radio input[type="radio"] + label > mark { display:inline-block; width:22px; height:22px; vertical-align:middle; border-radius:15px; border:1px solid #ccc; background:#fff; text-indent: 0; position: relative; }
 
-.checkbox { padding:5px;  }
-.checkbox input[type="checkbox"] { opacity: 0; position: absolute; }
+/* .checkbox { padding:5px;  }
+.checkbox input[type="checkbox"] { opacity: 1; position: absolute; }
 .checkbox input[type="checkbox"] + label { color:#555; line-height:20px; display:inline-block; text-indent:-38px; }
 .checkbox input[type="checkbox"] + label > mark {color: #0085ff; position:relative; display:inline-block; width:20px; height:20px; vertical-align:middle; border-radius:5px; border:1px solid #ccc; background:#fff; text-indent: 0; }
-.checkbox input[type="checkbox"]:checked + label > mark:before { content: "\f1f7"; font-family: amazing-neo; padding-left: 2px; position: absolute; top: 0px; font-size: 10px;}
+.checkbox input[type="checkbox"]:checked + label > mark:before { content: "\f1f7"; font-family: amazing-neo; padding-left: 2px; position: absolute; top: 0px; font-size: 10px;} */
+
+ul.tags li {
+    width: 100%;
+    display: flex;
+    height: 34px;
+}
+
+ul.tags li label i {font-style: initial;}
+.check-box {
+    float:left;
+    margin-left:15px;
+    cursor: pointer;
+    position: relative; 
+  }
+  
+  label.check-box {
+    padding-left: 35px; 
+    margin: 0;  
+  }
+  
+  .check-box input { 
+    height: 20px;
+    width: 20px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+  }
+  
+  .check-box input[type=checkbox], .custom-check-box span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 2px;
+    left:0;
+    top: 0;
+  }
+  
+  .check-box span {
+    z-index: 1;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    text-align:center;
+    border-radius: 3px;
+    left: 0;
+    top: 0;
+  }
+  
+  .check-box input[type=checkbox] {
+    z-index: 5;
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .check-box input[type=checkbox]:checked + span {
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .check-box input[type=checkbox]:checked + span:after {
+    content: "\02714";
+    font-size: 16px;
+    color: #0085ff;
+    width: 16px;
+    height: 16px;
+  }
+ 
+
+
+
 
 .tags-main{
     width: 20%;
@@ -3611,7 +3691,7 @@ a.back-to-all-btn{
 }
 
 #sky {
-    background: #0cadf0;
+    background: #0085ff;
 }
 
 #gray {
@@ -3635,7 +3715,7 @@ a.back-to-all-btn{
 }
 
 .sky {
-    color: #0cadf0;
+    color: #0085ff;
 }
 
 .gray {
@@ -3749,7 +3829,7 @@ a.back-to-all-btn{
     text-decoration: none;
 }
 .btn-pro:hover i {
-    background:#1da7b6;
+    background: #056ac8;
 }
 
 .btn-pro i {
@@ -3950,15 +4030,37 @@ ul.todo-list li p {
     text-align: center;
 }
 
+.example-container {
+    padding:100px 0 100px 0;
 
-
-.navigation-tab {
-    height: 150px;
-    background-color: #343a40;
-    box-shadow: 0 50px 30px 0 rgba(0, 0, 0, 0.175);
-    border-radius: 20px 20px 90px 90px;
+}
+.mob-body {
+    height: 355px;
+    width: 100%;
+    background: #eeeff4;
+    box-shadow: 0 -1px 7px 0 rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    border: 15px solid #343a40;
+    border: 15px solid #fff;
+    text-align: center;
+    padding-top: 100px;
+    border-bottom: 0px;
+}
+.mob-body i {
+    color: #222;
+    margin-bottom: 15px;
+}
+.mob-body p {
+    text-transform: uppercase;
+}
+.navigation-tab {
+    height: 130px;
+    background-color: #fff;
+    /* box-shadow: 0 50px 30px 0 rgba(0, 0, 0, 0.175);
+    border-radius: 20px 20px 90px 90px; */
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 0px 0px 90px 90px;
+    overflow: hidden;
+    border: 15px solid #fff;
     display: flex;
     position: relative;
     flex-shrink: 0;
@@ -3968,7 +4070,7 @@ ul.todo-list li p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 130px;
+    width: 24.7%;
     flex-shrink: 0;
     cursor: pointer;
     transition: 0.3s;
@@ -3976,7 +4078,11 @@ ul.todo-list li p {
     z-index: 2;
   }
   .navigation-tab-item.active {
-    width: 210px;
+    width: 25.7%;
+  }
+  .navigation-tab-item.active span i {
+      
+    color: #fff;
   }
   .navigation-tab-item.active .navigation-tab__icon {
     transform: translate(0px, -10px);
@@ -3987,9 +4093,10 @@ ul.todo-list li p {
   }
   .navigation-tab-overlay {
     border-radius: 10px;
-    background-color: #2c3135;
+    background-color: #0085ff;
+    color: #fff;
     height: 100%;
-    width: 210px;
+    width: 25.7%;
     position: absolute;
     left: 0;
     top: 0;
@@ -3997,7 +4104,7 @@ ul.todo-list li p {
   }
   .navigation-tab__icon {
     display: block;
-    color: #fff;
+    color: #0085ff;
     transition-duration: 0.3s;
     line-height: 1;
     transform: translate(0, 11px);

@@ -98,5 +98,21 @@
         window.location.reload();
     }
 
+    // data table
+    // $(document).ready(function() {
+    //     $('#icon-table').DataTable();
+    // } );
+
+    // upload files 
+    // var myDropzone     = new Dropzone("div#sketchFile", { 
+    //     url: '/admin/icon/fileUpload',
+    //     paramName: 'file'
+    // });
+
+    // myDropzone.on('sending', function(file, xhr, formData){
+    //     console.log(file.name);
+    //     $form = $("#formupdateid");
+    //     $form.append('<input type="text" name="sketch_file" value="'+file.name+'">');
+    // });
 
 })(jQuery)

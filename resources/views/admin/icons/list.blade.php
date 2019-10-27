@@ -15,6 +15,8 @@
 
             <div class="tabs widget">
                 <div class="tab-content">
+
+                
                     <!-- All Icons  -->
                     <div id="all-icons" class="tab-pane active">
 
@@ -34,14 +36,14 @@
                                         <th>{{ ColumnValue::get($col['field'], $row) }}</th>
                                     @endforeach
                                     <td>
-                                        <a class="btn btn-link" href="{{ route('admin.icons.edit', $row->id) }}">
+                                        <a class="btn btn-link" target="_blank" href="{{ route('admin.icons.edit', $row->id) }}">
                                             <i class="glyphicon glyphicon-pencil"></i>
                                         </a>
-                                        <a class="btn btn-link" href="{{ route('admin.icons.variations.list', $row->id) }}">
+                                        <a class="btn btn-link" target="_blank" href="{{ route('admin.icons.variations.list', $row->id) }}">
                                             <i class="fa fa-eye"></i>
                                         </a>
                                         @if ($row->variation->count() === 0)
-                                            <a class="btn btn-link js-remove" href="{{ route('admin.version.remove', $row->id) }}">
+                                            <a class="btn btn-link js-remove" target="_blank" href="{{ route('admin.version.remove', $row->id) }}">
                                                 <i class="fa fa-trash"></i>
                                             </a>
                                         @endif

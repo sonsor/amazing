@@ -9,6 +9,8 @@
 
 <link href="{{ asset('admin/css/font-awesome.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet" />
+<!-- upload files -->
+<!-- <link href="{{ asset('admin/assats/upload/css/dropzone.css') }}" rel="stylesheet" /> -->
 @if (\Request::routeIs('login'))
 <link href="{{ asset('admin/css/extra-style.css') }}" rel="stylesheet" />
 @endif

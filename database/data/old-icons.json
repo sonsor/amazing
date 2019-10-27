@@ -8762,8 +8762,8 @@
     "price": "0.00"
   },
   {
-    "label": "passport",
-    "class": "passport",
+    "label": "passport-alt",
+    "class": "passport-alt",
     "isPaid": "0",
     "wieght": "bold",
     "tags": [

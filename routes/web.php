@@ -85,6 +85,8 @@ Route::group(['prefix' => 'admin'], function () {
 
             Route::put('/{icon}/variation/new', 'Admin\\VariationController@store');
             Route::put('/{icon}/variation/{id}', 'Admin\\VariationController@store')->name('admin.icons.variations.update');
+            //  upload files
+            // Route::post('/fileUpload', 'Admin\\VariationController@stuploadFilesore')->name('admin.icons.variations.fileUpload');
         });
     });;
 

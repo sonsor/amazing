@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\Admin\IconForm;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+// upload files
+// use Illuminate\Support\Facades\Input;
+// use Response;
 
 class VariationController extends IconController
 {
@@ -67,12 +70,26 @@ class VariationController extends IconController
         ]);
     }
 
+     // upload files
+    // public function stuploadFilesore(Request $request){
+    //     $destinationPath = 'icon_file'; // upload path
+    //     $extension = Input::file('file')->getClientOriginalExtension(); // getting file extension
+    //     $fileName = rand(11111, 99999) . '.' . $extension; // renameing image
+    //     $upload_success = Input::file('file')->move($destinationPath, $fileName); // uploading file to given path
+    //     if ($upload_success) {
+    //         return response()->json($fileName, 200);
+    //     } else {
+    //         return response()->json('error', 400);
+    //     }
+    // }
+
     /**
      * @param IconForm $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(IconForm $request)
     {
+        // dd($request);
         $id = $request->route('id', null);
         $parent = $request->route('icon', null);
         $data = $request->all();

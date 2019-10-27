@@ -1,10 +1,243 @@
 [
   {
+    "name": "Animals",
+    "slug": "animals"
+  },
+  {
+    "name": "Accessibility",
+    "slug": "accessibility"
+  },
+
+  {
+    "name": "All",
+    "slug": "all"
+  },
+  {
+    "name": "Alert",
+    "slug": "alert"
+  },
+  {
+    "name": "Ammunition",
+    "slug": "ammunition"
+  },
+  {
+    "name": "Arrows",
+    "slug": "arrows"
+  },
+  {
+    "name": "Audio Video",
+    "slug": "audio-video"
+  },
+  {
+    "name": "Automotive",
+    "slug": "automotive"
+  },  
+  {
+    "name": "Autumn",
+    "slug": "autumn"
+  },  
+  {
+    "name": "Badge Award",
+    "slug": "badge-award"
+  },  
+  {
+    "name": "Beverage",
+    "slug": "beverage"
+  },  
+  {
+    "name": "Brands",
+    "slug": "brands"
+  },  
+  {
+    "name": "Business",
+    "slug": "business"
+  },
+  {
+    "name": "Buildings",
+    "slug": "buildings"
+  },
+  {
+    "name": "Camping",
+    "slug": "camping"
+  },
+  {
+    "name": "Chat",
+    "slug": "chat"
+  },
+  {
+    "name": "Chart",
+    "slug": "chart"
+  },
+  {
+    "name": "Charity",
+    "slug": "charity"
+  },
+  {
+    "name": "Childhood",
+    "slug": "childhood"
+  },
+  {
+    "name": "Clothing",
+    "slug": "clothing"
+  },
+  {
+    "name": "Code",
+    "slug": "code"
+  },
+  {
+    "name": "Computers",
+    "slug": "computers"
+  },
+  {
+    "name": "Communication",
+    "slug": "communication"
+  },
+  {
+    "name": "Construction",
+    "slug": "construction"
+  },
+  {
+    "name": "Currency",
+    "slug": "currency"
+  },
+  {
+    "name": "Date & time",
+    "slug": "date-and-time"
+  },
+  {
+    "name": "Design",
+    "slug": "design"
+  },
+  {
+    "name": "Editors",
+    "slug": "editors"
+  },
+  {
+    "name": "Education",
+    "slug": "education"
+  },
+  {
+    "name": "Emoji",
+    "slug": "emoji"
+  },
+  {
+    "name": "Energy",
+    "slug": "energy"
+  },
+  {
+    "name": "File",
+    "slug": "file"
+  },
+  {
+    "name": "Finance",
+    "slug": "finance"
+  },
+  {
+    "name": "Fitness",
+    "slug": "fitness"
+  },
+  {
+    "name": "Food",
+    "slug": "food"
+  },
+  {
+    "name": "Games",
+    "slug": "games"
+  },
+  {
+    "name": "Genders",
+    "slug": "genders"
+  },
+  {
+    "name": "Hand",
+    "slug": "hand"
+  },
+  {
+    "name": "Halloween",
+    "slug": "halloween"
+  },
+  {
+    "name": "Health",
+    "slug": "health"
+  },
+  {
+    "name": "Hotel",
+    "slug": "hotel"
+  },
+  {
+    "name": "Household",
+    "slug": "household"
+  },
+  {
+    "name": "Images",
+    "slug": "images"
+  },
+  {
+    "name": "Interfaces",
+    "slug": "interfaces"
+  },
+  {
+    "name": "Landmark",
+    "slug": "landmark"
+  },
+  {
+    "name": "Logistics",
+    "slug": "logistics"
+  },
+  {
+    "name": "Mathematics",
+    "slug": "mathematics"
+  },
+  {
+    "name": "Marketing",
+    "slug": "marketing"
+  },
+  {
+    "name": "Maritime",
+    "slug": "maritime"
+  },
+  {
+    "name": "Medical",
+    "slug": "medical"
+  },
+  {
     "name": "Menu",
     "slug": "menu"
   },
   {
-    "name": "Arrow",
-    "slug": "arrow"
+    "name": "Maps",
+    "slug": "maps"
+  },
+  {
+    "name": "Other",
+    "slug": "other"
+  },
+  {
+    "name": "Science Fiction",
+    "slug": "science-fiction"
+  },
+  {
+    "name": "Shopping",
+    "slug": "shopping"
+  },
+  {
+    "name": "Social",
+    "slug": "social"
+  },
+  {
+    "name": "Status",
+    "slug": "status"
+  },
+  {
+    "name": "Travel",
+    "slug": "travel"
+  },
+  {
+    "name": "Users",
+    "slug": "users"
+  },
+  {
+    "name": "Users & People",
+    "slug": "users-and-people"
   }
 ]

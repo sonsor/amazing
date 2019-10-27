@@ -41,6 +41,24 @@ a, a:hover, a:active, a:focus {text-decoration:none;}
 .sidebar.active.hovered ul li ul li a{ padding-left: 61px;}
 .sidebar.active.hovered ul li ul.child-menu { list-style-type: none; padding: 0; margin: 0; display:none; }
 .sidebar.active.hovered .dropdown.open .child-menu{ display:block; transition:all ease-in-out .3s .3s;}
+
+
+.sidebar.active li.dropdown> a:after {
+    position: absolute;
+    content: "\f106";
+    font-family: 'FontAwesome';
+    transition: all 0.4s ease;
+    right: 15px;
+    top: 22px;
+}
+
+.sidebar.active li.dropdown.open> a:after {
+    content: "\f106";
+    font-family: 'FontAwesome';
+    transition: all 0.4s ease;
+    transform: rotateZ(180deg);
+}
+
 /************************/
 .main {  position: relative; display: block; top: 50px; left: 0; padding: 15px; padding-left: 75px; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;}
 .main.active { padding-left: 275px; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;}
@@ -499,4 +517,5 @@ input.cmn-toggle-round:checked + label:after {margin-left: 25px;  }
 }
 .well ul li label {
     cursor: pointer;
+    width:95%;
 }

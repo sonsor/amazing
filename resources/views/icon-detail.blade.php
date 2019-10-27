@@ -6,7 +6,6 @@
     <div class="feature-section">
         <div class="container">
             <div class="copyToClip">
-
             <i style="color: #6f778a; padding-right: 10px;" class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-1x"></i> | 
                 <div id="copyTarget" class="ico-class">
                     <code data-balloon="Click to Copy HTML" data-balloon-pos="down"><span>&lt;i </span><span class="typ">class</span>=<span class="nam">"{{ $icon->variation->classes . ' an-' . $icon->classes  }}"</span><span>&gt;&lt;/i&gt;</span></code>
@@ -26,14 +25,12 @@
                 </div>
                 <span id="msg"></span>
             </div>
-
             <div class="tag-version">
                 <ul class="category-version">
                     <li>{{ $icon->name }}</li>
                     <li>Updated: Version {{ $icon->Version->version  }}</li>
                 </ul>
             </div>
-
         </div>
     </div>
 
@@ -43,9 +40,7 @@
                 <div class="col-md-5">
                     <div class="icon-grid-right">
                         <h1 class="h1-sm">{{ $icon->name  }}</h1>
-
                         <div class="clearfix"></div>
-
                         <div class="icon-main ">
                             <div class="icon-color-picker">
                                 <div class="bg-green" id="green" data-value="green"> </div>
@@ -63,7 +58,6 @@
                                 <code>&lt;i <span class="typ">class</span>=<span class="nam">"{{ $icon->variation->classes . ' an-' . $icon->classes  }}"</span>&gt;&lt;/i&gt; </code>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-md-7">
@@ -75,7 +69,6 @@
                                     <span> all icons</span>
                                 </a>
                             </div>
-
                             <div class="col-md-12 ico-var flex-end justify-between pt-4x">
                                 <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-1x"></i>
                                 <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-2x"></i>
@@ -99,151 +92,231 @@
                 </div>
             </div>
         </div>
-        <div class="icon-showcase-list-waget">
-            <div class="container">
-
-                <div class=col-md-7>
 
 
-<!-- ----------------------- moile tab-------------------------- -->
 
-<div class="navigation-tab">
-  <div class="navigation-tab-item active">   
-      <span class="navigation-tab__icon">
-    <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
-        </span>
-    <span class="navigation-tab__txt">{{ $icon->name }}</span>
-  </div>
-  <div class="navigation-tab-item">
-  <span class="navigation-tab__icon">
-        <i class="an an-list"></i>         
-        </span>
-    <span class="navigation-tab__txt">List</span>
-  </div>
-  <div class="navigation-tab-item">
-    <span class="navigation-tab__icon">
-        <i class="an an-bag"></i>
-    </span>
-    <span class="navigation-tab__txt">Bag</span>
-  </div>
-  <div class="navigation-tab-item">
-    <span class="navigation-tab__icon">
-        <i class="an an-bell"></i>
-    </span>
-    <span class="navigation-tab__txt">Notifications</span>
-  </div>
-  <div class="navigation-tab-overlay"></div>
-</div>
+        <div class="container">
+             <div class="example-container">
+            <style>
+                .exm-menu-out {
+                    background: #030121;
+                    padding:50px;
+                    margin-top: 30px;
+                }
+                ul.exm-menu {
+                background-color: #fff;
+                box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.05);
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                border-top: 2px solid #0085ff;
+                }
 
-<!-- ----------------------- todo ---------------------------- -->
+                ul.exm-menu li {
+                float: left;
+                }
 
+                ul.exm-menu li a {
+                    display: block;
+                color: #6f778a;
+                text-align: center;
+                padding: 25px 16px;
+                text-decoration: none;
+                transition: none;
+                }
+                ul.exm-menu li a span {
+                margin-left: .5rem;
+                }
 
-<style>
-    .todo {
-        display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    width: 500px;
-    background-color: #fafafa;
-    padding: 0px;
-    box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
-    margin: 6rem 0;
-    border-radius: 0.75rem;
-    }
-    .todo ul li {
-        padding: 1.5rem 2rem;
-        background:#343a40;
-    }
-    .todo ul li.active {
-        background: #2c3135;
-        color: #fff;
-    }
-    .todo ul li.active i {
-        background:  #343a40
-    }
-    .todo ul li.title {
-        padding-top: 1rem;
-        text-align: center;
-        color: gray;
-        font-weight: 500;
-        font-size: 1.25rem;
-    }
-
-    .todo ul li i{
-        background:#2c3135;
-        padding: 20px;
-
-    }
-    .todo ul li span {
-        padding: 30px;
-    }
-    </style>
-
-
-<div class="todo">
-  <ul>
-  <li class="title">        
-        <span>Lorem ipsum dolor</span>
-    </li>
-    <li>
-        <i class="an an-search"></i>
-        <span>Lorem ipsum dolor</span>
-    </li>
-    <li class="active">
-        <i class="an an-search"></i>
-        <span>Lorem ipsum dolor</span>
-    </li>
-    <li>
-        <i class="an an-search"></i>
-        <span>Lorem ipsum dolor</span>
-    </li>
-    <li>
-        <i class="an an-search"></i>
-        <span>Lorem ipsum dolor</span>
-    </li>
-    
-   
-    
-  </ul>
-</div>
-
-<!-- ------------------------todo end ------------ -->
-
-                    <div class="icon-showcase-todo">
-                        <ul class="todo-list">
-                            <li>
-                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
-                                <p> {{ $icon->name }} {{ $icon->description->mediumDescription1 }}</p>
-                            </li>
-                            <li>
-                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
-                                <p>{{ $icon->name }} {{ $icon->description->mediumDescription2 }}</p>
-                            </li>
-                            <li>
-                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
-                                <p>{{ $icon->name }} {{ $icon->description->mediumDescription3 }}</p>
-                            </li>
-                            <li>
-                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
-                                <p>{{ $icon->name }} {{ $icon->description->mediumDescription4 }}</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class=col-md-5>
-                    <div class="icon-waget one">
-                        <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
-                        <p>{{ $icon->name }} {{ $icon->description->smallDescription1 }}</p>
-                    </div>
-
-                    <div class="icon-waget two">
-                        <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
-                        <p>{{ $icon->name }} {{ $icon->description->smallDescription2 }}</p>
-                    </div>
-                </div>
+                ul.exm-menu li a:hover, ul.exm-menu li a.active {
+                    background-color: #0085ff;
+                color: #fff;
+                }
+            </style>
+            <div class="exm-menu-out">
+                <ul class="exm-menu">
+                <li><a href="#home"><i class="an an-home"></i> <span>Home</span></a></li>
+                <li><a href="#news"><i class="an an-user-group"></i> <span>Users</span></a></li>
+                <li><a href="#news"><i class="an an-newspaper"></i> <span>News</span></a></li>
+                <li><a class="active" href="#news"><i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i> <span>{{ $icon->name }}</span> </a></li>
+                <li><a href="#contact"><i class="an an-envelope"></i> Contact</a></li>
+                <li><a href="#about">more <i class="an an-angle-alt-down"></i></a></li>
+                </ul>
             </div>
-        </div>
+       
+      
+
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="exm-menu-out">
+                        <div class="mob-body">
+                            <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }} an-6x"></i>
+                            <p>{{ $icon->name }}</p>
+                        </div>
+                        <div class="navigation-tab">
+                            <div class="navigation-tab-item active">   
+                                <span class="navigation-tab__icon">
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                                    </span>
+                                <span class="navigation-tab__txt">{{ $icon->name }}</span>
+                            </div>
+                            <div class="navigation-tab-item">
+                                <span class="navigation-tab__icon">
+                                    <i class="an an-list"></i>         
+                                    </span>
+                                <span class="navigation-tab__txt">List</span>
+                            </div>
+                            <div class="navigation-tab-item">
+                                <span class="navigation-tab__icon">
+                                    <i class="an an-bag"></i>
+                                </span>
+                                <span class="navigation-tab__txt">Bag</span>
+                            </div>
+                            <div class="navigation-tab-item">
+                                <span class="navigation-tab__icon">
+                                    <i class="an an-bell"></i>
+                                </span>
+                                <span class="navigation-tab__txt">Notifications</span>
+                            </div>
+                            <div class="navigation-tab-overlay"></div>
+                        </div>            
+                    </div>
+                </div>
+                <!-- todo -->
+                <div class=col-md-5>
+                    <style>
+                        .todo {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: stretch;
+                            background-color: #fafafa;
+                            padding: 0px;
+                            box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
+                            margin: 2.6rem 0;
+                            border-radius: 0.75rem;
+                        }
+                        .todo ul {
+                            padding:0px;
+                        }
+                        .todo ul li {
+                            padding: 1.5rem 2rem;
+                            background:#fff;
+                            cursor:pointer;
+                        }
+                        .todo ul li.active {
+                            background: #0085ff;
+                            color: #fff;
+                        }
+                        .todo ul li.active i {
+                            background: #ffffff;
+                        color: #0085ff; 
+                        }
+                        .todo ul li.title {
+                            border-bottom: 1px solid #dedede;
+                            text-align: left;
+                            color: #222;
+                            font-weight: 600;
+                            font-size: 18px;
+                            padding: 30px 0;
+                        }
+
+                        .todo ul li i{
+                            background:#0085ff;
+                            padding: 20px;
+                            color: #fff;
+
+                        }
+                        .todo ul li span {
+                            padding: 30px;
+                        }
+                    </style>
+
+
+                    <div class="exm-menu-out">
+
+                        <div class="todo">
+                            <ul>
+                            <li class="title">
+                                    <span>Todo</span>
+                                </li>
+                                <li>
+                                    <i class="an an-search"></i>
+                                    <span>Lorem ipsum dolor</span>
+                                </li>
+                                <li class="active">
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                                    <span>Lorem ipsum dolor</span>
+                                </li>
+                                <li>
+                                    <i class="an an-search"></i>
+                                    <span>Lorem ipsum dolor</span>
+                                </li>
+                                <li>
+                                    <i class="an an-search"></i>
+                                    <span>Lorem ipsum dolor</span>
+                                </li>
+                                
+                            
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- todo end -->
+            </div>
+
+      
+     </div>
+
+  </div>
+
+
+
+
+        <!-- medium and small Description 
+                <div class="icon-showcase-list-waget">
+                    <div class="container">
+                        <div class=col-md-7>
+                            <div class="icon-showcase-todo">
+                                <ul class="todo-list">
+                                    <li>
+                                        <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                                        <p> {{ $icon->name }} {{ $icon->description->mediumDescription1 }}</p>
+                                    </li>
+                                    <li>
+                                        <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                                        <p>{{ $icon->name }} {{ $icon->description->mediumDescription2 }}</p>
+                                    </li>
+                                    <li>
+                                        <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                                        <p>{{ $icon->name }} {{ $icon->description->mediumDescription3 }}</p>
+                                    </li>
+                                    <li>
+                                        <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                                        <p>{{ $icon->name }} {{ $icon->description->mediumDescription4 }}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>   
+
+                        <div class=col-md-5>
+                            <div class="icon-waget one">
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                                <p>{{ $icon->name }} {{ $icon->description->smallDescription1 }}</p>
+                            </div>
+
+                            <div class="icon-waget two">
+                                <i class="{{ $icon->variation->classes . ' an-' . $icon->classes  }}"></i>
+                                <p>{{ $icon->name }} {{ $icon->description->smallDescription2 }}</p>
+                            </div>
+                        </div> 
+                        
+                    </div>
+                </div>
+        / end medium and small Description -->
+
+
         <div class="icon-showcase-list-waget-two">
             <div class="container">
                 <div class=col-md-6>
@@ -260,6 +333,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="relative-icon-saction">
             <div class="container">
                 <h3>Relative Icon </h3>

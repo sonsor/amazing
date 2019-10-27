@@ -7,7 +7,9 @@
     <div class="col-md-12">
         <div class="jumbotron row">
 
-            {{ Form::model($data, ['route' => ['admin.icons.variations.update',  $icon, $data->id ?? 'new'], 'method' => 'put']) }}
+            {{ Form::model($data, ['route' => ['admin.icons.variations.update',  $icon, $data->id ?? 'new'], 'method' => 'put', 'id' => 'formupdateid',  'enctype' => 'multipart/form-data']) }}
+            <!-- upload files -->
+            <!-- {{ Form::model($data, ['route' => ['admin.icons.variations.update',  $icon, $data->id ?? 'new'], 'method' => 'put']) }} -->
             {{ Form::token() }}
             {{ Form::hidden('description[id]') }}
             {{ Form::hidden('price', 0) }}
@@ -153,6 +155,23 @@
                         </div>
                     </div>
                 </div>
+                <!-- File Upload -->
+                <!-- <div class="row">
+                <div class="add-an-icon clearfix">
+                        <div class="col-md-12">
+                            <label class="m-t-20 m-b-20">Upload all type of files ( .ai, .eps, .psd, .svg, .png, .sketch ) with same name.</label>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label>Upload .sketch File &amp; Price</label>
+                                <div id="sketchFile" class="dz-clickable" style="height:200px"></div>
+                                <div class="form-group">
+                                    <input type="text" id="font-price" class="form-control" placeholder="Icon Price in USD ($0.00)" name="price">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
 
 
             </div>
